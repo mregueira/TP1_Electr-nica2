@@ -1,4 +1,4 @@
-# TP1_Electr-nica2
+# TP1_Electronica2
 Lo que dice el título
 
 Grupo 2 - 
