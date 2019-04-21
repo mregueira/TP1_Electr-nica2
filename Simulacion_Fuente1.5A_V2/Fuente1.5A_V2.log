@@ -1,0 +1,98 @@
+Circuit: * C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\Simulacion_Fuente1.5A_V2\Fuente1.5A_V2.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+vernier = 0.5
+Gmin = 0.000223007
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+Gmin = 0.000208262
+vernier = 0.015625
+vernier = 0.0078125
+vernier = 0.00390625
+Gmin = 0.000207451
+vernier = 0.00520833
+vernier = 0.00694444
+Gmin = 0.000204569
+vernier = 0.00925925
+vernier = 0.0123457
+Gmin = 0.000200086
+vernier = 0.0164609
+Gmin = 0.000193022
+vernier = 0.0219478
+vernier = 0.0292638
+Gmin = 0.000181999
+vernier = 0.0390184
+vernier = 0.0520245
+Gmin = 0.00016583
+vernier = 0.0693659
+Gmin = 0.000142649
+vernier = 0.0924879
+vernier = 0.123317
+Gmin = 0.000111604
+vernier = 0.164423
+vernier = 0.21923
+Gmin = 7.58536e-005
+vernier = 0.292307
+Gmin = 4.08278e-005
+vernier = 0.389743
+vernier = 0.519657
+Gmin = 1.50978e-005
+vernier = 0.692876
+vernier = 0.346438
+vernier = 0.173219
+vernier = 0.0866095
+vernier = 0.0433047
+Gmin = 7.6036e-006
+vernier = 0.0216524
+vernier = 0.0108262
+vernier = 0.00541309
+vernier = 0.00270655
+vernier = 0.00135327
+vernier = 0.000676636
+vernier = 0.000507477
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 88.6364%
+vernier = 0.0625
+Source Step = 87.8995%
+Starting source stepping with srcstepmethod=1
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 88.6364%
+vernier = 0.0625
+Source stepping failed
+
+Pseudo transient terminated at 101.235 s, solution accepted ready or not!
+
+Date: Fri Apr 19 22:01:26 2019
+Total elapsed time: 1.954 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 11919
+traniter = 1490
+tranpoints = 746
+accept = 746
+rejected = 55
+matrix size = 179
+fillins = 267
+solver = Normal
+Thread vector: 47.1/9.0[3] 2.4/2.3[1] 4.9/4.0[3] 0.9/1.6[1]  2592/500
+Matrix Compiler1: 23.64 KB object code size  5.0/2.4/[1.1]
+Matrix Compiler2: 19.52 KB object code size  2.6/3.7/[1.1]
+
