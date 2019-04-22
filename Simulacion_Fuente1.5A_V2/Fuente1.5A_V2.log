@@ -46,18 +46,20 @@ vernier = 0.389743
 vernier = 0.519657
 Gmin = 1.50978e-005
 vernier = 0.692876
-vernier = 0.346438
-vernier = 0.173219
-vernier = 0.0866095
-vernier = 0.0433047
-Gmin = 7.6036e-006
-vernier = 0.0216524
-vernier = 0.0108262
-vernier = 0.00541309
-vernier = 0.00270655
-vernier = 0.00135327
-vernier = 0.000676636
-vernier = 0.000507477
+vernier = 0.923834
+Gmin = 3.26032e-006
+vernier = 0.461917
+vernier = 0.230959
+vernier = 0.115479
+vernier = 0.0577396
+vernier = 0.0288698
+vernier = 0.0144349
+vernier = 0.00721745
+Gmin = 2.15166e-006
+vernier = 0.00360873
+vernier = 0.00180436
+vernier = 0.000902182
+vernier = 0.000451091
 Gmin = 0
 Gmin stepping failed
 
@@ -76,23 +78,23 @@ Source Step = 88.6364%
 vernier = 0.0625
 Source stepping failed
 
-Pseudo transient terminated at 101.235 s, solution accepted ready or not!
+Pseudo transient terminated at 100.547 s, solution accepted ready or not!
 
-Date: Fri Apr 19 22:01:26 2019
-Total elapsed time: 1.954 seconds.
+Date: Sun Apr 21 20:14:06 2019
+Total elapsed time: 2.234 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 11919
+totiter = 11677
 traniter = 1490
 tranpoints = 746
 accept = 746
-rejected = 55
+rejected = 49
 matrix size = 179
-fillins = 267
+fillins = 271
 solver = Normal
-Thread vector: 47.1/9.0[3] 2.4/2.3[1] 4.9/4.0[3] 0.9/1.6[1]  2592/500
-Matrix Compiler1: 23.64 KB object code size  5.0/2.4/[1.1]
-Matrix Compiler2: 19.52 KB object code size  2.6/3.7/[1.1]
+Thread vector: 21.0/9.2[3] 2.5/2.9[1] 0.5/1.9[1] 1.0/1.7[1]  2592/500
+Matrix Compiler1: 23.57 KB object code size  5.1/2.3/[1.1]
+Matrix Compiler2: 19.62 KB object code size  3.0/3.6/[2.4]
 

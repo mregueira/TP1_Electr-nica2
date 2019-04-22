@@ -7,10 +7,45 @@
 
 \section{Objetivos - Par\'ametros del dise\~no}
 
+En el presente trabajo de laboratorio se realiza el diseño y an\'alisis b\'asico del funcionamiento de una fuente regulada de tensi\'on, que cumple con las siguientes especificaciones:
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline 
+Rango de tension de salida & $IO_{MAX}$\\
+\hline 
+\hline 
+$4V \leq V_O \leq 10V$ & $1.5A$\\
+\hline 
+\end{tabular}
+\end{center}
+
+El diseño se implementar\'a en un PCB siguiendo determinadas consideraciones, y se realizar\'a un PCB adicional como banco de pruebas.
+
 \section{Dise\~no del sistema}
+
+Para implementar el dise\~no en cuesti\'on, se propone un circuito de regulaci\'on serie, el cual puede modelarse con el siguiente esquema.
+
+PONER ESQUEMA BLOQUES
+
+La caracter\'istica de 'serie' refiere a que el elemento de control se encuentra en serie a la carga $R_L$. En base a dicho esquema, se propone el siguiente circuito.
+
+PONER CIRCUITO SIN CAPACITOR
+
+La caracter\'istica de regulaci\'on se basa en un lazo de realimentaci\'on negativa entre la salida, el detector, el amplificador de error y el circuito de control. Si se supone que por un momento el valor de $V_O$ aumenta, en consecuencia el valor a la salida del detector tambi\'en aumenta. Dado que la tensi\'on provista por el generador es constante, la diferencia entre la tensi\'on a la salida del detector y el generador aumentar\'a, por lo que la tensi\'on a la salida del operacional tambi\'en. Al ocurrir esto, el transistor $T_1$ conducir\'a m\'as corriente entre colector y emisor. Dado que la corriente provista por el pre-regulador es constante (como se tratar\'a posteriormente), lo que sucede entonces es que se le quita corriente a la base del transistor $T_2$. En consecuencia, \'este conduce menos corriente, por lo que la carga $R_L$ recibe menos corriente, reestableciendo el valor de $V_O$.\par
+Cada bloque por separado se trata en las subsecciones siguientes.
+
 \subsection{Circuito de control}
 
-ELECCION Y COSAS, LO DE LA DERIVADA (DESPEJE EN ANEXO), CALCULO DISIPADOR SI NECESITA O  NO Y CUAL ELEGI AL FINAL
+El circuito de control, en este caso "serie", regula la intensidad de corriente que circula hacia la carga $R_L$ (a trav\'es de los otros bloques) de acuerdo al valor de dicha carga. El control es realizado de manera tal que el valor de $V_O$ seteado se mantenga, como se explic\'o anteriormente.
+
+\subsubsection{Protecci\'on}
+
+CALCULO DE LA PROTECCION, LO DE LA DERIVADA (DESPEJE EN ANEXO)
+
+\subsubsection{Disipaci\'on de potencia}
+
+CALCULO DISIPADOR SI NECESITA O  NO Y CUAL ELEGI AL FINAL
 
 \subsection{Pre-regulador}
 
@@ -20,20 +55,15 @@ ELECCION Y COSAS, LO DE LA DERIVADA (DESPEJE EN ANEXO), CALCULO DISIPADOR SI NEC
 
 \subsection{Amplificador de error}
 
-\section{Rango de carga $R_L$}
+\subsection{Rango de carga $R_L$}
 
+\subsection{Ganancia de lazo - Compensaci\'on}
 
-\section{Simulación}
+\section{Implementaci\'on - Resultados}
 
-COMENTAR QUE DAN BIEN LOS NUMEROS \par
-TEMA GANANCIA DE LAZO SIN Y CON COMPENSACION
-
-\section{Mediciones - Resultados}
-
-MENCIONAR QUE PARA LAS PRUEBAS SE REALIZO UNA PLACA DE BANCO DE PRUEBAS PARA TOMAR EN VARIOS PUNTOS POR TODA LA CURVA\\
 CUADRO DE VALORES\\
 RENDIMIENTO\\
-IMPEDANCIA DE SALIDA POR MAXIMA TRANSFERENCIA DE POTENCIA\\
+IMPEDANCIA DE SALIDA POR MAXIMA TRANSFERENCIA DE POTENCIA BUSCANDO LA MITAD DE LA VO\\
 PSRR\\
 
 
