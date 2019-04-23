@@ -235,7 +235,10 @@ $$(V_O + I_O \cdot R_A)\cdot \frac{R_B}{R_B+R_C} + V_{BE4_{ON}} = I_OR_A$$
 
 Como no se requiere amplificar corriente sino que el objetivo es sensar $I_O$ y derivar corriente de la base de $T_2$, se elije $T_4 = BC337$, cuyo $\beta_{MIN} = 100$ (se tiene entonces que $V_{BE4_{ON}} = 0.7V$). Para simplificar la notaci\'on, llamamos $\alpha = \dfrac{R_B}{R_B+RC}$. Despejando $I_O$ resulta:
 
-$$I_O = \frac{V_O \cdot \alpha + V_{BE4_{ON}}}{R_A(1-\alpha)}$$
+\begin{equation}
+I_O = \frac{V_O \cdot \alpha + V_{BE4_{ON}}}{R_A(1-\alpha)}
+\label{eqn:io_fb}
+\end{equation}
 
 EL gr\'afico caracter\'istico resultante es el siguiente:
 
@@ -282,6 +285,19 @@ $$I_{O_{CC}} = 0.76A$$
 \subsection{Disipaci\'on de potencia}
 
 Teniendo ya el circuito con los componentes seleccionados, resta definir la potencia m\'axima que disipar\'a $T_2$ y si requiere o no un disipador. 
+En general, la potencia que disipa el transistor $T_2$ est\'a dada por:
+
+\begin{equation}
+PD_{T_2} = V_{CE_2} \cdot I_O = (V_R - V_O - R_A \cdot I_O) \cdot I_O
+\end{equation}
+
+A medida que se disminuye $R_L$ desde el infinito hasta la m\'inima de regulaci\'on, la $V_O$ se mantiene constante y la $I_O$ aumenta, por lo que la $PD_{T_2}$ va en aumento en forma mon\'otona. Cuando la $R_L < R_{L_{MIN}}$, se sale de la regulaci\'on y se entra en la recta de foldback. Mientras se sigue disminuyendo $R_L$, la $V_O$ comienza a disminuir por lo que la $V_{CE_2}$ aumenta; pero a su vez la $I_O$ disminuye. Si se reemplaza la expresi\'on de $I_O$ de la ecuaci\'on (\ref{eqn:io_fb}) de foldback, queda:
+
+\[
+PD_{T_2} = \left( V_R - V_O - R_A \cdot \frac{V_O \cdot \alpha + 0.7V}{R_A(1-\alpha)}\right) \cdot \frac{V_O \cdot \alpha + 0.7V}{R_A(1-\alpha)}
+\]  
+
+
 
 \subsection{Ganancia de lazo - Compensaci\'on}
 
@@ -356,20 +372,14 @@ $\eta \%$ & 68\% & 67.9\% & 67.3\%\\
 \end{table}
 
 \subsection{Impedancia de salida - $Z_O$}
-
-Para hallar la impedancia de salida, se modela la fuente como un generador ideal con una resistencia en serie (que ser\'a $Z_O$).
-
-PONER DIBUJO VOMAX ZO RL
  
-Al conectar una carga $R_L$, por el teorema de la m\'axima transferencia de potencia, la potencia entregada a $R_L$ ser\'a m\'axima cuando $R_L = Z_O$. En dicho caso, la tensi\'on sobre $R_L$ ser\'a entonces $\frac{VO_{MAX}}{2}$. Teniendo en cuenta que la protecci\'on en este caso estar\'a actuando, $I_O$ ser\'a funci\'on de $V_O$ de acuerdo a la expresi\'on hallada previamente:
+Si la impedancia de salida fuera 0, en el caso de carga $R_{L_{MIN}}$ la $V_O$ deber\'ia ser la misma que para $R_L = \infty $. Como dicha impedancia no es nula, se puede medir un $\Delta V_O$ entre ambos casos de carga. De esta forma, se puede estimar un valor para la $Z_O$ (que ser\'a peque\~no) mediante:
 
-$$I_O = \frac{V_O \cdot \alpha + 0.7}{R_A \cdot (1-\alpha)}$$
+$$Z_O \simeq \frac{\Delta V_O}{I_{O_{MAX}}}$$   
 
-Teniendo en cuenta el valor de $VO_{MAX}$ te\'orico y el $\alpha$, se calcula la $I_O$ correspondiente. Por lo que entonces la $Z_O$ te\'orica ser\'a:
+La caracter\'istica de tensi\'on real en general puede modelarse como se muestra a continuaci\'on.
 
-$$I_O = 1.18A \Longrightarrow Z_O = \frac{VO_{MAX}}{I_O} = 4.32\Omega$$
-
-Para hallar la $Z_O$ simulada y experimental, se busca que la tensi\'on de salida sea la mitad de la $VO_{MAX}$, y se mide la corriente resultante, efectuando el cociente entre ambos. Se comparan los distintos valores en el siguiente cuadro.
+PONER GRAFICO
 
 \begin{table}[!h]
 
@@ -378,11 +388,11 @@ Para hallar la $Z_O$ simulada y experimental, se busca que la tensi\'on de salid
 \hline
 & Te\'orico & Simulado & Experimental\\
 \hline 
-$V_O$ & $10.2V$ & $5.09V$ & $5.1V$\\
+$\Delta V_O$ & $0V$ & $2mV$ & $0.53V$\\
 \hline 
-$I_O$ &  $1.18A$    &   $1.17A$     & $1.38A$\\
+$I_O$ &  $1.5A$    &   $1.61A$     & $1.55A$\\
 \hline
-$Z_O$ &   $4.32\Omega$   &    $4.36\Omega$    & $3.7\Omega$\\
+$Z_O$ &   $0\Omega$   &    $1.24m\Omega$    & $0.34\Omega$\\
 \hline
 \end{tabular}
 \end{center}
