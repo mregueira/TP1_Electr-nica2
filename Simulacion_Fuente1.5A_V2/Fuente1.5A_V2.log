@@ -48,53 +48,33 @@ Gmin = 1.50978e-005
 vernier = 0.692876
 vernier = 0.923834
 Gmin = 3.26032e-006
-vernier = 0.461917
-vernier = 0.230959
-vernier = 0.115479
-vernier = 0.0577396
-vernier = 0.0288698
-vernier = 0.0144349
-vernier = 0.00721745
-Gmin = 2.15166e-006
-vernier = 0.00360873
-vernier = 0.00180436
-vernier = 0.000902182
-vernier = 0.000451091
+vernier = 1
+Gmin = 3.78001e-007
+Gmin = 4.05875e-008
+Gmin = 4.35805e-009
+Gmin = 4.67942e-010
+Gmin = 5.02449e-011
+Gmin = 5.39501e-012
+Gmin = 5.79285e-013
 Gmin = 0
-Gmin stepping failed
+Gmin stepping succeeded in finding the operating point.
 
-Starting source stepping with srcstepmethod=0
-Source Step = 3.0303%
-Source Step = 33.3333%
-Source Step = 63.6364%
-Source Step = 88.6364%
-vernier = 0.0625
-Source Step = 87.8995%
-Starting source stepping with srcstepmethod=1
-Source Step = 3.0303%
-Source Step = 33.3333%
-Source Step = 63.6364%
-Source Step = 88.6364%
-vernier = 0.0625
-Source stepping failed
 
-Pseudo transient terminated at 100.547 s, solution accepted ready or not!
-
-Date: Sun Apr 21 20:14:06 2019
-Total elapsed time: 2.234 seconds.
+Date: Mon Apr 22 19:48:43 2019
+Total elapsed time: 0.437 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 11677
-traniter = 1490
-tranpoints = 746
-accept = 746
-rejected = 49
+totiter = 3130
+traniter = 1546
+tranpoints = 774
+accept = 774
+rejected = 0
 matrix size = 179
-fillins = 271
+fillins = 233
 solver = Normal
-Thread vector: 21.0/9.2[3] 2.5/2.9[1] 0.5/1.9[1] 1.0/1.7[1]  2592/500
-Matrix Compiler1: 23.57 KB object code size  5.1/2.3/[1.1]
-Matrix Compiler2: 19.62 KB object code size  3.0/3.6/[2.4]
+Thread vector: 12.7/7.5[3] 2.5/2.3[1] 4.4/3.7[3] 0.9/1.7[1]  2592/500
+Matrix Compiler1: 22.36 KB object code size  4.4/2.2/[0.9]
+Matrix Compiler2: 18.84 KB object code size  2.5/3.8/[1.2]
 

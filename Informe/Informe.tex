@@ -20,50 +20,379 @@ $4V \leq V_O \leq 10V$ & $1.5A$\\
 \end{tabular}
 \end{center}
 
-El diseño se implementar\'a en un PCB siguiendo determinadas consideraciones, y se realizar\'a un PCB adicional como banco de pruebas.
+El diseño se implementar\'a en un PCB siguiendo determinadas consideraciones, y se realizar\'a otro PCB adicional como banco de pruebas.
 
 \section{Dise\~no del sistema}
 
 Para implementar el dise\~no en cuesti\'on, se propone un circuito de regulaci\'on serie, el cual puede modelarse con el siguiente esquema.
 
-PONER ESQUEMA BLOQUES
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.35]{Imagenes/bloquesSerie.png}
+\par\end{centering}
+\caption{Diagrama en bloques de un regulador serie}
+
+\end{figure}
 
 La caracter\'istica de 'serie' refiere a que el elemento de control se encuentra en serie a la carga $R_L$. En base a dicho esquema, se propone el siguiente circuito.
 
-PONER CIRCUITO SIN CAPACITOR
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.32]{Imagenes/CircuitoSinCap.png}
+\par\end{centering}
+\caption{Circuito regulador serie propuesto}
 
-La caracter\'istica de regulaci\'on se basa en un lazo de realimentaci\'on negativa entre la salida, el detector, el amplificador de error y el circuito de control. Si se supone que por un momento el valor de $V_O$ aumenta, en consecuencia el valor a la salida del detector tambi\'en aumenta. Dado que la tensi\'on provista por el generador es constante, la diferencia entre la tensi\'on a la salida del detector y el generador aumentar\'a, por lo que la tensi\'on a la salida del operacional tambi\'en. Al ocurrir esto, el transistor $T_1$ conducir\'a m\'as corriente entre colector y emisor. Dado que la corriente provista por el pre-regulador es constante (como se tratar\'a posteriormente), lo que sucede entonces es que se le quita corriente a la base del transistor $T_2$. En consecuencia, \'este conduce menos corriente, por lo que la carga $R_L$ recibe menos corriente, reestableciendo el valor de $V_O$.\par
+\end{figure}
+
+La caracter\'istica de regulaci\'on se basa en un lazo de realimentaci\'on negativa entre la salida, el detector, el amplificador de error y el circuito de control. Si se supone que por un momento el valor de $V_O$ aumenta, en consecuencia el valor a la salida del detector tambi\'en aumenta. Dado que la tensi\'on provista por el generador es constante, la diferencia entre la tensi\'on a la salida del detector y el generador aumentar\'a, por lo que la tensi\'on a la salida del operacional tambi\'en. Al ocurrir esto, el transistor $T_1$ conducir\'a m\'as corriente entre colector y emisor. Dado que la corriente provista por el pre-regulador con $T_3$ es constante (como se tratar\'a posteriormente), lo que sucede entonces es que se le quita corriente a la base del transistor $T_2$. En consecuencia, \'este conduce menos corriente, por lo que la carga $R_L$ recibe menos corriente, reestableciendo el valor de $V_O$.\par
 Cada bloque por separado se trata en las subsecciones siguientes.
 
 \subsection{Circuito de control}
 
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.5]{Imagenes/Control.png}
+\par\end{centering}
+\caption{Circuito de control}
+
+\end{figure}
+
 El circuito de control, en este caso "serie", regula la intensidad de corriente que circula hacia la carga $R_L$ (a trav\'es de los otros bloques) de acuerdo al valor de dicha carga. El control es realizado de manera tal que el valor de $V_O$ seteado se mantenga, como se explic\'o anteriormente.
-
-\subsubsection{Protecci\'on}
-
-CALCULO DE LA PROTECCION, LO DE LA DERIVADA (DESPEJE EN ANEXO)
-
-\subsubsection{Disipaci\'on de potencia}
-
-CALCULO DISIPADOR SI NECESITA O  NO Y CUAL ELEGI AL FINAL
+Sabiendo que la $I_O$ m\'axima en regulaci\'on es de $1.5A$, se elije un transistor adecuado que en primera instancia pueda conducir dicha corriente, y luego verificar que la potencia m\'axima que vaya a disipar est\'e dentro de la dada por el fabricante.\par
+Para dar un cierto margen a la corriente y poder alcanzar el valor de $I_O$ m\'axima sin problemas se elije $T_2 = TIP112$, cuya m\'axima corriente de emisor es de $2A$.
+En la secci\'on de c\'alculo de disipador se detalla el an\'alisis de la potencia a disipar y la elecci\'on del disipador en caso de necesitarlo.
 
 \subsection{Pre-regulador}
 
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.5]{Imagenes/PreRegulador.png}
+\par\end{centering}
+\caption{Circuito de pre-regulador}
+
+\end{figure}
+
+Se considera un margen para la corriente m\'axima, tomando $I_O = 1.6A$. Siendo $\beta2_{MIN} = 500$ (en DC), se calcula la corriente que se le debe proveer a la base de $T_2$ en el peor caso:
+
+$$I_{B2} = \frac{I_{C2}}{\beta2_{MIN}} = \frac{I_O}{\beta2_{MIN}}= 3.2mA$$
+
+Entonces $I_{C3}$ ser\'a la $I_{B2}$ m\'axima. Dado que no hay requerimientos particulares para $T_3$, por simplicidad en la selecci\'on de componentes se utiliz\'o  $T_3 = BC327$, cuyo $\beta3_{MIN} = 100$ por lo que podremos luego despreciar la corriente de base para los c\'alculos. Planteando la malla comprendida por $R_1$, $BE_3$ y los diodos $D_1$ y $D_2$, se despeja el valor de $R_1$:
+
+$$2V_D - V_{{BE3}_{ON}} - I_{C3}R_1 = 0$$
+\par
+En la ecuaci\'on anterior se observa que la corriente $I_{C3}$ resulta independiente de las variaciones de la entrada $V_R$. Se toma $V_D = V_{{BE}_{ON}} = 0.7V$. Como s\'olo se requiere que $D_1$ y $D_2$ est\'en correctamente polarizados para dar las ca\'idas de tensi\'on $V_D$ consideradas, y no disipar\'an una potencia apreciable, se elijen $D_1 = D_2 = 1N4148$ por simplicidad. Entonces:
+$$\frac{2V_D - V_{{BE3}_{ON}}}{I_{C3}} = R_1 = 218.75\Omega$$
+
+Como se tom\'o una $I_O$ m\'axima mayor a la nominal para tener un margen, se normaliza sin problemas $R_1$ hacia arriba, entonces:
+$$R_1(N) = 220\Omega$$
+
+Tomando una corriente de polarizaci\'on en directa para los diodos de $I_F = 5mA$, se tiene (despreciando la corriente de base de $T_3$):
+
+\begin{equation}
+V_R - 2V_D - I_FR_6 = 0
+\label{eqn:R6_relation}
+\end{equation}
+
+Para definir la m\'inima $V_R$, se comsidera el caso donde el circuito entrega la m\'axima corriente para la m\'axima $V_O$, de manera tal que los transistores sigan funcionando en modo activo. Para ello se plantea:
+
+$$V_R > V_{O_{MAX}} + I_{O_{MAX}}R_A + V_{BE2_{ON}} + V_{CE3_{SAT}} + V_D$$
+
+Siendo de las hojas de datos de los transistores $V_{BE2_{ON}} = 1.8V$ y $V_{CE3_{SAT}} = 0.7V$, con $V_D = 0.7V$. Como se ver\'a en el dise\~no de la protecci\'on, $R_A$ tendr\'a un valor del orden de $1\Omega$, por lo que entonces se tiene:
+
+$$V_R > 10V + 1.5V + 1.8V + 0.7 + 0.7V = 14.7V$$
+
+Definiendo entonces una $V_R = 15V$. De la ecuaci\'on (\ref{eqn:R6_relation}) podemos despejar ahora el valor de $R_6$:
+
+$$\frac{V_R - 2V_D}{I_F} = R_6 = 2.72K\Omega \Longrightarrow R_6(N) = 2.7K\Omega$$ 
+
+
 \subsection{Generador}
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.34]{Imagenes/Generador.png}
+\par\end{centering}
+\caption{Circuito del generador}
+
+\end{figure}
+
+Realizando un planeto similar al pre-regulador, se seleccionan $D_3 = D_4 = 1N4148$. Se fija una corriente $I_{C5}$, de manera que el diodo zener reciba una corriente constante, y por ende la $V_Z$ no sufra variaciones importantes. Para no requerir una entrada $V_R$ m\'as grande, se utiliz\'o un diodo zener de baja tensi\'on de regulaci\'on, en este caso $V_Z = 2.7V$, donde el $DZ_1 = 1N5223$. Con la ecuaci\'on de malla:
+
+$$2V_D - V_{BE5_{ON}} - I_{C5}R_2 = 0$$
+
+Para el zener, de la hoja de datos del fabricante, se tiene que $I_{ZK} = 0.25mA$. Se supone una corriente de polarizaci\'on inversa de $I_R = 5mA$ (de manera tal que sea mayor a la m\'inima $I_{ZK}$ mencionada), que ser\'a aproximadamente igual a $I_{C5}$. Se despeja entonces $R_2$ de la ecuaci\'on anterior y con la corriente impuesta se calcula su valor:
+
+$$\frac{2V_D - V_{BE5_{ON}}}{I_{C5}} = R_2 = 140\Omega \Longrightarrow R_2(N) = 120\Omega$$
+
+Dado que el circuito es similar al del pre-regulador, se utiliz\'o por simplicidad el mismo transistor PNP, es decir que $T_5 = BC327$.
+
+Con el mismo criterio, se supone una $I_F = 5mA$, de manera tal que obtenemos para $R_8$ el mismo valor que $R_6$, entonces $R_8(N) = 2.7K\Omega$.
+
+\newpage
 
 \subsection{Detector}
 
+Analizando el circuito por realimentaci\'on negativa, se pueden identificar los bloques de 'amplificador', 'realimentador' y 'generador':
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.34]{Imagenes/CircuitoConFeed.png}
+\par\end{centering}
+\caption{An\'alisis por realimentaci\'on negativa}
+
+\end{figure}
+
+A la salida se muestrea tensi\'on y a la entrada se suma tensi\'on, por lo que el par\'ametro estabilizado resulta:
+
+$$PE = \frac{V_O}{V_G} = \frac{1}{f} \cdot \frac{|T|}{1+|T|}$$
+
+Donde $|T| = |a\cdot f|$. Asumiendo que $|T|$ es lo suficientemente grande:
+
+$$\frac{V_O}{V_G} \simeq \frac{1}{f}$$
+
+
+Por lo que hallando $f$ tendremos la relaci\'on entre la tens\'on de salida en funci\'on de la del generador, que es la $V_Z$.
+
+$$f = \left. \frac{\textrm{Magnitud que sumo}}{\textrm{Magnitud que muestreo}} \right|_{\textrm{Par\'ametro com\'un a la entrada = 0}}$$
+\\
+Para hallar $f$ planteamos el cuadripolo correspondiente:
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.34]{Imagenes/CuadripoloF.png}
+\par\end{centering}
+\caption{Modelo del cuadripolo $f$}
+
+\end{figure}
+
+Dado que $R_4$ es un potenci\'ometro, se la representa en dos partes ($0 \leq K \leq 1$). Entonces se tiene:
+
+$$f = \left. \frac{V_1}{V_2} \right|_{I_1=0} = \frac{R_4 \cdot K + R_5}{R_3 + R_4 + R_5}$$
+
+Seg\'un $K$ valga 0 o 1, tendremos $V_O$ m\'axima o m\'inima:
+
+$$
+\left\lbrace
+\begin{array}{l}
+V_{O_{MIN}} = V_G \cdot \dfrac{R_3+R_4+R_5}{R_4+R_5}\\ \\
+V_{O_{MAX}} = V_G \cdot \dfrac{R_3+R_4+R_5}{R_5}
+\end{array}
+\right.
+$$
+
+Para el dise\~no, mediante correcciones con simulaci\'on y prueba en protoboard, se tom\'o un margen m\'as amplio para $V_O$ respecto del nominal. Se utiliz\'o entonces como resultado de dichas pruebas un rango $3.9V \leq V_O \leq 10.4V$. Dividiendo ambas ecuaciones se puede despejar $R_5$ en funci\'on de $R_4$, resultando:
+
+$$R_5 = \frac{3}{5} \cdot R_4$$
+
+Tomando un potenci\'ometro nominal, se define $R_4(N) = 10K\Omega$, por lo que resulta $R_5 = 6K\Omega$. Normalizando, se tiene:
+
+$$R_5(N) = 12K\Omega \textrm{ // } 12K\Omega$$
+
+De la segunda ecuaci\'on se despeja $R_3$, obteniendo:
+
+$$\left(\frac{V_{O_{MAX}}}{V_G}\right)R_5 - R_5 - R_4 = R_3 \Longrightarrow R_3 = 7.11K\Omega$$
+
+Normalizando se tiene que: 
+
+$$R_3(N) = 6.8K\Omega + 330\Omega$$
+
+
 \subsection{Amplificador de error}
 
-\subsection{Rango de carga $R_L$}
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.5]{Imagenes/CircuitoError.png}
+\par\end{centering}
+\caption{Circuito del amplificador de error}
+
+\end{figure}
+
+
+El amplificador de error se compone del operacional m\'as el transistor $T_1$. Dado que a la entrada de la fuente s\'olo se dispone de una s\'ola tensi\'on $V_R$ positiva, se debi\'o utilizar un operacional que pueda funcionar con fuente simple. Adem\'as, su ganancia a lazo abierto debe ser grande para que la ganancia de lazo $|T|$ sea grande, y valga la suposici\'on realizada anteriormente para el diseño del detector. Tambi\'en el ancho de banda del operacional no debe ser muy grande, para reducir la posibilidad de tener oscilaciones a la salida del circuito (esto \'ultimo se trata en la secci\'on de ganacia de lazo y su compensaci\'on).\par
+En base a esto, el operacional seleccionado es el $LM358$.\par
+El transistor $T_1$ cumple la funci\'on de realizar la inversi\'on para que la realimentaci\'on resulte negativa (conectando al operacional como no inversor). Por otra parte, al estar configurado como emisor com\'un, aumenta m\'as la ganancia de lazo. \par
+El transistor seleccionado finalmente fue $T_1 = BC548C$. Dado su alto valor de $\beta$ no exige corriente a la salida del operacional.\par
+La resistencia $R_7$ se añadi\'o para que el operacional entregue una tensi\'on mayor a la $V_{BE1_{ON}}$, de manera tal que se encuentre con un cierto margen por encima de los $0V$, dado que se lo aliment\'o con fuente simple. Se determin\'o un valor adecuado para ella mediante la simulaci\'on, de manera tal que el circuito funcionara correctamente, resultando: 
+
+$$R_7(N) = 100K\Omega$$
+
+\newpage
+
+\subsection{Protecci\'on}
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.4]{Imagenes/Proteccion.png}
+\par\end{centering}
+\caption{Circuito de la protecci\'on Foldback}
+
+\end{figure}
+
+La protecci\'on utilizada se denomina Foldback. Mientras la $R_L$ sea mayor a la m\'inima en regulaci\'on, la tensi\'on $V_{BE4} < V_{BE4_{ON}}$, por lo que $T_4$ no se enciende y la protecci\'on no incide en el circuito. Cuando se disminuye la carga $R_L$ por debajo de la m\'inima que puede conectarse en regulaci\'on, el lazo de realimentaci\'on se abre y el transistor $T_4$ comienza a conducir, tomando parte de la corriente que va a la base de $T_2$ (dado que $I_{PRE-REG}$ es constante) que es la indicada como $I_{SINK}$, y la tensi\'on y corrientes de salida pasan a estar determinados por una expresi\'on lineal, donde a medida que la $V_O$ disminuye, la $I_O$ tambi\'en lo hace. De esta manera, veremos que la $I_{O_{CC}} < I_{O_{MAX}}$.\par
+Para observar esto, se plantea la malla que contiene a $V_{BE4_{ON}}$:
+
+$$(V_O + I_O \cdot R_A)\cdot \frac{R_B}{R_B+R_C} + V_{BE4_{ON}} = I_OR_A$$
+
+Como no se requiere amplificar corriente sino que el objetivo es sensar $I_O$ y derivar corriente de la base de $T_2$, se elije $T_4 = BC337$, cuyo $\beta_{MIN} = 100$ (se tiene entonces que $V_{BE4_{ON}} = 0.7V$). Para simplificar la notaci\'on, llamamos $\alpha = \dfrac{R_B}{R_B+RC}$. Despejando $I_O$ resulta:
+
+$$I_O = \frac{V_O \cdot \alpha + V_{BE4_{ON}}}{R_A(1-\alpha)}$$
+
+EL gr\'afico caracter\'istico resultante es el siguiente:
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.5]{Imagenes/FB_Generico.png}
+\par\end{centering}
+\caption{Caracter\'istica de salida ideal con protecci\'on Foldback}
+
+\end{figure}
+
+Como la funci\'on de $R_A$ es \'unicamente sensar la corriente de salida $I_O$, no debe ser muy grande para no perder demasiada potencia en ella. Teniendo en cuenta que:
+
+\begin{equation}
+\left. R_{L_{MIN}} \right|_{REG} = \left. \frac{V_{O_{MAX}}}{I_{O_{MAX}}} \right|_{REG} = 6.4\Omega
+\label{eqn:RL_MIN}
+\end{equation}
+
+Un criterio adecuado para seleccionar $R_A$ es que sea 10 veces menor a la $R_L$ m\'inima en regulaci\'on. Pero como puede observarse de la ecuaci\'on (\ref{eqn:RL_MIN}), al estar definidos $V_{O_{MAX}}$ e $I_{O_{MAX}}$ en regulaci\'on, queda formada una relaci\'on de compromiso entre $\alpha$ y $R_A$, que tambi\'en en consecuencia definir\'a la $I_{O_{CC}}$, y por ende el punto donde la potencia disipada en $T_2$ sea m\'axima (esto \'ultimo se tratar\'a en la secci\'on siguiente). Si de la ecuaci\'on (\ref{eqn:RL_MIN}) despejamos $\alpha$:
+
+\begin{equation}
+\alpha = \frac{I_O \cdot R_A - 0.7V}{V_O + I_O \cdot R_A}
+\label{eqn:alpha}
+\end{equation}
+
+De la ecuaci\'on (\ref{eqn:alpha}) vemos que, en referencia a lo mencionado anteriormente, si se reemplaza por $V_{O_{MAX}}$ e $I_{O_{MAX}}$, $R_A$ no puede valer cualquier cosa sino que tendr\'a un valor m\'inimo, tal que $\alpha > 0$ (porque es un cociente de un divisor resistivo).\par
+Seleccionando $R_A = 1\Omega$, con la $I_{O_{MAX}} = 1.6A$ que se dio de margen previamente, se tiene que la potencia m\'axima que debe disipar $R_A$ es $R_A \cdot I^2_{O_{MAX}} = 2.56W$. Por lo que normalizando se tiene:
+
+$$R_A(N) = 1\Omega - 3W$$
+
+Reemplazando $V_{O_{MAX}}$, $I_{O_{MAX}}$ y $R_A(N)$ en la ecuaci\'on (\ref{eqn:alpha}) se obtiene:
+
+$$\frac{R_A \cdot I_{O_{MAX}}- 0.7V}{V_{O_{MAX}} + R_A \cdot I_{O_{MAX}}} = \alpha = 0.076$$
+
+Teniendo $\alpha$, se seleccionan en forma simple $R_B$ y $R_C$ para el divisor resistivo, de forma tal que:
+
+$$R_B(N) = 1K\Omega \hspace{2cm} R_C(N) = 12K\Omega$$
+
+Con el valor de $\alpha$ calculado, si $V_O = 0V$, la $I_O$ resultante es la de cortocircuito:
+
+$$I_{O_{CC}} = 0.76A$$
+
+
+\subsection{Disipaci\'on de potencia}
+
+Teniendo ya el circuito con los componentes seleccionados, resta definir la potencia m\'axima que disipar\'a $T_2$ y si requiere o no un disipador. 
 
 \subsection{Ganancia de lazo - Compensaci\'on}
 
+\newpage
+
 \section{Implementaci\'on - Resultados}
 
-CUADRO DE VALORES\\
-RENDIMIENTO\\
-IMPEDANCIA DE SALIDA POR MAXIMA TRANSFERENCIA DE POTENCIA BUSCANDO LA MITAD DE LA VO\\
+\subsection{Caracter\'istica $V_O(I_O)$}
+
+Utilizando el banco de pruebas, se registraron pares de valores $V_O$ - $I_O$ para trazar la curva caracter\'istica $V_O(I_O)$. Los valores tomados se muestran en la siguiente tabla.
+
+\begin{table}[!h]
+\begin{centering}
+
+\begin{tabular}[H]{|c|c|c|}
+\hline 
+RL & VO & IO\tabularnewline
+\hline 
+\hline 
+$\infty$ & $10.09V$ & $0A$\tabularnewline
+\hline 
+$28.3 \Omega$ & $10V$ & $0.37A$\tabularnewline
+\hline 
+$13.6 \Omega$ & $9.95V$ & $0.77A$\tabularnewline
+\hline 
+$8.5 \Omega$ & $9.7V$ & $1.21A$\tabularnewline
+\hline 
+$6.5 \Omega$ & $9.56V$ & $1.55A$\tabularnewline
+\hline 
+$5.3 \Omega$ & $5.63V$ & $1.2A$\tabularnewline
+\hline 
+$3.9 \Omega$ & $3.24V$ & $1A$\tabularnewline
+\hline 
+$0 \Omega (CC)$ & $0V$ & $0.76A$\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{Valores de $V_O(I_O)$ experimentales}
+
+\end{table}
+
+Con dichos valores, se compara ahora la caracter\'istica obtenida experimentalmente con la te\'orica y la simulada.
+
+\begin{figure}[!h]
+\begin{centering}
+ACA VA EL GRAFICO SUPERPUESTO DE VO IO
+\par\end{centering}
+\caption{Caracter\'istica $V_O(I_O)$}
+
+\end{figure}  
+
+\subsection{Rendimiento}
+
+Definimos el rendimiento de la fuente como la relaci\'on entre la m\'axima tensi\'on de salida $V_O$ y la m\'inima tensi\'on de entrada $V_R$, en porcentaje. Es decir:
+
+$$\eta \% = \frac{V_O}{V_R} \cdot 100$$ 
+
+Se calcula entonces el rendimiento con los valores de $V_O$ e $I_O$ te\'oricos, simulados y experimentales. Se considera como valor de $V_O$ te\'orico m\'aximo $10.2V$ (es decir, incluyendo el margen), y el simulado fue de $10.18V$.
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|c||c|c|c|}
+\hline
+& Te\'orico & Simulado & Experimental\\
+\hline 
+$\eta \%$ & 68\% & 67.9\% & 67.3\%\\
+\hline 
+\end{tabular}
+\end{center}
+
+\caption{Valores de rendimiento obtenidos}
+\end{table}
+
+\subsection{Impedancia de salida - $Z_O$}
+
+Para hallar la impedancia de salida, se modela la fuente como un generador ideal con una resistencia en serie (que ser\'a $Z_O$).
+
+PONER DIBUJO VOMAX ZO RL
+ 
+Al conectar una carga $R_L$, por el teorema de la m\'axima transferencia de potencia, la potencia entregada a $R_L$ ser\'a m\'axima cuando $R_L = Z_O$. En dicho caso, la tensi\'on sobre $R_L$ ser\'a entonces $\frac{VO_{MAX}}{2}$. Teniendo en cuenta que la protecci\'on en este caso estar\'a actuando, $I_O$ ser\'a funci\'on de $V_O$ de acuerdo a la expresi\'on hallada previamente:
+
+$$I_O = \frac{V_O \cdot \alpha + 0.7}{R_A \cdot (1-\alpha)}$$
+
+Teniendo en cuenta el valor de $VO_{MAX}$ te\'orico y el $\alpha$, se calcula la $I_O$ correspondiente. Por lo que entonces la $Z_O$ te\'orica ser\'a:
+
+$$I_O = 1.18A \Longrightarrow Z_O = \frac{VO_{MAX}}{I_O} = 4.32\Omega$$
+
+Para hallar la $Z_O$ simulada y experimental, se busca que la tensi\'on de salida sea la mitad de la $VO_{MAX}$, y se mide la corriente resultante, efectuando el cociente entre ambos. Se comparan los distintos valores en el siguiente cuadro.
+
+\begin{table}[!h]
+
+\begin{center}
+\begin{tabular}{|c||c|c|c|}
+\hline
+& Te\'orico & Simulado & Experimental\\
+\hline 
+$V_O$ & $10.2V$ & $5.09V$ & $5.1V$\\
+\hline 
+$I_O$ &  $1.18A$    &   $1.17A$     & $1.38A$\\
+\hline
+$Z_O$ &   $4.32\Omega$   &    $4.36\Omega$    & $3.7\Omega$\\
+\hline
+\end{tabular}
+\end{center}
+
+\caption{Valores de $Z_O$ obtenidos}
+\end{table}
+
+
+
+\subsection{PSRR - Power Supply Rejection Ratio}
 PSRR\\
 
 

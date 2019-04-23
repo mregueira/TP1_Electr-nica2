@@ -1,16 +1,19 @@
 \select@language {spanish}
 \contentsline {section}{\numberline {1}Objetivos - Par\'ametros del dise\~no}{2}
 \contentsline {section}{\numberline {2}Dise\~no del sistema}{2}
-\contentsline {subsection}{\numberline {2.1}Circuito de control}{2}
-\contentsline {subsubsection}{\numberline {2.1.1}Protecci\'on}{2}
-\contentsline {subsubsection}{\numberline {2.1.2}Disipaci\'on de potencia}{2}
-\contentsline {subsection}{\numberline {2.2}Pre-regulador}{2}
-\contentsline {subsection}{\numberline {2.3}Generador}{2}
-\contentsline {subsection}{\numberline {2.4}Detector}{2}
-\contentsline {subsection}{\numberline {2.5}Amplificador de error}{2}
-\contentsline {subsection}{\numberline {2.6}Rango de carga $R_L$}{2}
-\contentsline {subsection}{\numberline {2.7}Ganancia de lazo - Compensaci\'on}{2}
-\contentsline {section}{\numberline {3}Implementaci\'on - Resultados}{2}
-\contentsline {section}{\numberline {4}Dise\~no de PCB - Consideraciones}{3}
-\contentsline {subsection}{\numberline {4.1}Placa fuente}{3}
-\contentsline {subsection}{\numberline {4.2}Placa de banco de pruebas}{3}
+\contentsline {subsection}{\numberline {2.1}Circuito de control}{3}
+\contentsline {subsection}{\numberline {2.2}Pre-regulador}{3}
+\contentsline {subsection}{\numberline {2.3}Generador}{4}
+\contentsline {subsection}{\numberline {2.4}Detector}{5}
+\contentsline {subsection}{\numberline {2.5}Amplificador de error}{6}
+\contentsline {subsection}{\numberline {2.6}Protecci\'on}{7}
+\contentsline {subsection}{\numberline {2.7}Disipaci\'on de potencia}{8}
+\contentsline {subsection}{\numberline {2.8}Ganancia de lazo - Compensaci\'on}{8}
+\contentsline {section}{\numberline {3}Implementaci\'on - Resultados}{9}
+\contentsline {subsection}{\numberline {3.1}Caracter\'istica $V_O(I_O)$}{9}
+\contentsline {subsection}{\numberline {3.2}Rendimiento}{9}
+\contentsline {subsection}{\numberline {3.3}Impedancia de salida - $Z_O$}{9}
+\contentsline {subsection}{\numberline {3.4}PSRR - Power Supply Rejection Ratio}{10}
+\contentsline {section}{\numberline {4}Dise\~no de PCB - Consideraciones}{10}
+\contentsline {subsection}{\numberline {4.1}Placa fuente}{10}
+\contentsline {subsection}{\numberline {4.2}Placa de banco de pruebas}{10}
