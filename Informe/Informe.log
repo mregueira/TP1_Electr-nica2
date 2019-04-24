@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2018.4.3)  24 APR 2019 10:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2018.4.3)  24 APR 2019 11:59
 entering extended mode
 **./Informe.tex
 (Informe.tex
@@ -1087,40 +1087,51 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 6.43999pt on input line 392.
 
+<Imagenes/FB_Real.png, id=59, 436.9926pt x 204.765pt>
+File: Imagenes/FB_Real.png Graphic file (type png)
+
+<use Imagenes/FB_Real.png>
+Package pdftex.def Info: Imagenes/FB_Real.png used on input line 468.
+(pdftex.def)             Requested size: 218.49576pt x 102.38223pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 492--493
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--499
 
  []
 
-[10] <Imagenes/Fuente3D.png, id=62, 717.27975pt x 445.665pt>
+[10] <Imagenes/Fuente3D.png, id=63, 717.27975pt x 445.665pt>
 File: Imagenes/Fuente3D.png Graphic file (type png)
 
 <use Imagenes/Fuente3D.png>
-Package pdftex.def Info: Imagenes/Fuente3D.png used on input line 512.
+Package pdftex.def Info: Imagenes/Fuente3D.png used on input line 518.
 (pdftex.def)             Requested size: 322.7729pt x 200.5474pt.
 
-<Imagenes/Banco3D.png, id=63, 690.78075pt x 378.81525pt>
+<Imagenes/Banco3D.png, id=64, 690.78075pt x 378.81525pt>
 File: Imagenes/Banco3D.png Graphic file (type png)
 
 <use Imagenes/Banco3D.png>
-Package pdftex.def Info: Imagenes/Banco3D.png used on input line 524.
+Package pdftex.def Info: Imagenes/Banco3D.png used on input line 530.
 (pdftex.def)             Requested size: 310.84846pt x 170.46527pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[11 <./Imagenes/Fuente3D.png>] [12 <./Imagenes/Banco3D.png>] (Informe.aux
+[11 <./Imagenes/FB_Real.png> <./Imagenes/Fuente3D.png>] [12 <./Imagenes/Banco3D
+.png>] (Informe.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 5207 strings out of 493333
- 69025 string characters out of 3136603
- 142561 words of memory out of 3000000
- 8560 multiletter control sequences out of 15000+200000
+ 5212 strings out of 493333
+ 69135 string characters out of 3136603
+ 143561 words of memory out of 3000000
+ 8564 multiletter control sequences out of 15000+200000
  75604 words of font info for 101 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,11n,43p,957b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1132,9 +1143,9 @@ s (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on Informe.pdf (12 pages, 2703126 bytes).
+Output written on Informe.pdf (12 pages, 2815406 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
+ 96 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
