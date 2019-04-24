@@ -467,6 +467,7 @@ PONER GRAFICO
 
 En el caso experimental, como dicha pendiente puede cambiar en el trayecto desde $0A$ hasta $I_{O_{MAX}}$, se tomo de referencia el caso con carga $R_L = \infty$ y un caso intermedio, donde pudiera medirse m\'as claramente una $V_O$ diferente al primer caso, para obtener un estimador de $Z_O$. Dichos valores tomados se indican en el siguiente cuadro, obteniendo un estimador de $Z_O$ experimental comparado con el te\'orico y el simulado.
 
+
 \begin{table}[!h]
 
 \begin{center}
@@ -487,18 +488,43 @@ $Z_O$ &   $0\Omega$   &    $1.2m\Omega$    & $0.2\Omega$\\
 \end{table}
 
 
-
 \subsection{PSRR - Power Supply Rejection Ratio}
 PSRR\\
 
-
+\newpage
 
 \section{Dise\~no de PCB - Consideraciones}
 
-SARASA DE TAMECOS, PISTAS, ESPACIO PARA DISIPADOR, CONECTORES, MODELO 3D DE AMBAS PLACAS
+Al momento de realizar la implementaci\'on en PCB, como es una placa de potencia, se tienen en cuenta ciertas cuestiones en relaci\'on al ruteo y espacio de componentes.
 
 \subsection{Placa fuente}
 
+Para implementar la fuente, teniendo en cuenta los requerimientos de espacio y potencia:
+
+\begin{itemize}
+\item Dado que el transistor lleva un disipador, se lo coloc\'o cerca de uno de los bordes, de manera tal que el disipador quede hacia afuera.
+\item Para la alimentaci\'on y salida, se utilizaron conectores polarizados,
+\item Se incluyeron soportes tipo tameco en las esquinas para mantener el PCB en pie.
+\end{itemize}
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.45]{Imagenes/Fuente3D.png}
+\par\end{centering}
+\caption{Modelo 3D del PCB de la fuente}
+
+\end{figure}
+
 \subsection{Placa de banco de pruebas}
+
+Para poder realizar mediciones con carga $R_L$ sobre la curva de foldback, se implement\'o una placa como banco de pruebas con resistencias de potencia de $15\Omega$, $10\Omega$, $1\Omega$ y $0.47\Omega$. De esta manera se logra tener cargas resistivas puras, evitando utilizar un re\'ostato debido a la gran inductancia que posee.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.45]{Imagenes/Banco3D.png}
+\par\end{centering}
+\caption{Modelo 3D del PCB del banco de pruebas}
+
+\end{figure}
 
 \end{document}
