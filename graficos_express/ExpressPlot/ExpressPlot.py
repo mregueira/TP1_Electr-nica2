@@ -66,6 +66,7 @@ class CombinedPlot:
     def addSpiceBodePlot(self, filename, name, color, mode, color2 = None, name2 = None):
         spiceData = self.getSpiceData(filename)
         suma = 0
+
         for i in range(len(spiceData["pha"])):
             if i > 0 and spiceData["pha"][i]+suma > 100 and spiceData["pha"][i-1] < -100:
                 suma += -360
@@ -79,8 +80,8 @@ class CombinedPlot:
             ydata = spiceData["pha"]
         elif mode == BOTH:
             xdata = spiceData["f"]
-            ydata = spiceData["abs"]
-            ydata2 = spiceData["pha"]
+            ydata2 = spiceData["abs"]
+            ydata = spiceData["pha"]
         else:
             raise Exception("Invalid mode ", mode, " selected")
 
@@ -99,10 +100,10 @@ class CombinedPlot:
                 {
                     "signal": signal,
                     "signal2": signal2,
-                    "color": color,
-                    "name": name,
-                    "color2": color2,
-                    "name2": name2
+                    "color": color2,
+                    "name": name2,
+                    "color2": color,
+                    "name2": name
                 }
             )
         return self
@@ -251,6 +252,7 @@ class CombinedPlot:
                     plot["color"]
                 )
             if "signal2" in plot:
+                #print(plot["signal2"].values[0])
                 ax2.semilogx(
                     plot["signal2"].xvar,
                     plot["signal2"].values,
@@ -274,11 +276,17 @@ class CombinedPlot:
         #plt.tick_params(axis='x', which='minor', bottom=False)
 
         ax1.set_xlabel(self.xAxisTitle)
-        ax1.set_ylabel(self.yAxisTitle)
+
 
         if self.y2AxisTitle != "":
             ax2.set_ylabel(self.y2AxisTitle)
+
+        ax1.set_ylabel(self.yAxisTitle)
+
         self.fig = fig
+
+        self.ax1 = ax1
+        self.ax2 = ax2
 
         #fig.savefig(filename, dpi=300)
 
@@ -297,25 +305,40 @@ class CombinedPlot:
 
         return self
 
-    def addDataTip(self, titleX, titleY, unitX, unitY):
+    def addDataTip(self, titleX, titleY, unitX, unitY, ax):
         #print("adding")
-        self.plot()
+        #self.plot()
 
         datacursor(
+            axes=ax,
             display='multiple',
             tolerance=30,
             formatter=(titleX+": {x:.3e}  "+unitX+" \n"+titleY+":{y:.1f} "+unitY).format,
             draggable=True
         )
-        plt.show()
 
+        return self
+
+    def show(self):
+        plt.show()
         return self
 
     def addDataTipBodePha(self):
         self.addDataTip(
+            ax=self.ax1,
             titleX= "Freq",
             titleY= "Fase",
             unitX= "Hz",
             unitY = "Grados"
+        )
+        return self
+
+    def addDataTipBodeMag(self):
+        self.addDataTip(
+            ax=self.ax2,
+            titleX="Freq",
+            titleY="Amp",
+            unitX="Hz",
+            unitY="Db"
         )
         return self
