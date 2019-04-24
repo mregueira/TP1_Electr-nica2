@@ -8,12 +8,12 @@
 \contentsline {subsection}{\numberline {2.5}Amplificador de error}{6}
 \contentsline {subsection}{\numberline {2.6}Protecci\'on}{7}
 \contentsline {subsection}{\numberline {2.7}Disipaci\'on de potencia}{8}
-\contentsline {subsection}{\numberline {2.8}Ganancia de lazo - Compensaci\'on}{8}
-\contentsline {section}{\numberline {3}Implementaci\'on - Resultados}{9}
-\contentsline {subsection}{\numberline {3.1}Caracter\'istica $V_O(I_O)$}{9}
-\contentsline {subsection}{\numberline {3.2}Rendimiento}{9}
-\contentsline {subsection}{\numberline {3.3}Impedancia de salida - $Z_O$}{9}
+\contentsline {subsection}{\numberline {2.8}Ganancia de lazo - Compensaci\'on}{9}
+\contentsline {section}{\numberline {3}Implementaci\'on - Resultados}{10}
+\contentsline {subsection}{\numberline {3.1}Caracter\'istica $V_O(I_O)$}{10}
+\contentsline {subsection}{\numberline {3.2}Rendimiento}{10}
+\contentsline {subsection}{\numberline {3.3}Impedancia de salida - $Z_O$}{10}
 \contentsline {subsection}{\numberline {3.4}PSRR - Power Supply Rejection Ratio}{10}
-\contentsline {section}{\numberline {4}Dise\~no de PCB - Consideraciones}{10}
-\contentsline {subsection}{\numberline {4.1}Placa fuente}{10}
-\contentsline {subsection}{\numberline {4.2}Placa de banco de pruebas}{10}
+\contentsline {section}{\numberline {4}Dise\~no de PCB - Consideraciones}{11}
+\contentsline {subsection}{\numberline {4.1}Placa fuente}{11}
+\contentsline {subsection}{\numberline {4.2}Placa de banco de pruebas}{11}

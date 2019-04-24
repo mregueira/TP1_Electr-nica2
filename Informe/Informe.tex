@@ -171,14 +171,14 @@ $$f = \left. \frac{V_1}{V_2} \right|_{I_1=0} = \frac{R_4 \cdot K + R_5}{R_3 + R_
 
 Seg\'un $K$ valga 0 o 1, tendremos $V_O$ m\'axima o m\'inima:
 
-$$
+\[
 \left\lbrace
 \begin{array}{l}
 V_{O_{MIN}} = V_G \cdot \dfrac{R_3+R_4+R_5}{R_4+R_5}\\ \\
 V_{O_{MAX}} = V_G \cdot \dfrac{R_3+R_4+R_5}{R_5}
 \end{array}
 \right.
-$$
+\]
 
 Para el dise\~no, mediante correcciones con simulaci\'on y prueba en protoboard, se tom\'o un margen m\'as amplio para $V_O$ respecto del nominal. Se utiliz\'o entonces como resultado de dichas pruebas un rango $3.9V \leq V_O \leq 10.4V$. Dividiendo ambas ecuaciones se puede despejar $R_5$ en funci\'on de $R_4$, resultando:
 
@@ -288,18 +288,102 @@ Teniendo ya el circuito con los componentes seleccionados, resta definir la pote
 En general, la potencia que disipa el transistor $T_2$ est\'a dada por:
 
 \begin{equation}
-PD_{T_2} = V_{CE_2} \cdot I_O = (V_R - V_O - R_A \cdot I_O) \cdot I_O
+P_D(T_2) = V_{CE_2} \cdot I_O = (V_R - V_O - R_A \cdot I_O) \cdot I_O
+\label{eqn:pdT2}
 \end{equation}
 
-A medida que se disminuye $R_L$ desde el infinito hasta la m\'inima de regulaci\'on, la $V_O$ se mantiene constante y la $I_O$ aumenta, por lo que la $PD_{T_2}$ va en aumento en forma mon\'otona. Cuando la $R_L < R_{L_{MIN}}$, se sale de la regulaci\'on y se entra en la recta de foldback. Mientras se sigue disminuyendo $R_L$, la $V_O$ comienza a disminuir por lo que la $V_{CE_2}$ aumenta; pero a su vez la $I_O$ disminuye. Si se reemplaza la expresi\'on de $I_O$ de la ecuaci\'on (\ref{eqn:io_fb}) de foldback, queda:
+A medida que se disminuye $R_L$ desde el infinito hasta la m\'inima de regulaci\'on, la $V_O$ se mantiene constante y la $I_O$ aumenta, por lo que la $PD_{T_2}$ va en aumento en forma mon\'otona. Cuando la $R_L < R_{L_{MIN}}$, se sale de la regulaci\'on y se entra en la recta de foldback. Mientras se sigue disminuyendo $R_L$, la $V_O$ comienza a disminuir por lo que la $V_{CE_2}$ aumenta; pero a su vez la $I_O$ disminuye. Si se reemplaza la expresi\'on de $I_O$ de la ecuaci\'on (\ref{eqn:io_fb}) de foldback, en la expresi\'on de potencia disipada (\ref{eqn:pdT2}):
 
 \[
-PD_{T_2} = \left( V_R - V_O - R_A \cdot \frac{V_O \cdot \alpha + 0.7V}{R_A(1-\alpha)}\right) \cdot \frac{V_O \cdot \alpha + 0.7V}{R_A(1-\alpha)}
+P_D(T_2) = \left( V_R - V_O - R_A \cdot \frac{V_O \cdot \alpha + 0.7V}{R_A(1-\alpha)}\right) \cdot \frac{V_O \cdot \alpha + 0.7V}{R_A(1-\alpha)}
 \]  
 
+Queda entonces la $P_D(T_2)$ como una funci\'on cuadr\'atica de $V_O$, con concavidad hacia abajo. Esto quiere decir que la potencia m\'axima se encuentra en la $V_O$ del v\'ertice de la par\'abola. En una ecuaci\'on cuadr\'atica general:
 
+\[
+ax^2 + bx + c \Longrightarrow x_v = -\frac{b}{2a} 
+\]
 
+Si se hace la distributiva de los t\'erminos de la expresi\'on de $P_D(T_2)$ y se los agrupa adecuadamente para tener el formato anterior con los coeficientes $a$, $b$, y $c$, se puede obtener la $V_{O_v}$ (donde estar\'a el m\'aximo de la $P_D(T_2)$):
+
+\[
+V_O \biggr|_{PD_{MAX}} = \frac{V_R \cdot \alpha \cdot (1-\alpha) - 0.7V \cdot (1+\alpha)}{2\alpha} = 1.97V
+\]
+
+Reemplazando en la expresi\'on de $I_O$ de la ecuaci\'on (\ref{eqn:io_fb}), se obtiene:
+
+\[
+I_O \biggr|_{PD_{MAX}} = 0.92A \Longrightarrow P_D(T_2) \biggr|_{MAX} = 11.14W
+\]
+ 
+Como la potencia m\'axima total que admite disipar el $TIP112$ es de $50W$, no hay inconveniente en utilizarlo. Con esta informaci\'on calculamos ahora la potencia m\'axima sin disipador que soporta el transistor. De la hoja de datos del fabricante se tiene que:
+
+\[
+T_j = 150^{\circ}C  \hspace{2cm} R_{\theta ja} = 62.5 \left( \frac{^{\circ}C}{W}\right) \hspace{2cm} R_{\theta jc} = 2.5 \left(\frac{^{\circ}C}{W}\right)
+\] 
+ 
+\[
+\left\lbrace
+\begin{array}{l}
+R_{\theta ja}: \textrm{Resistencia t\'ermica entre juntura y ambiente} \\
+R_{\theta jc}: \textrm{Resistencia t\'ermica entre juntura y carcasa del transistor}
+\end{array}
+\right.
+\] 
+ 
+\newpage 
+ 
+Suponiendo una $T_a = 25^{\circ}C$, se tiene:
+
+\[
+P_D(T_2) \biggr|_{S/D} = \frac{T_j - T_a}{R_{\theta ja}} = 2W
+\]
+ 
+La potencia que se requiere disipar ($11.14W$) es entonces mayor a la m\'axima sin disipador, por lo tanto se necesita incorporarle uno. Con disipador, se tiene:
+
+\[
+P_D(T_2) \biggr|_{C/D} = \frac{T_j - T_a}{R_{\theta jc} + R_{\theta cd} + R_{\theta da}}
+\]
+ 
+\[
+\left\lbrace
+\begin{array}{l}
+R_{\theta cd}: \textrm{Resistencia t\'ermica entre carcasa del transistor y disipador} \\
+R_{\theta da}: \textrm{Resistencia t\'ermica entre disipador y el ambiente}
+\end{array}
+\right.
+\] 
+
+Utilizando pasta t\'ermica, la $R_{\theta cd} \approx 1(^{\circ}C/W)$, y la $R_{\theta da}$ m\'axima es la que se quiere averiguar para seleccionar el modelo de disipador a usar. Despej\'andola de la ecuaci\'on anterior:
+
+\[
+R_{\theta da} = \frac{T_j - T_a}{P_D(T_2)} - R_{\theta jc} - R_{\theta cd} = 7.45 \left(\frac{^{\circ}C}{W}\right)
+\]
+ 
+Se necesita entonces un disipador cuya $R_{\theta da}$ sea menor a la obtenida. Un disipador sencillo que cumple esta caracter\'istica con margen es el ZD9, cuya $R_{\theta da} = 3.8(^{\circ}C/W)$, por lo que se le incorpor\'o dicho disipador a $T_2$. 
+ 
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[scale=0.7]{Imagenes/ZD9.jpg}
+\par\end{centering}
+\caption{Disipador ZD9 comercial}
+
+\end{figure}
+ 
 \subsection{Ganancia de lazo - Compensaci\'on}
+
+Utilizando LTSpice, se simula la respuesta en frecuencia de la ganancia de lazo, con el script provisto por la c\'atedra. El objetivo es verificar que se tenga un margen de fase y de amplitud adecuados para disminuir la posibilidad de oscilaci\'on de la fuente. En caso de no tenerlo, quiere decir que habr\'a alguna frecuencia para la cual la ganancia del lazo es mayor o igual a 1 cuando la fase cruza por los $\pm 180^{\circ}$ (criterio de Barkhausen para que se mantenga un oscilador). En ese caso se agregar\'an capacitores para compensarla, haciendo que se aten\'ue m\'as con la frecuencia, evitando que se cumpla el criterio en cuesti\'on.
+Simulando el circuito original sin compensaci\'on con $R_L = \infty$ se obtiene:
+
+GRAFICO DE SPICE PEDIR A ARI
+
+Como se indica en la respuesta obtenida, para cuando la fase cruza los $-180^{\circ}$ la ganacia es de $21dB$, que est\'a por encima de los $0dB$. Por lo tanto, hay altas probabilidades de que el circuito oscile sin carga. Como la oscilaci\'on ocurre a alta frecuencia, se observar\'ia la oscilaci\'on montada sobre la tensi\'on $V_O$ en DC esperada (seg\'un el valor del potenci\'ometro $R_4$). Con un volt\'imetro, no es posible observar esto dado que el valor medido es el valor medio, que ser\'ia la $V_O$ en DC esperada.
+
+Para compensar esto, se coloc\'o un capacitor de $1uF$ entre la entrada no inversora del operacional y el colector del transistor $T_1$ del amplificador de error, m\'as un capacitor de $10uF$ a la salida del circuito (es decir en $V_O$), simulando en LTSpice para verificar que se realice la compensaci\'on.
+
+PEDIR GRAFICO CON LOS DOS CAPS, TARDA EN SIMULAR PERO LO HACE
+
+La respuesta en frecuencia resultante efectivamente logra cumplir con el objetivo de tener un margen de fase y de amplitud apropiados, disminuyendo la probabilidad de tener oscilaciones en la implementaci\'on real.
 
 \newpage
 
@@ -381,6 +465,8 @@ La caracter\'istica de tensi\'on real en general puede modelarse como se muestra
 
 PONER GRAFICO
 
+En el caso experimental, como dicha pendiente puede cambiar en el trayecto desde $0A$ hasta $I_{O_{MAX}}$, se tomo de referencia el caso con carga $R_L = \infty$ y un caso intermedio, donde pudiera medirse m\'as claramente una $V_O$ diferente al primer caso, para obtener un estimador de $Z_O$. Dichos valores tomados se indican en el siguiente cuadro, obteniendo un estimador de $Z_O$ experimental comparado con el te\'orico y el simulado.
+
 \begin{table}[!h]
 
 \begin{center}
@@ -388,11 +474,11 @@ PONER GRAFICO
 \hline
 & Te\'orico & Simulado & Experimental\\
 \hline 
-$\Delta V_O$ & $0V$ & $2mV$ & $0.53V$\\
+$\Delta V_O$ & $0V$ & $2mV$ & $10.09V-9.95V=0.14V$\\
 \hline 
-$I_O$ &  $1.5A$    &   $1.61A$     & $1.55A$\\
+$I_O$ &  $1.5A$    &   $1.61A$     & $0.77A - 0A = 0.77A$\\
 \hline
-$Z_O$ &   $0\Omega$   &    $1.24m\Omega$    & $0.34\Omega$\\
+$Z_O$ &   $0\Omega$   &    $1.2m\Omega$    & $0.2\Omega$\\
 \hline
 \end{tabular}
 \end{center}
