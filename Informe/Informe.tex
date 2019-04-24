@@ -255,7 +255,7 @@ EL gr\'afico caracter\'istico resultante es el siguiente:
 
 \begin{figure}[!ht]
 \begin{centering}
-\includegraphics[scale=0.5]{Imagenes/FB_Generico.png}
+\includegraphics[scale=0.6]{Imagenes/FB_Generico.png}
 \par\end{centering}
 \caption{Caracter\'istica de salida ideal con protecci\'on Foldback}
 
@@ -381,18 +381,32 @@ Se necesita entonces un disipador cuya $R_{\theta da}$ sea menor a la obtenida. 
 
 \end{figure}
  
+\newpage 
+ 
 \subsection{Ganancia de lazo - Compensaci\'on}
 
 Utilizando LTSpice, se simula la respuesta en frecuencia de la ganancia de lazo, con el script provisto por la c\'atedra. El objetivo es verificar que se tenga un margen de fase y de amplitud adecuados para disminuir la posibilidad de oscilaci\'on de la fuente. En caso de no tenerlo, quiere decir que habr\'a alguna frecuencia para la cual la ganancia del lazo es mayor o igual a 1 cuando la fase cruza por los $\pm 180^{\circ}$ (criterio de Barkhausen para que se mantenga un oscilador). En ese caso se agregar\'an capacitores para compensarla, haciendo que se aten\'ue m\'as con la frecuencia, evitando que se cumpla el criterio en cuesti\'on.
 Simulando el circuito original sin compensaci\'on con $R_L = \infty$ se obtiene:
 
-GRAFICO DE SPICE PEDIR A ARI
+\begin{figure}[!ht]
+\begin{centering}
+\includegraphics[scale=0.58]{Imagenes/Fuente_SinComp.png}
+\par\end{centering}
+\caption{Respuesta en frecuencia de la ganancia de lazo sin compensar}
+
+\end{figure}
 
 Como se indica en la respuesta obtenida, para cuando la fase cruza los $-180^{\circ}$ la ganacia es de $21dB$, que est\'a por encima de los $0dB$. Por lo tanto, hay altas probabilidades de que el circuito oscile sin carga. Como la oscilaci\'on ocurre a alta frecuencia, se observar\'ia la oscilaci\'on montada sobre la tensi\'on $V_O$ en DC esperada (seg\'un el valor del potenci\'ometro $R_4$). Con un volt\'imetro, no es posible observar esto dado que el valor medido es el valor medio, que ser\'ia la $V_O$ en DC esperada.
 
 Para compensar esto, se coloc\'o un capacitor de $1uF$ entre la entrada no inversora del operacional y el colector del transistor $T_1$ del amplificador de error, m\'as un capacitor de $10uF$ a la salida del circuito (es decir en $V_O$), simulando en LTSpice para verificar que se realice la compensaci\'on.
 
-PEDIR GRAFICO CON LOS DOS CAPS, TARDA EN SIMULAR PERO LO HACE
+\begin{figure}[!ht]
+\begin{centering}
+\includegraphics[scale=0.58]{Imagenes/Fuente_ConComp.png}
+\par\end{centering}
+\caption{Respuesta en frecuencia de la ganancia de lazo compensada}
+
+\end{figure}
 
 La respuesta en frecuencia resultante efectivamente logra cumplir con el objetivo de tener un margen de fase y de amplitud apropiados, disminuyendo la probabilidad de tener oscilaciones en la implementaci\'on real.
 
@@ -527,16 +541,21 @@ Para la simulaci\'on y la experimental, se toma el $\Delta V_O$ para carga m\'in
 \begin{tabular}{|c|c|c|c|}
 \hline
 \multicolumn{2}{|c|}{}                         & Simulado & Experimental \\ \hline
-\multirow{3}{*}{$R_L = \infty$} & $\Delta V_R$ &          &              \\ \cline{2-4} 
-                                & $\Delta V_O$ &          &              \\ \cline{2-4} 
-                                & PSRR         &          &              \\ \hline
+\multirow{3}{*}{$R_L = \infty$} & $\Delta V_R$ &  $2V$    & $213mV$              \\ \cline{2-4} 
+                                & $\Delta V_O$ &  $0.013V$& $80mV$             \\ \cline{2-4} 
+                                & PSRR         &  44dB    & 8.5dB              \\ \hline
 \multirow{3}{*}{$R_{L_{MIN}}$}  & $\Delta V_R$ &  $2V$    &  $3.19V$            \\ \cline{2-4} 
-                                & $\Delta V_O$ &  $0.04V$ & $1.69$              \\ \cline{2-4} 
-                                & PSRR         &  34dB    &  5.52db            \\ \hline
+                                & $\Delta V_O$ &  $0.04V$ & $1.69V$              \\ \cline{2-4} 
+                                & PSRR         &  34dB    &  5.52dB            \\ \hline
 \end{tabular}
 \caption{Valores de PSRR}
 
 \end{table}
+
+En el caso de la simulaci\'on da un valor m\'as grande dado que la fuente utilizada es una senoidal que var\'ia $15V$ y $17V$ ideal, es decir que no cae su valor al disminuir la carga $R_L$, por lo que el valor obtenido es m\'as preciso.
+En el caso experimental, se utiliz\'o una fuente de $15V$ de DC con ripple, pero cuyo valor nominal disminuye al cargarla y exigirle corrientes altas, lo que modifica los puntos de polarizaci\'on en forma considerable.
+En cualquier caso, tanto el simulado como el medido coinciden en que el PSRR empeora al exigir corriente.
+
 
 \newpage
 
