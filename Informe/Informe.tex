@@ -26,7 +26,7 @@ El diseño se implementar\'a en un PCB siguiendo determinadas consideraciones, y
 
 Para implementar el dise\~no en cuesti\'on, se propone un circuito de regulaci\'on serie, el cual puede modelarse con el siguiente esquema.
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{centering}
 \includegraphics[scale=0.35]{Imagenes/bloquesSerie.png}
 \par\end{centering}
@@ -36,7 +36,7 @@ Para implementar el dise\~no en cuesti\'on, se propone un circuito de regulaci\'
 
 La caracter\'istica de 'serie' refiere a que el elemento de control se encuentra en serie a la carga $R_L$. En base a dicho esquema, se propone el siguiente circuito.
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{centering}
 \includegraphics[scale=0.32]{Imagenes/CircuitoSinCap.png}
 \par\end{centering}
@@ -49,7 +49,7 @@ Cada bloque por separado se trata en las subsecciones siguientes.
 
 \subsection{Circuito de control}
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{centering}
 \includegraphics[scale=0.5]{Imagenes/Control.png}
 \par\end{centering}
@@ -64,7 +64,7 @@ En la secci\'on de c\'alculo de disipador se detalla el an\'alisis de la potenci
 
 \subsection{Pre-regulador}
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{centering}
 \includegraphics[scale=0.5]{Imagenes/PreRegulador.png}
 \par\end{centering}
@@ -74,18 +74,27 @@ En la secci\'on de c\'alculo de disipador se detalla el an\'alisis de la potenci
 
 Se considera un margen para la corriente m\'axima, tomando $I_O = 1.6A$. Siendo $\beta2_{MIN} = 500$ (en DC), se calcula la corriente que se le debe proveer a la base de $T_2$ en el peor caso:
 
-$$I_{B2} = \frac{I_{C2}}{\beta2_{MIN}} = \frac{I_O}{\beta2_{MIN}}= 3.2mA$$
+\[
+I_{B2} = \frac{I_{C2}}{\beta2_{MIN}} = \frac{I_O}{\beta2_{MIN}}= 3.2mA
+\]
 
 Entonces $I_{C3}$ ser\'a la $I_{B2}$ m\'axima. Dado que no hay requerimientos particulares para $T_3$, por simplicidad en la selecci\'on de componentes se utiliz\'o  $T_3 = BC327$, cuyo $\beta3_{MIN} = 100$ por lo que podremos luego despreciar la corriente de base para los c\'alculos. Planteando la malla comprendida por $R_1$, $BE_3$ y los diodos $D_1$ y $D_2$, se despeja el valor de $R_1$:
 
-$$2V_D - V_{{BE3}_{ON}} - I_{C3}R_1 = 0$$
+\[
+2V_D - V_{{BE3}_{ON}} - I_{C3}R_1 = 0
+\]
+
 \par
 En la ecuaci\'on anterior se observa que la corriente $I_{C3}$ resulta independiente de las variaciones de la entrada $V_R$. Se toma $V_D = V_{{BE}_{ON}} = 0.7V$. Como s\'olo se requiere que $D_1$ y $D_2$ est\'en correctamente polarizados para dar las ca\'idas de tensi\'on $V_D$ consideradas, y no disipar\'an una potencia apreciable, se elijen $D_1 = D_2 = 1N4148$ por simplicidad. Entonces:
-$$\frac{2V_D - V_{{BE3}_{ON}}}{I_{C3}} = R_1 = 218.75\Omega$$
+
+\[
+\frac{2V_D - V_{{BE3}_{ON}}}{I_{C3}} = R_1 = 218.75\Omega
+\]
 
 Como se tom\'o una $I_O$ m\'axima mayor a la nominal para tener un margen, se normaliza sin problemas $R_1$ hacia arriba, entonces:
-$$R_1(N) = 220\Omega$$
-
+\[
+R_1(N) = 220\Omega
+\]
 Tomando una corriente de polarizaci\'on en directa para los diodos de $I_F = 5mA$, se tiene (despreciando la corriente de base de $T_3$):
 
 \begin{equation}
@@ -95,20 +104,21 @@ V_R - 2V_D - I_FR_6 = 0
 
 Para definir la m\'inima $V_R$, se comsidera el caso donde el circuito entrega la m\'axima corriente para la m\'axima $V_O$, de manera tal que los transistores sigan funcionando en modo activo. Para ello se plantea:
 
-$$V_R > V_{O_{MAX}} + I_{O_{MAX}}R_A + V_{BE2_{ON}} + V_{CE3_{SAT}} + V_D$$
-
+\[
+V_R > V_{O_{MAX}} + I_{O_{MAX}}R_A + V_{BE2_{ON}} + V_{CE3_{SAT}} + V_D
+\]
 Siendo de las hojas de datos de los transistores $V_{BE2_{ON}} = 1.8V$ y $V_{CE3_{SAT}} = 0.7V$, con $V_D = 0.7V$. Como se ver\'a en el dise\~no de la protecci\'on, $R_A$ tendr\'a un valor del orden de $1\Omega$, por lo que entonces se tiene:
-
-$$V_R > 10V + 1.5V + 1.8V + 0.7 + 0.7V = 14.7V$$
-
+\[
+V_R > 10V + 1.5V + 1.8V + 0.7 + 0.7V = 14.7V
+\]
 Definiendo entonces una $V_R = 15V$. De la ecuaci\'on (\ref{eqn:R6_relation}) podemos despejar ahora el valor de $R_6$:
-
-$$\frac{V_R - 2V_D}{I_F} = R_6 = 2.72K\Omega \Longrightarrow R_6(N) = 2.7K\Omega$$ 
-
+\[
+\frac{V_R - 2V_D}{I_F} = R_6 = 2.72K\Omega \Longrightarrow R_6(N) = 2.7K\Omega
+\]
 
 \subsection{Generador}
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{centering}
 \includegraphics[scale=0.34]{Imagenes/Generador.png}
 \par\end{centering}
@@ -117,13 +127,13 @@ $$\frac{V_R - 2V_D}{I_F} = R_6 = 2.72K\Omega \Longrightarrow R_6(N) = 2.7K\Omega
 \end{figure}
 
 Realizando un planeto similar al pre-regulador, se seleccionan $D_3 = D_4 = 1N4148$. Se fija una corriente $I_{C5}$, de manera que el diodo zener reciba una corriente constante, y por ende la $V_Z$ no sufra variaciones importantes. Para no requerir una entrada $V_R$ m\'as grande, se utiliz\'o un diodo zener de baja tensi\'on de regulaci\'on, en este caso $V_Z = 2.7V$, donde el $DZ_1 = 1N5223$. Con la ecuaci\'on de malla:
-
-$$2V_D - V_{BE5_{ON}} - I_{C5}R_2 = 0$$
-
+\[
+2V_D - V_{BE5_{ON}} - I_{C5}R_2 = 0
+\]
 Para el zener, de la hoja de datos del fabricante, se tiene que $I_{ZK} = 0.25mA$. Se supone una corriente de polarizaci\'on inversa de $I_R = 5mA$ (de manera tal que sea mayor a la m\'inima $I_{ZK}$ mencionada), que ser\'a aproximadamente igual a $I_{C5}$. Se despeja entonces $R_2$ de la ecuaci\'on anterior y con la corriente impuesta se calcula su valor:
-
-$$\frac{2V_D - V_{BE5_{ON}}}{I_{C5}} = R_2 = 140\Omega \Longrightarrow R_2(N) = 120\Omega$$
-
+\[
+\frac{2V_D - V_{BE5_{ON}}}{I_{C5}} = R_2 = 140\Omega \Longrightarrow R_2(N) = 120\Omega
+\]
 Dado que el circuito es similar al del pre-regulador, se utiliz\'o por simplicidad el mismo transistor PNP, es decir que $T_5 = BC327$.
 
 Con el mismo criterio, se supone una $I_F = 5mA$, de manera tal que obtenemos para $R_8$ el mismo valor que $R_6$, entonces $R_8(N) = 2.7K\Omega$.
@@ -134,7 +144,7 @@ Con el mismo criterio, se supone una $I_F = 5mA$, de manera tal que obtenemos pa
 
 Analizando el circuito por realimentaci\'on negativa, se pueden identificar los bloques de 'amplificador', 'realimentador' y 'generador':
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{centering}
 \includegraphics[scale=0.34]{Imagenes/CircuitoConFeed.png}
 \par\end{centering}
@@ -143,21 +153,22 @@ Analizando el circuito por realimentaci\'on negativa, se pueden identificar los 
 \end{figure}
 
 A la salida se muestrea tensi\'on y a la entrada se suma tensi\'on, por lo que el par\'ametro estabilizado resulta:
-
-$$PE = \frac{V_O}{V_G} = \frac{1}{f} \cdot \frac{|T|}{1+|T|}$$
-
+\[
+PE = \frac{V_O}{V_G} = \frac{1}{f} \cdot \frac{|T|}{1+|T|}
+\]
 Donde $|T| = |a\cdot f|$. Asumiendo que $|T|$ es lo suficientemente grande:
-
-$$\frac{V_O}{V_G} \simeq \frac{1}{f}$$
-
+\[
+\frac{V_O}{V_G} \simeq \frac{1}{f}
+\]
 
 Por lo que hallando $f$ tendremos la relaci\'on entre la tens\'on de salida en funci\'on de la del generador, que es la $V_Z$.
-
-$$f = \left. \frac{\textrm{Magnitud que sumo}}{\textrm{Magnitud que muestreo}} \right|_{\textrm{Par\'ametro com\'un a la entrada = 0}}$$
+\[
+f = \left. \frac{\textrm{Magnitud que sumo}}{\textrm{Magnitud que muestreo}} \right|_{\textrm{Par\'ametro com\'un a la entrada = 0}}
+\]
 \\
 Para hallar $f$ planteamos el cuadripolo correspondiente:
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{centering}
 \includegraphics[scale=0.34]{Imagenes/CuadripoloF.png}
 \par\end{centering}
@@ -166,9 +177,9 @@ Para hallar $f$ planteamos el cuadripolo correspondiente:
 \end{figure}
 
 Dado que $R_4$ es un potenci\'ometro, se la representa en dos partes ($0 \leq K \leq 1$). Entonces se tiene:
-
-$$f = \left. \frac{V_1}{V_2} \right|_{I_1=0} = \frac{R_4 \cdot K + R_5}{R_3 + R_4 + R_5}$$
-
+\[
+f = \left. \frac{V_1}{V_2} \right|_{I_1=0} = \frac{R_4 \cdot K + R_5}{R_3 + R_4 + R_5}
+\]
 Seg\'un $K$ valga 0 o 1, tendremos $V_O$ m\'axima o m\'inima:
 
 \[
@@ -181,25 +192,25 @@ V_{O_{MAX}} = V_G \cdot \dfrac{R_3+R_4+R_5}{R_5}
 \]
 
 Para el dise\~no, mediante correcciones con simulaci\'on y prueba en protoboard, se tom\'o un margen m\'as amplio para $V_O$ respecto del nominal. Se utiliz\'o entonces como resultado de dichas pruebas un rango $3.9V \leq V_O \leq 10.4V$. Dividiendo ambas ecuaciones se puede despejar $R_5$ en funci\'on de $R_4$, resultando:
-
-$$R_5 = \frac{3}{5} \cdot R_4$$
-
+\[
+R_5 = \frac{3}{5} \cdot R_4
+\]
 Tomando un potenci\'ometro nominal, se define $R_4(N) = 10K\Omega$, por lo que resulta $R_5 = 6K\Omega$. Normalizando, se tiene:
-
-$$R_5(N) = 12K\Omega \textrm{ // } 12K\Omega$$
-
+\[
+R_5(N) = 12K\Omega \textrm{ // } 12K\Omega
+\]
 De la segunda ecuaci\'on se despeja $R_3$, obteniendo:
-
-$$\left(\frac{V_{O_{MAX}}}{V_G}\right)R_5 - R_5 - R_4 = R_3 \Longrightarrow R_3 = 7.11K\Omega$$
-
+\[
+\left(\frac{V_{O_{MAX}}}{V_G}\right)R_5 - R_5 - R_4 = R_3 \Longrightarrow R_3 = 7.11K\Omega
+\]
 Normalizando se tiene que: 
-
-$$R_3(N) = 6.8K\Omega + 330\Omega$$
-
+\[
+R_3(N) = 6.8K\Omega + 330\Omega
+\]
 
 \subsection{Amplificador de error}
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{centering}
 \includegraphics[scale=0.5]{Imagenes/CircuitoError.png}
 \par\end{centering}
@@ -213,14 +224,14 @@ En base a esto, el operacional seleccionado es el $LM358$.\par
 El transistor $T_1$ cumple la funci\'on de realizar la inversi\'on para que la realimentaci\'on resulte negativa (conectando al operacional como no inversor). Por otra parte, al estar configurado como emisor com\'un, aumenta m\'as la ganancia de lazo. \par
 El transistor seleccionado finalmente fue $T_1 = BC548C$. Dado su alto valor de $\beta$ no exige corriente a la salida del operacional.\par
 La resistencia $R_7$ se añadi\'o para que el operacional entregue una tensi\'on mayor a la $V_{BE1_{ON}}$, de manera tal que se encuentre con un cierto margen por encima de los $0V$, dado que se lo aliment\'o con fuente simple. Se determin\'o un valor adecuado para ella mediante la simulaci\'on, de manera tal que el circuito funcionara correctamente, resultando: 
-
-$$R_7(N) = 100K\Omega$$
-
+\[
+R_7(N) = 100K\Omega
+\]
 \newpage
 
 \subsection{Protecci\'on}
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{centering}
 \includegraphics[scale=0.4]{Imagenes/Proteccion.png}
 \par\end{centering}
@@ -230,9 +241,9 @@ $$R_7(N) = 100K\Omega$$
 
 La protecci\'on utilizada se denomina Foldback. Mientras la $R_L$ sea mayor a la m\'inima en regulaci\'on, la tensi\'on $V_{BE4} < V_{BE4_{ON}}$, por lo que $T_4$ no se enciende y la protecci\'on no incide en el circuito. Cuando se disminuye la carga $R_L$ por debajo de la m\'inima que puede conectarse en regulaci\'on, el lazo de realimentaci\'on se abre y el transistor $T_4$ comienza a conducir, tomando parte de la corriente que va a la base de $T_2$ (dado que $I_{PRE-REG}$ es constante) que es la indicada como $I_{SINK}$, y la tensi\'on y corrientes de salida pasan a estar determinados por una expresi\'on lineal, donde a medida que la $V_O$ disminuye, la $I_O$ tambi\'en lo hace. De esta manera, veremos que la $I_{O_{CC}} < I_{O_{MAX}}$.\par
 Para observar esto, se plantea la malla que contiene a $V_{BE4_{ON}}$:
-
-$$(V_O + I_O \cdot R_A)\cdot \frac{R_B}{R_B+R_C} + V_{BE4_{ON}} = I_OR_A$$
-
+\[
+(V_O + I_O \cdot R_A)\cdot \frac{R_B}{R_B+R_C} + V_{BE4_{ON}} = I_OR_A
+\]
 Como no se requiere amplificar corriente sino que el objetivo es sensar $I_O$ y derivar corriente de la base de $T_2$, se elije $T_4 = BC337$, cuyo $\beta_{MIN} = 100$ (se tiene entonces que $V_{BE4_{ON}} = 0.7V$). Para simplificar la notaci\'on, llamamos $\alpha = \dfrac{R_B}{R_B+RC}$. Despejando $I_O$ resulta:
 
 \begin{equation}
@@ -242,7 +253,7 @@ I_O = \frac{V_O \cdot \alpha + V_{BE4_{ON}}}{R_A(1-\alpha)}
 
 EL gr\'afico caracter\'istico resultante es el siguiente:
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{centering}
 \includegraphics[scale=0.5]{Imagenes/FB_Generico.png}
 \par\end{centering}
@@ -266,21 +277,21 @@ Un criterio adecuado para seleccionar $R_A$ es que sea 10 veces menor a la $R_L$
 
 De la ecuaci\'on (\ref{eqn:alpha}) vemos que, en referencia a lo mencionado anteriormente, si se reemplaza por $V_{O_{MAX}}$ e $I_{O_{MAX}}$, $R_A$ no puede valer cualquier cosa sino que tendr\'a un valor m\'inimo, tal que $\alpha > 0$ (porque es un cociente de un divisor resistivo).\par
 Seleccionando $R_A = 1\Omega$, con la $I_{O_{MAX}} = 1.6A$ que se dio de margen previamente, se tiene que la potencia m\'axima que debe disipar $R_A$ es $R_A \cdot I^2_{O_{MAX}} = 2.56W$. Por lo que normalizando se tiene:
-
-$$R_A(N) = 1\Omega - 3W$$
-
+\[
+R_A(N) = 1\Omega - 3W
+\]
 Reemplazando $V_{O_{MAX}}$, $I_{O_{MAX}}$ y $R_A(N)$ en la ecuaci\'on (\ref{eqn:alpha}) se obtiene:
-
-$$\frac{R_A \cdot I_{O_{MAX}}- 0.7V}{V_{O_{MAX}} + R_A \cdot I_{O_{MAX}}} = \alpha = 0.076$$
-
+\[
+\frac{R_A \cdot I_{O_{MAX}}- 0.7V}{V_{O_{MAX}} + R_A \cdot I_{O_{MAX}}} = \alpha = 0.076
+\]
 Teniendo $\alpha$, se seleccionan en forma simple $R_B$ y $R_C$ para el divisor resistivo, de forma tal que:
-
-$$R_B(N) = 1K\Omega \hspace{2cm} R_C(N) = 12K\Omega$$
-
+\[
+R_B(N) = 1K\Omega \hspace{2cm} R_C(N) = 12K\Omega
+\]
 Con el valor de $\alpha$ calculado, si $V_O = 0V$, la $I_O$ resultante es la de cortocircuito:
-
-$$I_{O_{CC}} = 0.76A$$
-
+\[
+I_{O_{CC}} = 0.76A
+\]
 
 \subsection{Disipaci\'on de potencia}
 
@@ -362,7 +373,7 @@ R_{\theta da} = \frac{T_j - T_a}{P_D(T_2)} - R_{\theta jc} - R_{\theta cd} = 7.4
  
 Se necesita entonces un disipador cuya $R_{\theta da}$ sea menor a la obtenida. Un disipador sencillo que cumple esta caracter\'istica con margen es el ZD9, cuya $R_{\theta da} = 3.8(^{\circ}C/W)$, por lo que se le incorpor\'o dicho disipador a $T_2$. 
  
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{centering}
 \includegraphics[scale=0.7]{Imagenes/ZD9.jpg}
 \par\end{centering}
@@ -393,7 +404,7 @@ La respuesta en frecuencia resultante efectivamente logra cumplir con el objetiv
 
 Utilizando el banco de pruebas, se registraron pares de valores $V_O$ - $I_O$ para trazar la curva caracter\'istica $V_O(I_O)$. Los valores tomados se muestran en la siguiente tabla.
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \begin{centering}
 
 \begin{tabular}[H]{|c|c|c|}
@@ -425,7 +436,7 @@ $0 \Omega (CC)$ & $0V$ & $0.76A$\tabularnewline
 
 Con dichos valores, se compara ahora la caracter\'istica obtenida experimentalmente con la te\'orica y la simulada.
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{centering}
 ACA VA EL GRAFICO SUPERPUESTO DE VO IO
 \par\end{centering}
@@ -436,18 +447,25 @@ ACA VA EL GRAFICO SUPERPUESTO DE VO IO
 \subsection{Rendimiento}
 
 Definimos el rendimiento de la fuente como la relaci\'on entre la m\'axima tensi\'on de salida $V_O$ y la m\'inima tensi\'on de entrada $V_R$, en porcentaje. Es decir:
+\[
+\eta \% = \frac{V_O}{V_R} \cdot 100
+\]
+Se calcula entonces el rendimiento con los valores de $V_O$ e $I_O$ te\'oricos, simulados y experimentales a carga m\'inima en regulaci\'on.
+Se considera como valor de $V_O$ te\'orico m\'aximo $10.2V$ (es decir, incluyendo el margen), teniendo entonces:
 
-$$\eta \% = \frac{V_O}{V_R} \cdot 100$$ 
+\[
+V_{R_{MIN}} = V_{O_{MAX}} + R_A \cdot I_{O_{MAX}} + V_{BE2_{ON}} + V_{CE3_{SAT}} + V_{R_1} = 10.2V + 1.6V + 1.4V + 0.7V + 0.7V = 14.8V 
+\]
 
-Se calcula entonces el rendimiento con los valores de $V_O$ e $I_O$ te\'oricos, simulados y experimentales. Se considera como valor de $V_O$ te\'orico m\'aximo $10.2V$ (es decir, incluyendo el margen), y el simulado fue de $10.18V$.
+El valor de $V_O$ simulado fue de $10.18V$ con una $V_{R_{MIN}}= 14V$.
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \begin{center}
 \begin{tabular}{|c||c|c|c|}
 \hline
 & Te\'orico & Simulado & Experimental\\
 \hline 
-$\eta \%$ & 68\% & 67.9\% & 67.3\%\\
+$\eta \%$ & 68\% & 72.7\% & 67.3\%\\
 \hline 
 \end{tabular}
 \end{center}
@@ -458,12 +476,12 @@ $\eta \%$ & 68\% & 67.9\% & 67.3\%\\
 \subsection{Impedancia de salida - $Z_O$}
  
 Si la impedancia de salida fuera 0, en el caso de carga $R_{L_{MIN}}$ la $V_O$ deber\'ia ser la misma que para $R_L = \infty $. Como dicha impedancia no es nula, se puede medir un $\Delta V_O$ entre ambos casos de carga. De esta forma, se puede estimar un valor para la $Z_O$ (que ser\'a peque\~no) mediante:
-
-$$Z_O \simeq \frac{\Delta V_O}{I_{O_{MAX}}}$$   
-
+\[
+Z_O \simeq \frac{\Delta V_O}{I_{O_{MAX}}}   
+\]
 La caracter\'istica de tensi\'on real en general puede modelarse como se muestra a continuaci\'on.
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{centering}
 \includegraphics[scale=0.5]{Imagenes/FB_Real.png}
 \par\end{centering}
@@ -474,7 +492,7 @@ La caracter\'istica de tensi\'on real en general puede modelarse como se muestra
 En el caso experimental, como dicha pendiente puede cambiar en el trayecto desde $0A$ hasta $I_{O_{MAX}}$, se tomo de referencia el caso con carga $R_L = \infty$ y un caso intermedio, donde pudiera medirse m\'as claramente una $V_O$ diferente al primer caso, para obtener un estimador de $Z_O$. Dichos valores tomados se indican en el siguiente cuadro, obteniendo un estimador de $Z_O$ experimental comparado con el te\'orico y el simulado.
 
 
-\begin{table}[!h]
+\begin{table}[!ht]
 
 \begin{center}
 \begin{tabular}{|c||c|c|c|}
@@ -495,7 +513,30 @@ $Z_O$ &   $0\Omega$   &    $1.2m\Omega$    & $0.2\Omega$\\
 
 
 \subsection{PSRR - Power Supply Rejection Ratio}
-PSRR\\
+
+La relaci\'on de rechazo del ripple de la entrada en la salida se la define como:
+
+\[
+PSRR = 20 \cdot log \left( \frac{\Delta V_R}{\Delta V_O} \right)
+\]
+
+Para la simulaci\'on y la experimental, se toma el $\Delta V_O$ para carga m\'inima y sin carga, obteniendo los siguientes resultados.
+
+\begin{table}[!ht]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{}                         & Simulado & Experimental \\ \hline
+\multirow{3}{*}{$R_L = \infty$} & $\Delta V_R$ &          &              \\ \cline{2-4} 
+                                & $\Delta V_O$ &          &              \\ \cline{2-4} 
+                                & PSRR         &          &              \\ \hline
+\multirow{3}{*}{$R_{L_{MIN}}$}  & $\Delta V_R$ &  $2V$    &  $3.19V$            \\ \cline{2-4} 
+                                & $\Delta V_O$ &  $0.04V$ & $1.69$              \\ \cline{2-4} 
+                                & PSRR         &  34dB    &  5.52db            \\ \hline
+\end{tabular}
+\caption{Valores de PSRR}
+
+\end{table}
 
 \newpage
 
@@ -513,7 +554,7 @@ Para implementar la fuente, teniendo en cuenta los requerimientos de espacio y p
 \item Se incluyeron soportes tipo tameco en las esquinas para mantener el PCB en pie.
 \end{itemize}
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{centering}
 \includegraphics[scale=0.45]{Imagenes/Fuente3D.png}
 \par\end{centering}
@@ -525,7 +566,7 @@ Para implementar la fuente, teniendo en cuenta los requerimientos de espacio y p
 
 Para poder realizar mediciones con carga $R_L$ sobre la curva de foldback, se implement\'o una placa como banco de pruebas con resistencias de potencia de $15\Omega$, $10\Omega$, $1\Omega$ y $0.47\Omega$. De esta manera se logra tener cargas resistivas puras, evitando utilizar un re\'ostato debido a la gran inductancia que posee.
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{centering}
 \includegraphics[scale=0.45]{Imagenes/Banco3D.png}
 \par\end{centering}

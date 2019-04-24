@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2018.4.3)  24 APR 2019 11:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2018.4.3)  24 APR 2019 14:36
 entering extended mode
 **./Informe.tex
 (Informe.tex
@@ -1029,101 +1029,85 @@ Package pdftex.def Info: Imagenes/PreRegulador.png used on input line 69.
 File: Imagenes/Generador.png Graphic file (type png)
 
 <use Imagenes/Generador.png>
-Package pdftex.def Info: Imagenes/Generador.png used on input line 113.
+Package pdftex.def Info: Imagenes/Generador.png used on input line 123.
 (pdftex.def)             Requested size: 200.21657pt x 76.74489pt.
  [4 <./Imagenes/Generador.png>]
 <Imagenes/CircuitoConFeed.png, id=31, 989.01495pt x 844.1136pt>
 File: Imagenes/CircuitoConFeed.png Graphic file (type png)
 
 <use Imagenes/CircuitoConFeed.png>
-Package pdftex.def Info: Imagenes/CircuitoConFeed.png used on input line 139.
+Package pdftex.def Info: Imagenes/CircuitoConFeed.png used on input line 149.
 (pdftex.def)             Requested size: 336.26064pt x 286.99483pt.
 
 <Imagenes/CuadripoloF.png, id=32, 483.7272pt x 371.7087pt>
 File: Imagenes/CuadripoloF.png Graphic file (type png)
 
 <use Imagenes/CuadripoloF.png>
-Package pdftex.def Info: Imagenes/CuadripoloF.png used on input line 162.
+Package pdftex.def Info: Imagenes/CuadripoloF.png used on input line 173.
 (pdftex.def)             Requested size: 164.46507pt x 126.37927pt.
  [5 <./Imagenes/CircuitoConFeed.png> <./Imagenes/CuadripoloF.png>]
 <Imagenes/CircuitoError.png, id=39, 503.84235pt x 185.0112pt>
 File: Imagenes/CircuitoError.png Graphic file (type png)
 
 <use Imagenes/CircuitoError.png>
-Package pdftex.def Info: Imagenes/CircuitoError.png used on input line 204.
+Package pdftex.def Info: Imagenes/CircuitoError.png used on input line 215.
 (pdftex.def)             Requested size: 251.92055pt x 92.50537pt.
  [6 <./Imagenes/CircuitoError.png>]
 <Imagenes/Proteccion.png, id=44, 346.4142pt x 435.42674pt>
 File: Imagenes/Proteccion.png Graphic file (type png)
 
 <use Imagenes/Proteccion.png>
-Package pdftex.def Info: Imagenes/Proteccion.png used on input line 225.
+Package pdftex.def Info: Imagenes/Proteccion.png used on input line 236.
 (pdftex.def)             Requested size: 138.56322pt x 174.1676pt.
 
 <Imagenes/FB_Generico.png, id=45, 436.9926pt x 204.765pt>
 File: Imagenes/FB_Generico.png Graphic file (type png)
 
 <use Imagenes/FB_Generico.png>
-Package pdftex.def Info: Imagenes/FB_Generico.png used on input line 247.
+Package pdftex.def Info: Imagenes/FB_Generico.png used on input line 258.
 (pdftex.def)             Requested size: 218.49576pt x 102.38223pt.
  [7 <./Imagenes/Proteccion.png> <./Imagenes/FB_Generico.png>] [8] <Imagenes/ZD9
 .jpg, id=55, 351.3125pt x 250.9375pt>
 File: Imagenes/ZD9.jpg Graphic file (type jpg)
 
 <use Imagenes/ZD9.jpg>
-Package pdftex.def Info: Imagenes/ZD9.jpg used on input line 367.
+Package pdftex.def Info: Imagenes/ZD9.jpg used on input line 378.
 (pdftex.def)             Requested size: 245.91707pt x 175.65504pt.
  [9 <./Imagenes/ZD9.jpg>]
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 392.
+(Font)              scaled to size 11.03998pt on input line 403.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 392.
+(Font)              scaled to size 8.27998pt on input line 403.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 392.
+(Font)              scaled to size 6.43999pt on input line 403.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 392.
+(Font)              scaled to size 11.03998pt on input line 403.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 392.
+(Font)              scaled to size 8.27998pt on input line 403.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 392.
+(Font)              scaled to size 6.43999pt on input line 403.
 
 <Imagenes/FB_Real.png, id=59, 436.9926pt x 204.765pt>
 File: Imagenes/FB_Real.png Graphic file (type png)
 
 <use Imagenes/FB_Real.png>
-Package pdftex.def Info: Imagenes/FB_Real.png used on input line 468.
+Package pdftex.def Info: Imagenes/FB_Real.png used on input line 486.
 (pdftex.def)             Requested size: 218.49576pt x 102.38223pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 498--499
-
- []
-
-[10] <Imagenes/Fuente3D.png, id=63, 717.27975pt x 445.665pt>
+ [10] [11 <./Imagenes/FB_Real.png>]
+<Imagenes/Fuente3D.png, id=67, 717.27975pt x 445.665pt>
 File: Imagenes/Fuente3D.png Graphic file (type png)
 
 <use Imagenes/Fuente3D.png>
-Package pdftex.def Info: Imagenes/Fuente3D.png used on input line 518.
+Package pdftex.def Info: Imagenes/Fuente3D.png used on input line 559.
 (pdftex.def)             Requested size: 322.7729pt x 200.5474pt.
 
-<Imagenes/Banco3D.png, id=64, 690.78075pt x 378.81525pt>
+<Imagenes/Banco3D.png, id=68, 690.78075pt x 378.81525pt>
 File: Imagenes/Banco3D.png Graphic file (type png)
 
 <use Imagenes/Banco3D.png>
-Package pdftex.def Info: Imagenes/Banco3D.png used on input line 530.
+Package pdftex.def Info: Imagenes/Banco3D.png used on input line 571.
 (pdftex.def)             Requested size: 310.84846pt x 170.46527pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[11 <./Imagenes/FB_Real.png> <./Imagenes/Fuente3D.png>] [12 <./Imagenes/Banco3D
-.png>] (Informe.aux
+ [12 <./Imagenes/Fuente3D.png> <./Imagenes/Banco3D.png>] (Informe.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
@@ -1134,7 +1118,7 @@ Here is how much of TeX's memory you used:
  8564 multiletter control sequences out of 15000+200000
  75604 words of font info for 101 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,11n,43p,957b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,12n,43p,957b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ml.pfb><C:/Program File
@@ -1143,7 +1127,7 @@ s (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on Informe.pdf (12 pages, 2815406 bytes).
+Output written on Informe.pdf (12 pages, 2817298 bytes).
 PDF statistics:
  96 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
