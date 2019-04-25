@@ -12,8 +12,8 @@
 \contentsline {section}{\numberline {3}Implementaci\'on - Resultados}{11}
 \contentsline {subsection}{\numberline {3.1}Caracter\'istica $V_O(I_O)$}{11}
 \contentsline {subsection}{\numberline {3.2}Rendimiento}{11}
-\contentsline {subsection}{\numberline {3.3}Impedancia de salida - $Z_O$}{11}
+\contentsline {subsection}{\numberline {3.3}Impedancia de salida - $Z_O$}{12}
 \contentsline {subsection}{\numberline {3.4}PSRR - Power Supply Rejection Ratio}{12}
-\contentsline {section}{\numberline {4}Dise\~no de PCB - Consideraciones}{13}
-\contentsline {subsection}{\numberline {4.1}Placa fuente}{13}
-\contentsline {subsection}{\numberline {4.2}Placa de banco de pruebas}{13}
+\contentsline {section}{\numberline {4}Dise\~no de PCB - Consideraciones}{14}
+\contentsline {subsection}{\numberline {4.1}Placa fuente}{14}
+\contentsline {subsection}{\numberline {4.2}Placa de banco de pruebas}{14}

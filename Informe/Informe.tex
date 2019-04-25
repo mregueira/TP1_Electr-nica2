@@ -452,9 +452,9 @@ Con dichos valores, se compara ahora la caracter\'istica obtenida experimentalme
 
 \begin{figure}[!ht]
 \begin{centering}
-ACA VA EL GRAFICO SUPERPUESTO DE VO IO
+\includegraphics[scale=0.7]{Imagenes/Caracteristica_iovo.png}
 \par\end{centering}
-\caption{Caracter\'istica $V_O(I_O)$}
+\caption{Caracter\'isticas de salida comparadas}
 
 \end{figure}  
 
@@ -468,7 +468,10 @@ Se calcula entonces el rendimiento con los valores de $V_O$ e $I_O$ te\'oricos, 
 Se considera como valor de $V_O$ te\'orico m\'aximo $10.2V$ (es decir, incluyendo el margen), teniendo entonces:
 
 \[
-V_{R_{MIN}} = V_{O_{MAX}} + R_A \cdot I_{O_{MAX}} + V_{BE2_{ON}} + V_{CE3_{SAT}} + V_{R_1} = 10.2V + 1.6V + 1.4V + 0.7V + 0.7V = 14.8V 
+V_{R_{MIN}} = V_{O_{MAX}} + R_A \cdot I_{O_{MAX}} + V_{BE2_{ON}} + V_{CE3_{SAT}} + V_{R_1}
+\]
+\[
+V_{R_{MIN}} =  = 10.2V + 1.6V + 1.4V + 0.7V + 0.7V = 14.8V 
 \]
 
 El valor de $V_O$ simulado fue de $10.18V$ con una $V_{R_{MIN}}= 14V$.
@@ -555,7 +558,6 @@ Para la simulaci\'on y la experimental, se toma el $\Delta V_O$ para carga m\'in
 En el caso de la simulaci\'on da un valor m\'as grande dado que la fuente utilizada es una senoidal que var\'ia $15V$ y $17V$ ideal, es decir que no cae su valor al disminuir la carga $R_L$, por lo que el valor obtenido es m\'as preciso.
 En el caso experimental, se utiliz\'o una fuente de $15V$ de DC con ripple, pero cuyo valor nominal disminuye al cargarla y exigirle corrientes altas, lo que modifica los puntos de polarizaci\'on en forma considerable.
 En cualquier caso, tanto el simulado como el medido coinciden en que el PSRR empeora al exigir corriente.
-
 
 \newpage
 
