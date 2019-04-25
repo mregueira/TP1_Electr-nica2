@@ -46,98 +46,54 @@ vernier = 0.389743
 vernier = 0.519657
 Gmin = 1.50978e-005
 vernier = 0.692876
-vernier = 0.923834
-Gmin = 3.26032e-006
-vernier = 1
-Gmin = 3.78001e-007
-Gmin = 4.05875e-008
-Gmin = 4.35805e-009
-Gmin = 4.67942e-010
-Gmin = 5.02449e-011
-Gmin = 5.39501e-012
-Gmin = 5.79285e-013
+vernier = 0.346438
+vernier = 0.173219
+Gmin = 5.5241e-006
+vernier = 0.0866095
+vernier = 0.0433047
+vernier = 0.0216524
+vernier = 0.0108262
+vernier = 0.00541309
+vernier = 0.00270655
+vernier = 0.00135327
+vernier = 0.000676636
+vernier = 0.000507477
 Gmin = 0
-Gmin stepping succeeded in finding the operating point.
+Gmin = 0
+Gmin stepping failed
 
-Semiconductor Device Operating Points:
-                        --- Diodes ---
-Name:  d:u1:e_n:2  d:u1:e_n:1  d:u1:i_np:2  d:u1:i_np:1  d:u1:i_nn:2
-Model: u1:e_n:dvn  u1:e_n:dvn  u1:i_np:dvnf u1:i_np:dvnf u1:i_nn:dvnf
-Id:      1.00e-02    1.00e-02    1.00e-02     1.00e-02     1.00e-02
-Vd:      8.34e-01    8.34e-01    8.34e-01     8.34e-01     8.34e-01
-Req:     2.59e+00    2.59e+00    2.59e+00     2.59e+00     2.59e+00
-CAP:     0.00e+00    0.00e+00    0.00e+00     0.00e+00     0.00e+00
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 88.6364%
+vernier = 0.0625
+Source Step = 87.8995%
+Starting source stepping with srcstepmethod=1
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 88.6364%
+vernier = 0.0625
+Source stepping failed
 
-Name:  d:u1:i_nn:1    d:d3:z      d:d3:1      d:q2:1        d5
-Model: u1:i_nn:dvnf    d3:dr       d3:df     q2:dmodel    1n4148
-Id:      1.00e-02     5.04e-03   -7.90e-11   -1.53e-11    5.06e-03
-Vd:      8.34e-01     2.48e+00   -2.70e+00   -1.43e+01    6.60e-01
-Req:     2.59e+00     1.54e+01    1.00e+12    1.00e+12    8.96e+00
-CAP:     0.00e+00     0.00e+00    2.79e-10    0.00e+00    2.24e-09
+Pseudo transient terminated at 102.938 s, solution accepted ready or not!
 
-Name:      d4          d2          d1
-Model:   1n4148      1n4148      1n4148
-Id:      5.06e-03    5.06e-03    5.06e-03
-Vd:      6.60e-01    6.61e-01    6.61e-01
-Req:     8.96e+00    8.96e+00    8.96e+00
-CAP:     2.24e-09    2.24e-09    2.24e-09
-
-                        --- Bipolar Transistors ---
-Name:     q:q2:2      q:q2:1        q5          q3          q4
-Model:  q2:q1model   q2:qmodel   bc327-25    bc327-25    bc337-25
-Ib:       9.96e-03    9.27e-05   -1.10e-05   -6.94e-06    1.11e-05
-Ic:       6.97e-01    1.05e-02   -5.04e-03   -3.22e-03    3.07e-03
-Vbe:      7.34e-01    5.59e-01   -6.23e-01   -6.11e-01    6.38e-01
-Vbc:     -1.36e+01   -1.30e+01    1.10e+01    1.17e+01   -1.36e+00
-Vce:      1.43e+01    1.36e+01   -1.16e+01   -1.23e+01    2.00e+00
-BetaDC:   6.99e+01    1.14e+02    4.59e+02    4.64e+02    2.77e+02
-Gm:       1.47e+01    3.73e-01    1.94e-01    1.25e-01    1.20e-01
-Rpi:      2.95e+00    3.95e+02    2.38e+03    3.78e+03    2.31e+03
-Rx:       3.19e+00    4.89e+00    6.02e-01    6.24e-01    5.47e+01
-Ro:       6.22e+01    4.06e+03    8.05e+03    1.28e+04    4.64e+04
-Cbe:      2.08e-08    6.83e-10    2.30e-10    1.77e-10    1.35e-10
-Cbc:        NaN       2.13e-11    2.96e-12    2.88e-12    3.36e-12
-Cjs:      0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
-BetaAC:   4.34e+01    1.48e+02    4.63e+02    4.71e+02    2.78e+02
-Cbx:      0.00e+00    2.36e-12    3.49e-12    3.39e-12    4.03e-12
-Ft:       1.12e+08    8.41e+07    1.31e+08    1.08e+08    1.34e+08
-
-Name:       q1
-Model:    bc547c
-Ib:      -1.99e-12
-Ic:       2.13e-12
-Vbe:      2.38e-02
-Vbc:     -1.98e+00
-Vce:      2.01e+00
-BetaDC:  -1.07e+00
-Gm:       4.62e-12
-Rpi:      8.89e+11
-Rx:       1.00e+00
-Ro:       4.52e+14
-Cbe:      1.25e-11
-Cbc:      1.41e-12
-Cjs:      0.00e+00
-BetaAC:   4.10e+00
-Cbx:      8.65e-13
-Ft:       4.84e-02
-
-
-
-Date: Wed Apr 24 18:29:47 2019
-Total elapsed time: 127.998 seconds.
+Date: Thu Apr 25 11:13:08 2019
+Total elapsed time: 2.157 seconds.
 
 tnom = 27
 temp = 27
-method = trap
-totiter = 10094
-traniter = 0
-tranpoints = 0
-accept = 0
-rejected = 47
+method = modified trap
+totiter = 11002
+traniter = 890
+tranpoints = 446
+accept = 446
+rejected = 48
 matrix size = 179
-fillins = 247
+fillins = 276
 solver = Normal
-Thread vector: 15.6/8.6[2] 0.0/0.0[2] 4.1/3.8[1] 0.9/1.5[1]  2592/500
-Matrix Compiler1: 23.66 KB object code size  4.4/2.2/[1.0]
-Matrix Compiler2: 19.13 KB object code size  2.7/3.7/[1.7]
+Thread vector: 16.7/10.2[3] 2.2/3.1[1] 6.8/5.0[3] 0.9/2.3[1]  2592/500
+Matrix Compiler1: 24.22 KB object code size  6.0/2.3/[1.4]
+Matrix Compiler2: 19.69 KB object code size  3.1/4.1/[1.2]
 

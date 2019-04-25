@@ -474,7 +474,9 @@ V_{R_{MIN}} = V_{O_{MAX}} + R_A \cdot I_{O_{MAX}} + V_{BE2_{ON}} + V_{CE3_{SAT}}
 V_{R_{MIN}} =  = 10.2V + 1.6V + 1.4V + 0.7V + 0.7V = 14.8V 
 \]
 
-El valor de $V_O$ simulado fue de $10.18V$ con una $V_{R_{MIN}}= 14V$.
+\newpage
+
+El valor de $V_O$ simulado fue de $10.18V$ con una $V_{R_{MIN}}= 14V$. Esta tensi\'on menor se debe a que en la simulaci\'on las tensiones $V_{BE}$ resultan un poco menores a las te\'oricas asumidas, pero en suma logran bajar un poco el valor de $V_{R_{MIN}}$. En el siguiente cuadro se plasman los rendimientos obtenidos en cada caso.
 
 \begin{table}[!ht]
 \begin{center}
@@ -490,11 +492,11 @@ $\eta \%$ & 68\% & 72.7\% & 67.3\%\\
 \caption{Valores de rendimiento obtenidos}
 \end{table}
 
-\subsection{Impedancia de salida - $Z_O$}
+\subsection{Impedancia de salida - $Z_{OUT}$}
  
-Si la impedancia de salida fuera 0, en el caso de carga $R_{L_{MIN}}$ la $V_O$ deber\'ia ser la misma que para $R_L = \infty $. Como dicha impedancia no es nula, se puede medir un $\Delta V_O$ entre ambos casos de carga. De esta forma, se puede estimar un valor para la $Z_O$ (que ser\'a peque\~no) mediante:
+Si la impedancia de salida fuera 0, en el caso de carga $R_{L_{MIN}}$ la $V_O$ deber\'ia ser la misma que para $R_L = \infty $. Como dicha impedancia no es nula, se puede medir un $\Delta V_O$ entre ambos casos de carga. De esta forma, se puede estimar un valor para la $Z_{OUT}$ (que ser\'a peque\~no) mediante:
 \[
-Z_O \simeq \frac{\Delta V_O}{I_{O_{MAX}}}   
+Z_{OUT} \simeq \frac{\Delta V_O}{I_{O_{MAX}}}   
 \]
 La caracter\'istica de tensi\'on real en general puede modelarse como se muestra a continuaci\'on.
 
@@ -506,8 +508,142 @@ La caracter\'istica de tensi\'on real en general puede modelarse como se muestra
 
 \end{figure}
 
-En el caso experimental, como dicha pendiente puede cambiar en el trayecto desde $0A$ hasta $I_{O_{MAX}}$, se tomo de referencia el caso con carga $R_L = \infty$ y un caso intermedio, donde pudiera medirse m\'as claramente una $V_O$ diferente al primer caso, para obtener un estimador de $Z_O$. Dichos valores tomados se indican en el siguiente cuadro, obteniendo un estimador de $Z_O$ experimental comparado con el te\'orico y el simulado.
+En el caso experimental, como dicha pendiente puede cambiar en el trayecto desde $0A$ hasta $I_{O_{MAX}}$, se tomo de referencia el caso con carga $R_L = \infty$ y un caso intermedio, donde pudiera medirse m\'as claramente una $V_O$ diferente al primer caso, para obtener un estimador de $Z_{OUT}$. Dichos valores tomados se indican en el siguiente cuadro, obteniendo un estimador de $Z_{OUT}$ experimental comparado con el simulado.
+Para hallar un valor de $Z_{OUT}$ te\'orico en forma cuantitativa, se calcular\'a en forma aproximada la ganacia de lazo $|a \cdot f|$, en el caso analizado con $V_{O_{MAX}}$. Para dicho caso se tiene por un lado:
 
+\[
+f = \frac{R_5}{R_3 + R_4 + R_5} = 0.3
+\]
+
+Para el c\'alculo de $a$, primero se debe reemplazar al cuadripolo $f$ por las impedancias vistas de ambos lados. Tomando en cuenta que el caso es con $V_{O_{MAX}}$, entonces $K=0$:
+
+\begin{figure}[!ht]
+\begin{centering}
+\includegraphics[scale=0.5]{Imagenes/CuadripoloF_K0.png}
+\par\end{centering}
+\caption{Cuadripolo del realimentador - $K = 0$}
+
+\end{figure}
+
+La impedancia vista desde la entrada con el par\'ametro com\'un a la salida pasivado:
+
+\[
+R^*_1 = \left. \frac{V_1}{I_1} \right|_{V_2=0} = (R_3+R_4) // R_5 = 4.4K\Omega
+\]
+
+La impedancia vista desde la salida con el par\'ametro com\'un a la entrada pasivado:
+
+\[
+R^*_2 = \left. \frac{V_2}{I_2} \right|_{I_1=0} = R_3 + R_4 + R_5 = 23.1K\Omega
+\]
+
+Como paso siguiente, para reemplazar al operacional por el modelo utilizado, se toman de la hoja de datos del fabricante los siguientes datos:
+
+\[
+R_i = 10M\Omega \hspace{2cm} R_o = 300\Omega \hspace{2cm} A_{VOL} = 70000
+\]
+
+Para el generador de tensi\'on con el zener, se lo modelar\'a como una fuente ideal sin resistencia de salida, dado que como se conecta a la entrada del operacional quedar\'ia en serie a su $R_i$ que es muy alta, por lo que no incidir\'a significativamente en el an\'alisis cuantitativo.\par
+El pre-regulador se puede modelar como una fuente de corriente constante con su resistencia de salida en paralelo. Al pasivarla, s\'olo queda dicha resistencia. Al ser una fuente de $mA$, dicha resistencia estar\'a en el orden de los $K\Omega$, por lo que a efectos de este an\'alisis para simplificar los c\'alculos del modelo de $a$ no se la tendr\'a en cuenta.
+Para modelar a los transistores se utiliza el modelo h\'ibrido, cuyos par\'ametros son:
+
+\begin{figure}[!ht]
+\begin{centering}
+\includegraphics[scale=0.5]{Imagenes/ModeloPi.png}
+\par\end{centering}
+\caption{Modelo h\'ibrido del transistor}
+
+\end{figure}
+
+Donde sus par\'ametros resistivos:
+
+\[
+R_{\pi} \simeq (\beta+1) \cdot \frac{V_T}{I_{CQ}}  \hspace{2cm} R_{ce} \simeq \frac{V_A}{ICQ}
+\]
+
+Siendo $V_A$ la tensi\'on de Early, cuyo valor exacto se desconoce, por lo que se tomar\'a como caso desfavorable un valor bajo: $V_A = 60V$, s\'olo a efectos de poder luego realizar los c\'alculos. La $V_T$ es la tensi\'on t\'ermica, que a temperatura ambiente vale aproximadamente $26mV$.\par
+Con el mismo criterio adoptado para el pre-regulador, se desprecia la resistencia $R_{ce1}$ a efectos de simplificaci\'on. No as\'i la resistencia $R_{ce2}$, ya que es la correspondiente al transistor de paso. Su valor ser\'a bajo dado que la corriente del caso analizado es de $\approx 0.5A$.\par
+Para el caso en cuesti\'on se tiene entonces que $R_{ce2} \approx 120\Omega$. Por otro lado, sabiendo que en DC en este caso la $I_{CQ2} = 0.5A$, con $\beta_{2_{MIN}}$ se tiene que $I_{BQ2} = 1mA$, por lo que entonces $I_{CQ1} = I_{CQ3} - I_{BQ2} = 2.2mA$. Sabiendo de la hoja de datos del fabricante que en pequeña se\~nal $\beta_1 = 450$, se calcula $R_{\pi1} = 5.3K\Omega$. Para el transitor $T_2$, la ganancia en AC a pequeña se\~nal es de $\beta_{2_{MIN}} = 25$.\par
+Con estas consideraciones, se planetea el modelo del nuevo amplificador b\'asico.
+
+\begin{figure}[!ht]
+\begin{centering}
+\includegraphics[scale=0.5]{Imagenes/NuevoAmpBasicoCancer_Parte1.png}
+\par\end{centering}
+
+\end{figure}
+
+\begin{figure}[!ht]
+\begin{centering}
+\includegraphics[scale=0.5]{Imagenes/NuevoAmpBasicoCancer_Parte2.png}
+\par\end{centering}
+\caption{Nuevo amplificador b\'asico}
+
+\end{figure}
+
+Se puede observar que el valor de $a$ depender\'a del punto de polarizaci\'on, que varar\'a seg\'un la corriente de salida pedida a la fuente. Es decir que la $Z_{OUT}$ no tiene un valor constante en toda la caracter\'istica $V_O - I_O$ en regulaci\'on. Como la idea es realizar luego un an\'alisis cuantitativo para comparar con las $Z_{OUT}$ simuladas y medidas, se dejar\'a la expresi\'on simb\'olica y luego se calcular\'a una num\'erica para el caso considerado de $0.5A$.
+
+Donde se tiene que $a = \dfrac{V^*_O}{I^*_O}$. Partiendo de la salida:
+
+\[
+V^*_O = I^*_O \cdot R_L
+\]
+
+$I^*_O$ se puede pensar como un divisor de corriente:
+
+\[
+I^*_O = I_A \cdot \frac{R^*_2}{R^*_2 + R_L} 
+\]
+
+La $I_A$ se puede tratar tambi\'en como un divisor de corriente m\'as grande entre [$R_{ce2}//(R_B+R_C)$] y [$R_A + (R^*_2 // R_L)$]:
+
+\[
+I_A = i_{b2} \cdot (\beta_2+1) \cdot \frac{R_{ce2}//(R_B+R_C)}{R_{ce2}//(R_B+R_C) + R_A + (R^*_2 // R_L)}
+\]
+
+Adem\'as se tiene que $i_{b2} = -\beta_1 \cdot i_{b1}$. De la malla de salida del operacional se tiene $i_{b1}$:
+
+\[
+i_{b1} = \frac{-A_{VOL} \cdot \varepsilon}{R_o + R_7 + R_{\pi1}}
+\]
+
+Y finalmente $\varepsilon$ se calcula como un divisor de tensi\'on:
+
+\[
+\varepsilon = V_G \cdot \frac{R_i}{R_i + R^*_1}
+\]
+
+Reemplazando las expresiones una dentro de otra se obtiene finalmente $a$:
+
+\[
+a \simeq R_L \cdot \left( \frac{R^*_2}{R^*_2 + R_L} \right) \cdot \left( \frac{(\beta_2 + 1) \cdot [R_{ce2}//(R_B+R_C)]}{[R_{ce2}//(R_B+R_C)] + R_A + (R^*_2 // R_L)} \right) \cdot \beta_1 \cdot \left( \frac{A_{VOL}}{R_o + R_7 + R_{\pi1}} \right) \cdot \left( \frac{R_i}{R_i + R^*_1} \right)
+\]
+
+Para hallar la $Z_{Oa}$, se pasiva el generador de entrada y se busca la resistencia que ve un generador ideal a la salida:
+
+\[
+Z_{Oa} \simeq (R_{ce2} // (R_B+R_C))+R_A+(R^*_2+R_L)
+\]
+
+Dado que se muestrea tensi\'on, se tiene un nodo com\'un, por lo que la $Z_O$ ser\'a:
+
+\[
+Z_O = \frac{Z_{Oa}}{1+|a\cdot f|}
+\]
+
+Sabiendo que $Z_O = Z_{OUT} // R_L$, se despeja la impedancia buscada:
+
+\[
+Z_{OUT} = \frac{R_L \cdot Z_O}{R_L - Z_O}
+\]
+
+Para el caso analizado con $I_O = 0.5$, la $R_L = 20\Omega$. Formalmente, si se desarrolla la expresi\'on de $Z_{OUT}$ se observar\'ia que no depende de $R_L$, pero como se busca un an\'alisis cuantitativo no se realizar\'a dicho despeje. Para el caso en cuesti\'on, se tiene reemplazando por los valores calculados anteriormente:
+
+\[
+Z_{OUT} = 0.004\Omega
+\]
+
+Se comparan los valores te\'orico, simulado y experimental en el siguiente cuadro.
 
 \begin{table}[!ht]
 
@@ -516,11 +652,11 @@ En el caso experimental, como dicha pendiente puede cambiar en el trayecto desde
 \hline
 & Te\'orico & Simulado & Experimental\\
 \hline 
-$\Delta V_O$ & $0V$ & $2mV$ & $10.09V-9.95V=0.14V$\\
+$\Delta V_O$ & $-$ & $2mV$ & $10.09V-9.95V=0.14V$\\
 \hline 
-$I_O$ &  $1.5A$    &   $1.61A$     & $0.77A - 0A = 0.77A$\\
+$I_O$ &  $0.5A$    &   $1.61A$     & $0.77A - 0A = 0.77A$\\
 \hline
-$Z_O$ &   $0\Omega$   &    $1.2m\Omega$    & $0.2\Omega$\\
+$Z_O$ &   $0.004\Omega$   &    $0.0012\Omega$    & $0.2\Omega$\\
 \hline
 \end{tabular}
 \end{center}
