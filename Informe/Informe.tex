@@ -146,12 +146,13 @@ Analizando el circuito por realimentaci\'on negativa, se pueden identificar los 
 
 \begin{figure}[!ht]
 \begin{centering}
-\includegraphics[scale=0.34]{Imagenes/CircuitoConFeed.png}
+\includegraphics[scale=0.32]{Imagenes/CircuitoConFeed.png}
 \par\end{centering}
 \caption{An\'alisis por realimentaci\'on negativa}
 
 \end{figure}
 
+En el lazo, se observa que el operacional est\'a conectado de manera tal que no invierte, y en transistor $T_1$ como emisor com\'un si lo hace, por lo que efectivamente el lazo de realimentaci\'on es negativo.\par
 A la salida se muestrea tensi\'on y a la entrada se suma tensi\'on, por lo que el par\'ametro estabilizado resulta:
 \[
 PE = \frac{V_O}{V_G} = \frac{1}{f} \cdot \frac{|T|}{1+|T|}
@@ -170,7 +171,7 @@ Para hallar $f$ planteamos el cuadripolo correspondiente:
 
 \begin{figure}[!ht]
 \begin{centering}
-\includegraphics[scale=0.34]{Imagenes/CuadripoloF.png}
+\includegraphics[scale=0.32]{Imagenes/CuadripoloF.png}
 \par\end{centering}
 \caption{Modelo del cuadripolo $f$}
 
@@ -396,7 +397,7 @@ Simulando el circuito original sin compensaci\'on con $R_L = \infty$ se obtiene:
 
 \end{figure}
 
-Como se indica en la respuesta obtenida, para cuando la fase cruza los $-180^{\circ}$ la ganacia es de $21dB$, que est\'a por encima de los $0dB$. Por lo tanto, hay altas probabilidades de que el circuito oscile sin carga. Como la oscilaci\'on ocurre a alta frecuencia, se observar\'ia la oscilaci\'on montada sobre la tensi\'on $V_O$ en DC esperada (seg\'un el valor del potenci\'ometro $R_4$). Con un volt\'imetro, no es posible observar esto dado que el valor medido es el valor medio, que ser\'ia la $V_O$ en DC esperada.
+Como se indica en la respuesta obtenida, para cuando la fase cruza los $-180^{\circ}$ la ganacia es de $23.2dB$, que est\'a por encima de los $0dB$. Por lo tanto, hay altas probabilidades de que el circuito oscile sin carga. Como la oscilaci\'on ocurre a alta frecuencia, se observar\'ia la oscilaci\'on montada sobre la tensi\'on $V_O$ en DC esperada (seg\'un el valor del potenci\'ometro $R_4$). Con un volt\'imetro, no es posible observar esto dado que el valor medido es el valor medio, que ser\'ia la $V_O$ en DC esperada.
 
 Para compensar esto, se coloc\'o un capacitor de $1uF$ entre la entrada no inversora del operacional y el colector del transistor $T_1$ del amplificador de error, m\'as un capacitor de $10uF$ a la salida del circuito (es decir en $V_O$), simulando en LTSpice para verificar que se realice la compensaci\'on.
 
@@ -471,7 +472,7 @@ Se considera como valor de $V_O$ te\'orico m\'aximo $10.2V$ (es decir, incluyend
 V_{R_{MIN}} = V_{O_{MAX}} + R_A \cdot I_{O_{MAX}} + V_{BE2_{ON}} + V_{CE3_{SAT}} + V_{R_1}
 \]
 \[
-V_{R_{MIN}} =  = 10.2V + 1.6V + 1.4V + 0.7V + 0.7V = 14.8V 
+V_{R_{MIN}} = 10.2V + 1.6V + 1.4V + 0.7V + 0.7V = 14.8V 
 \]
 
 \newpage
@@ -581,9 +582,9 @@ Con estas consideraciones, se planetea el modelo del nuevo amplificador b\'asico
 
 \end{figure}
 
-Se puede observar que el valor de $a$ depender\'a del punto de polarizaci\'on, que varar\'a seg\'un la corriente de salida pedida a la fuente. Es decir que la $Z_{OUT}$ no tiene un valor constante en toda la caracter\'istica $V_O - I_O$ en regulaci\'on. Como la idea es realizar luego un an\'alisis cuantitativo para comparar con las $Z_{OUT}$ simuladas y medidas, se dejar\'a la expresi\'on simb\'olica y luego se calcular\'a una num\'erica para el caso considerado de $0.5A$.
+Se puede observar que el valor de $a$ depender\'a del punto de polarizaci\'on, que variar\'a seg\'un la corriente de salida pedida a la fuente. Es decir que la $Z_{OUT}$ no tiene un valor constante en toda la caracter\'istica $V_O - I_O$ en regulaci\'on. Como la idea es realizar luego un an\'alisis cuantitativo para comparar con las $Z_{OUT}$ simuladas y medidas, se dejar\'a la expresi\'on simb\'olica y luego se calcular\'a una num\'erica para el caso considerado de $0.5A$.
 
-Donde se tiene que $a = \dfrac{V^*_O}{I^*_O}$. Partiendo de la salida:
+Se tiene entonces que $a = \dfrac{V^*_O}{I^*_O}$. Partiendo de la salida:
 
 \[
 V^*_O = I^*_O \cdot R_L
@@ -708,8 +709,8 @@ Al momento de realizar la implementaci\'on en PCB, como es una placa de potencia
 Para implementar la fuente, teniendo en cuenta los requerimientos de espacio y potencia:
 
 \begin{itemize}
-\item Dado que el transistor lleva un disipador, se lo coloc\'o cerca de uno de los bordes, de manera tal que el disipador quede hacia afuera.
-\item Para la alimentaci\'on y salida, se utilizaron conectores polarizados,
+\item Dado que el transistor lleva un disipador, se lo coloc\'o cerca de uno de los bordes, de manera tal que el disipador quede hacia afuera, pero la base apoyada sobre la placa (no en el aire).
+\item Para la alimentaci\'on y salida, se utilizaron conectores polarizados.
 \item Se incluyeron soportes tipo tameco en las esquinas para mantener el PCB en pie.
 \end{itemize}
 
