@@ -1,0 +1,47 @@
+Circuit: * C:\Users\joa-m\TP1_Electronica2\TP2\Simulacion_Joaco\Amplificador.asc
+
+Early termination of direct N-R iteration.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+vernier = 0.5
+vernier = 0.25
+Gmin = 3.42672
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+Gmin = 3.4493
+vernier = 0.0078125
+vernier = 0.0104167
+vernier = 0.00520833
+vernier = 0.00260417
+Gmin = 3.41358
+vernier = 0.00347222
+Gmin = 3.38703
+vernier = 0.00173611
+vernier = 0.000868055
+vernier = 0.00115741
+Gmin = 3.38336
+vernier = 0.00154321
+vernier = 0.00205761
+Gmin = 3.37087
+vernier = 0.00102881
+vernier = 0.000514403
+vernier = 0.00068587
+Gmin = 3.36871
+vernier = 0.000914493
+vernier = 0.00121932
+Gmin = 3.36133
+vernier = 0.00162576
+vernier = 0.000812882
+vernier = 0.000406441
+Gmin = 3.35553
+vernier = 0.000541921
+vernier = 0.000722562
+Gmin = 3.35118
+vernier = 0.000963415
+vernier = 0.000481708
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
