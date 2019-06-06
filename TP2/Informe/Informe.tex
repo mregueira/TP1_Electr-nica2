@@ -222,7 +222,7 @@ A_V = -\frac{R_8}{R_7}
 \]
 
 Se toman por simplicidad $R_7(N) = R_8(N) = 10K\Omega$.
-En la figura se hace una distinción particular con $V_f$, dado que la ganancia se calculó tomando como tensión que muestrea el lazo como $\frac{\hat{V_O}_{MAX}}{2}$. Como la señal a muestrear debe ser la salida del circuito y ésta es diferencial, se debe tomar dicha salida y hacer la diferencia propiamente dicha, dividida por 2. Es decir:
+En la figura se hace una distinción particular con $V_f$, dado que la ganancia se calculó tomando como tensión que muestrea el lazo como $\frac{\hat{V_O}_{MAX}}{2}$. Como la señal a muestrear debe ser la salida del circuito y ésta es diferencial, se debe tomar dicha salida y hacer la diferencia propiamente dicha, dividida por 2. Es decir, como se muestra a continuación.
 
 \[
 V_f = \frac{1}{2}\left( \frac{\hat{V_O}_{MAX}}{2} - \left( -\frac{\hat{V_O}_{MAX}}{2} \right) \right) = \frac{\hat{V_O}_{MAX}}{2}
@@ -248,6 +248,8 @@ Si se toma $R_{10}(N) = R_{11}(N) = 1K\Omega$, y $R_{12}(N) = R_{13}(N) = (1K\Om
 \[
 V_f = \frac{V_O}{2} \cdot \left( \frac{1}{3} \right) \cdot \left( \frac{3}{2} \right) + \frac{V_O}{2} \cdot \left( \frac{1}{2} \right) = \frac{V_O}{2}
 \]
+
+\newpage
 
 \subsubsection{Reestricción del ancho de banda}
 
@@ -410,13 +412,43 @@ Se obtiene entonces el rendimiento máximo con la $\hat{V_O}_{MAX}$:
 
 \subsection{Respuesta en frecuencia}
 
+Se simuló la respuesta en frecuencia en un rango más amplio (cubriendo de 9Hz a 50KHz, que fue el rango donde se midió). Para la máxima potencia, en vacío se obtiene prácticamente la misma tensión de salida esperada que en la simulación sin inconvenientes.
+
+\begin{figure}[!ht]
+\begin{centering}
+\includegraphics[scale=0.4]{Imagenes/feed_ok.png}
+\par\end{centering}
+\caption{Respuesta temporal con señal de entrada 1Vpp a 1KHz sin carga. Los canales 1 y 2 son las salidas en los bornes de la carga $R_L$ referenciadas a masa, el canal 3 es la señal de entrada y mediante Math del osciloscopio se realizó la resta.}
+\end{figure}
+
+\newpage
+
+Al cargar el circuito con la $R_L = 8\Omega$, al llegar a la máxima potencia se tiene saturación en los picos de la señal, un factor no esperado.
+
+\begin{figure}[!ht]
+\begin{centering}
+\includegraphics[scale=0.4]{Imagenes/sat_1k.png}
+\par\end{centering}
+\caption{Respuesta temporal con señal de entrada 1Vpp a 1KHz con carga. Los canales 1 y 2 son las salidas en los bornes de la carga $R_L$ referenciadas a masa, el canal 3 es la señal de entrada y mediante Math del osciloscopio se realizó la resta.}
+\end{figure}
+
+Con carga conectada, se pudo obtener una salida sin saturación hasta una señal de entrada de 0.75Vpp.\par
+Para el rango de frecuencias expresando anteriormente (9Hz a 50KHz) y una señal de entrada de 0.75Vpp (para que no sature), se comparan la respuesta en frecuencia medida y simulada, obteniendo una buena coincidencia.
+
+\begin{figure}[!ht]
+\begin{centering}
+\includegraphics[scale=0.6]{Imagenes/BodeContraste.png}
+\par\end{centering}
+\caption{Respuesta en frecuencia - Módulo}
+\end{figure}
+
 \subsubsection{Ganancia de lazo - Compensación}
 
 El circuito propuesto tal como está planteado, si se simula la ganancia de lazo (mediante el script provisto por la cátedra), puede observarse que cuando la magnitud cruza los $0dB$, el margen de fase es negativo, surgiendo oscilaciones en torno a la frecuencia de 1MHz. El diagrama se muestra en la figura siguiente.
 
 \begin{figure}[!ht]
 \begin{centering}
-\includegraphics[scale=0.45]{Imagenes/LazoSinCompenzar.png}
+\includegraphics[scale=0.6]{Imagenes/LazoSinCompenzar.png}
 \par\end{centering}
 \caption{Ganancia de lazo (módulo y fase) sin compensar - Gráfico realizado en Python}
 \end{figure}
@@ -425,7 +457,7 @@ Para mejorar el margen de fase para evitar la oscilación, se colocó un capacit
 
 \begin{figure}[!ht]
 \begin{centering}
-\includegraphics[scale=0.45]{Imagenes/LazoCompenzar.png}
+\includegraphics[scale=0.6]{Imagenes/LazoCompenzar.png}
 \par\end{centering}
 \caption{Ganancia de lazo (módulo y fase) compensada - Gráfico realizado en Python}
 \end{figure}
@@ -434,10 +466,9 @@ Para mejorar el margen de fase para evitar la oscilación, se colocó un capacit
 
 Dado que a la entrada desde el generador se ve la entrada del amplificador operacional en configuración de no inversor, la impedancia vista es la de entrada del operacional, multiplicada por el factor (1+|T|) dado que el lazo de realimentación suma tensión. La impedancia de entrada del TL084 es del orden de $10^{12}\Omega$, por lo que multiplicada por Es decir que (1+|T|) resulta prácticamente infinita. Para cumplir con un poco de margen con la característica pedida de $Z_{IN} = 50K\Omega$, se coloca en paralelo a la entrada del operacional una resistencia de $56K\Omega$. Al tener una impedancia muy grande en paralelo a la de $56K\Omega$, la vista por el generador a la entrada resulta prácticamente $56K\Omega$.
 
-\subsection{Impedancia de salida}
-
-%CREO QUE DE BAJA
-
 \subsection{Distorsión armónica}
+
+Se midió el THD sobre una de las salidas (en uno de los bornes de la carga $R_L$ que corresponde a $\frac{V_O}{2}$) utilizando el analizador de espectros para audio disponible en el laboratorio, con una señal de entrada de 0.75Vpp (para evitar el efecto de saturación) tanto con y sin carga.\par
+Se obtuvo para ambos casos un THD del 4$\%$ para dicha frecuencia (que en escala logarítmica se encuentra en el centro).
 
 \end{document}

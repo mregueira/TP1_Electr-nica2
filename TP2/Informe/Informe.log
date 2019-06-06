@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2018.4.3)  6 JUN 2019 18:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2018.4.3)  6 JUN 2019 18:58
 entering extended mode
 **./Informe.tex
 (Informe.tex
@@ -1059,45 +1059,64 @@ File: Imagenes/Diferenciador.png Graphic file (type png)
 <use Imagenes/Diferenciador.png>
 Package pdftex.def Info: Imagenes/Diferenciador.png used on input line 235.
 (pdftex.def)             Requested size: 192.77975pt x 153.03134pt.
-
-<Imagenes/Opamp2ConCap.png, id=39, 699.8145pt x 373.51546pt>
+ [7 <./Imagenes/opamp2SinCap.png> <./Imagenes/Diferenciador.png>]
+<Imagenes/Opamp2ConCap.png, id=45, 699.8145pt x 373.51546pt>
 File: Imagenes/Opamp2ConCap.png Graphic file (type png)
 
 <use Imagenes/Opamp2ConCap.png>
-Package pdftex.def Info: Imagenes/Opamp2ConCap.png used on input line 258.
+Package pdftex.def Info: Imagenes/Opamp2ConCap.png used on input line 260.
 (pdftex.def)             Requested size: 349.90639pt x 186.75726pt.
- [7 <./Imagenes/opamp2SinCap.png> <./Imagenes/Diferenciador.png>] [8 <./Imagene
-s/Opamp2ConCap.png>]
-<Imagenes/ZD35.jpg, id=51, 285.065pt x 203.76125pt>
+ [8 <./Imagenes/Opamp2ConCap.png>] [9]
+<Imagenes/ZD35.jpg, id=54, 285.065pt x 203.76125pt>
 File: Imagenes/ZD35.jpg Graphic file (type jpg)
  <use Imagenes/ZD35.jpg>
-Package pdftex.def Info: Imagenes/ZD35.jpg used on input line 382.
+Package pdftex.def Info: Imagenes/ZD35.jpg used on input line 384.
 (pdftex.def)             Requested size: 142.53215pt x 101.88037pt.
 
-[9 <./Imagenes/ZD35.jpg>]
-<Imagenes/LazoSinCompenzar.png, id=55, 462.528pt x 346.896pt>
+[10 <./Imagenes/ZD35.jpg>]
+<Imagenes/feed_ok.png, id=58, 1027.84pt x 825.0825pt>
+File: Imagenes/feed_ok.png Graphic file (type png)
+
+<use Imagenes/feed_ok.png>
+Package pdftex.def Info: Imagenes/feed_ok.png used on input line 419.
+(pdftex.def)             Requested size: 411.12872pt x 330.02715pt.
+ [11 <./Imagenes/feed_ok.png (PNG copy)>]
+<Imagenes/sat_1k.png, id=62, 1027.84pt x 825.0825pt>
+File: Imagenes/sat_1k.png Graphic file (type png)
+ <use Imagenes/sat_1k.png>
+Package pdftex.def Info: Imagenes/sat_1k.png used on input line 430.
+(pdftex.def)             Requested size: 411.12872pt x 330.02715pt.
+
+<Imagenes/BodeContraste.png, id=63, 462.528pt x 346.896pt>
+File: Imagenes/BodeContraste.png Graphic file (type png)
+
+<use Imagenes/BodeContraste.png>
+Package pdftex.def Info: Imagenes/BodeContraste.png used on input line 440.
+(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
+ [12 <./Imagenes/sat_1k.png (PNG copy)> <./Imagenes/BodeContraste.png>]
+<Imagenes/LazoSinCompenzar.png, id=68, 462.528pt x 346.896pt>
 File: Imagenes/LazoSinCompenzar.png Graphic file (type png)
 
 <use Imagenes/LazoSinCompenzar.png>
-Package pdftex.def Info: Imagenes/LazoSinCompenzar.png used on input line 419.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+Package pdftex.def Info: Imagenes/LazoSinCompenzar.png used on input line 451.
+(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
 
-<Imagenes/LazoCompenzar.png, id=56, 462.528pt x 346.896pt>
+<Imagenes/LazoCompenzar.png, id=69, 462.528pt x 346.896pt>
 File: Imagenes/LazoCompenzar.png Graphic file (type png)
 
 <use Imagenes/LazoCompenzar.png>
-Package pdftex.def Info: Imagenes/LazoCompenzar.png used on input line 428.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
- [10 <./Imagenes/LazoSinCompenzar.png> <./Imagenes/LazoCompenzar.png>] [11] (In
+Package pdftex.def Info: Imagenes/LazoCompenzar.png used on input line 460.
+(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
+ [13 <./Imagenes/LazoSinCompenzar.png> <./Imagenes/LazoCompenzar.png>] [14] (In
 forme.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 5183 strings out of 493333
- 68681 string characters out of 3136603
- 140521 words of memory out of 3000000
- 8538 multiletter control sequences out of 15000+200000
+ 5198 strings out of 493333
+ 69036 string characters out of 3136603
+ 143521 words of memory out of 3000000
+ 8550 multiletter control sequences out of 15000+200000
  75945 words of font info for 101 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,11n,43p,1097b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1109,9 +1128,9 @@ s (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on Informe.pdf (11 pages, 1758926 bytes).
+Output written on Informe.pdf (14 pages, 1996115 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
