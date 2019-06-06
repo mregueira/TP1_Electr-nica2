@@ -300,17 +300,143 @@ f_{CS} = \frac{1}{2 \cdot \pi \cdot C_1(N) \cdot R_6(N)} = 25.3KHz
 
 \subsection{Disipación de potencia}
 
+Los transistores de potencia utilizados pueden soportar sin disipador una potencia de 2W (según hoja de datos ON Semiconductor). Para saber si requieren disipador, se calcula la potencia disipada en los mismos en el peor caso posible. Una forma simple de calcularla es obtener la potencia total entregada por las fuentes, y restar la potencia disipada por la carga $R_L$, ya que son las más significativas del circuito (junto con las potencias de los transistores).\par
+Considerando la fuente de $+V_{CC}$, se tiene:
+
+\[
+P_{+V_{CC}} = V_{CC} \cdot \overline{I_{CC}}
+\]
+Dado que las fuentes entregan corriente en ambos semiciclos de la señal de entrada, la $I_{CC}$ tendrá formato de senoidal pero ambos semiciclos positivos. Se puede calcular la $\overline{I_{CC}}$ realizando la integral en un semiciclo y luego multiplicando el resultado por 2 debido a la simetría:
+
+\[
+\overline{I_{CC}} = 2 \cdot \frac{1}{T} \int_0^T \hat{I_O} \cdot sen(\omega t) \cdot dt = \frac{2}{\pi} \cdot \hat{I_O}
+\]
+
+Por lo que la potencia entregada por la fuente de $+V_{CC}$ resulta:
+
+\[
+P_{+V_{CC}} = V_{CC} \cdot \frac{2}{\pi} \cdot \hat{I_O} = V_{CC} \cdot \frac{2}{\pi} \cdot \frac{\hat{V_O}}{R_L}
+\]
+
+Entonces la potencia entregada por ambas fuentes resulta:
+
+\[
+P_{V_{CC}} = P_{+V_{CC}} + P_{-V_{CC}} = V_{CC} \cdot \frac{4}{\pi} \cdot \frac{\hat{V_O}}{R_L}
+\]
+
+Por lo tanto, para calcular la potencia disipada en los transistores, se le resta a esta última la potencia disipada por la carga, y se divide por 4 para obtener la potencia en cada transistor:
+
+\[
+P_{D_{Tx}} = \frac{1}{4} ( P_{V_{CC}} - P_O ) =  \frac{V_{CC}}{\pi} \cdot \frac{\hat{V_O}}{R_L} - \frac{\hat{V_O}^2}{8 \cdot R_L}
+\]
+
+Siendo 'x' cualquiera de los transistores $T_1$, $T_2$, $T_3$ y $T_4$. La expresión resultante es una parábola con concavidad hacia abajo, por lo que el máximo se halla en el vértice, que puede calcularse en forma sencilla derivando la expresión respecto a $\hat{V_O}$ e igualando a 0:
+
+\[
+\frac{dP_{D_{Tx}}}{d\hat{V_O}} = \frac{V_{CC}}{\pi \cdot R_L} - \frac{2 \cdot \hat{V_O}}{8 \cdot R_L} = 0
+\]
+
+\[
+\left. \hat{V_O} \right|_{P_{D_{Tx}}\textrm{es máxima}} = \frac{4 \cdot V_{CC}}{\pi} = 19.09V < \hat{V_O}_{MAX}
+\]
+
+Reemplazando en la expresión de $P_{D_{Tx}}$ se halla entonces la potencia máxima disipada:
+
+\[
+\left. P_{D_{Tx}} \right|_{MAX} = \frac{2 \cdot V_{CC}^2}{\pi^2 \cdot R_L} = 5.7W
+\]
+
+Si el valor de $\hat{V_O}$ obtenido hubiera sido mayor al $\hat{V_O}_{MAX}$, el máximo estaría justamente en $\hat{V_O}_{MAX}$, ya que la $V_O$ no puede tomar un valor pico mayor a éste.\par
+Dado que la potencia máxima obtenida resulta mayor a los 2W mencionados, se requiere añadirle un disipador a los transistores. Empleando el modelo conocido para relacionar la temperatura y potencia disipada mediante las resistencias térmicas, se tiene en este caso:
+
+\[
+P_{D_{Tx}} = \frac{T_J - T_A}{\theta_{JC} + \theta_{CD} + \theta_{DA}}
+\]
+
+De la hoja de datos utilizada (ON Semiconductor):
+
+\[
+T_J = 150^{\circ}C \hspace{2cm} R_{\theta_{JC}} = 1.95 \left(\frac{^{\circ}C}{W}\right)
+\] 
+ 
+\[
+\left\lbrace
+\begin{array}{l}
+R_{\theta_{JC}}: \textrm{Resistencia t\'ermica entre juntura y carcasa del transistor} \\
+R_{\theta_{CD}}: \textrm{Resistencia t\'ermica entre carcasa y el disipador} \\
+R_{\theta_{DA}}: \textrm{Resistencia t\'ermica entre disipador y ambiente}
+\end{array}
+\right.
+\] 
+
+Dado que se colocará el disipador directamente sobre el transistor mediante pasta térmica, se puede considerar una $R_{\theta_{CD}} \approx 1 \left(\frac{^{\circ}C}{W}\right)$, y se considera como temperatura ambiente $T_A = 30^{\circ}C$. Se despeja entonces el valor de la $R_{\theta_{DA}}$:
+
+\[
+R_{\theta_{DA}} = \frac{T_J - T_A}{P_{D_{Tx}}} - R_{\theta_{JC}} - R_{\theta_{CD}} = 18 \left(\frac{^{\circ}C}{W}\right)
+\]
+
+De los disipadores que se disponían, se utilizó el ZD35 (modelo de 5cm de altura), que cumple con una $R_{\theta_{DA}} = 10 \left(\frac{^{\circ}C}{W}\right)$, que se muestra en la siguiente figura.
+
+\begin{figure}[!ht]
+\begin{centering}
+\includegraphics[scale=0.5]{Imagenes/ZD35.jpg}
+\par\end{centering}
+\caption{Disipador ZD35 - Modelo de alto 5cm}
+\end{figure}
+
+\newpage
+
 \section{Implementación - Análisis de parámetros característicos}
 
 \subsection{Rendimiento}
 
+El rendimiento del amplificador se define como: 
+
+\[
+\eta(\%) = \frac{P_O}{P_{V_{CC}}}
+\]
+
+Si se reemplazan las expresiones de potencia total entregada por las fuentes y la potencia de salida, resulta:
+
+\[
+\eta(\%) = \frac{\hat{V_O} \cdot \pi}{8 \cdot V_{CC}} 
+\]
+
+Se obtiene entonces el rendimiento máximo con la $\hat{V_O}_{MAX}$:
+
+\[
+\eta(\%) = 52.3\%
+\]
+
 \subsection{Respuesta en frecuencia}
 
-\subsubsection{Compensación}
+\subsubsection{Ganancia de lazo - Compensación}
+
+El circuito propuesto tal como está planteado, si se simula la ganancia de lazo (mediante el script provisto por la cátedra), puede observarse que cuando la magnitud cruza los $0dB$, el margen de fase es negativo, surgiendo oscilaciones en torno a la frecuencia de 1MHz. El diagrama se muestra en la figura siguiente.
+
+\begin{figure}[!ht]
+\begin{centering}
+\includegraphics[scale=0.45]{Imagenes/LazoSinCompenzar.png}
+\par\end{centering}
+\caption{Ganancia de lazo (módulo y fase) sin compensar - Gráfico realizado en Python}
+\end{figure}
+
+Para mejorar el margen de fase para evitar la oscilación, se colocó un capacitor en la resistencia de realimentación del amplificador operacional que realiza la diferenciación de la señal de salida (es la $R_8$). Su valor se determinó mediante simulaciones sucesivas (llegando a un valor final de $C_{COMP} = 1nF$) hasta obtener un margen de fase holgado, logrando un valor de aproximadamente $70^{\circ}$, como se muestra en la siguiente figura.
+
+\begin{figure}[!ht]
+\begin{centering}
+\includegraphics[scale=0.45]{Imagenes/LazoCompenzar.png}
+\par\end{centering}
+\caption{Ganancia de lazo (módulo y fase) compensada - Gráfico realizado en Python}
+\end{figure}
 
 \subsection{Impedancia de entrada}
 
+Dado que a la entrada desde el generador se ve la entrada del amplificador operacional en configuración de no inversor, la impedancia vista es la de entrada del operacional, multiplicada por el factor (1+|T|) dado que el lazo de realimentación suma tensión. La impedancia de entrada del TL084 es del orden de $10^{12}\Omega$, por lo que multiplicada por Es decir que (1+|T|) resulta prácticamente infinita. Para cumplir con un poco de margen con la característica pedida de $Z_{IN} = 50K\Omega$, se coloca en paralelo a la entrada del operacional una resistencia de $56K\Omega$. Al tener una impedancia muy grande en paralelo a la de $56K\Omega$, la vista por el generador a la entrada resulta prácticamente $56K\Omega$.
+
 \subsection{Impedancia de salida}
+
+%CREO QUE DE BAJA
 
 \subsection{Distorsión armónica}
 

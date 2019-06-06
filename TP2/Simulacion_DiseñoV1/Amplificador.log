@@ -1,6 +1,9 @@
 Circuit: * C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Simulacion_DiseñoV1\Amplificador.asc
 
 R7: both pins shorted together -- ignoring.
+WARNING: Node N019 is floating.
+
+WARNING: Less than two connections to node N019.  This node is used by C3.
 Early termination of direct N-R iteration.
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
@@ -28,9 +31,11 @@ Source Step = 63.6364%
 Source Step = 93.9394%
 Source stepping succeeded in finding the operating point.
 
+.step prb=-1
+.step prb=1
 
-Date: Thu Jun 06 16:24:41 2019
-Total elapsed time: 0.572 seconds.
+Date: Thu Jun 06 17:23:17 2019
+Total elapsed time: 0.988 seconds.
 
 tnom = 27
 temp = 27
@@ -40,9 +45,9 @@ traniter = 0
 tranpoints = 0
 accept = 0
 rejected = 0
-matrix size = 142
+matrix size = 143
 fillins = 661
 solver = Normal
-Matrix Compiler1:    3635 opcodes
-Matrix Compiler2: 24.69 KB object code size  4.3/3.6/[0.9]
+Matrix Compiler1:    3638 opcodes
+Matrix Compiler2: 24.76 KB object code size  4.3/3.7/[1.0]
 

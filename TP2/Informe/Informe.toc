@@ -7,10 +7,10 @@
 \contentsline {subsection}{\numberline {2.4}Etapa de ganancia de tensi\IeC {\'o}n}{6}
 \contentsline {subsubsection}{\numberline {2.4.1}Reestricci\IeC {\'o}n del ancho de banda}{7}
 \contentsline {subsection}{\numberline {2.5}Disipaci\IeC {\'o}n de potencia}{8}
-\contentsline {section}{\numberline {3}Implementaci\IeC {\'o}n - An\IeC {\'a}lisis de par\IeC {\'a}metros caracter\IeC {\'\i }sticos}{8}
-\contentsline {subsection}{\numberline {3.1}Rendimiento}{8}
-\contentsline {subsection}{\numberline {3.2}Respuesta en frecuencia}{8}
-\contentsline {subsubsection}{\numberline {3.2.1}Compensaci\IeC {\'o}n}{8}
-\contentsline {subsection}{\numberline {3.3}Impedancia de entrada}{8}
-\contentsline {subsection}{\numberline {3.4}Impedancia de salida}{8}
-\contentsline {subsection}{\numberline {3.5}Distorsi\IeC {\'o}n arm\IeC {\'o}nica}{8}
+\contentsline {section}{\numberline {3}Implementaci\IeC {\'o}n - An\IeC {\'a}lisis de par\IeC {\'a}metros caracter\IeC {\'\i }sticos}{10}
+\contentsline {subsection}{\numberline {3.1}Rendimiento}{10}
+\contentsline {subsection}{\numberline {3.2}Respuesta en frecuencia}{10}
+\contentsline {subsubsection}{\numberline {3.2.1}Ganancia de lazo - Compensaci\IeC {\'o}n}{10}
+\contentsline {subsection}{\numberline {3.3}Impedancia de entrada}{11}
+\contentsline {subsection}{\numberline {3.4}Impedancia de salida}{11}
+\contentsline {subsection}{\numberline {3.5}Distorsi\IeC {\'o}n arm\IeC {\'o}nica}{11}
