@@ -28,12 +28,14 @@ El circuito propuesto es un amplificador con salida diferencial, utilizando etap
 
 \begin{figure}[!ht]
 \begin{centering}
-%\includegraphics[scale=0.32]{Imagenes/CircuitoSinCap.png}
+\includegraphics[scale=0.45]{Imagenes/CompletoSimple.png}
 \par\end{centering}
 \caption{Circuito amplificador con salida diferencial (simplificado)}
 \end{figure}
 
 Para tener un cierto margen a las especificaciones propuestas, se diseñará para una potencia de $25W$ sobre la carga.
+
+\newpage
 
 \subsection{Etapa de salida}
 
@@ -83,7 +85,44 @@ Se detalla el cálculo de las potencias en la sección de cálculo de protecció
 
 \subsection{Prepolarización}
 
-%EFECTO DE CRUCE POR CERO Y EMBALAMIENTO TERMICO
+En la etapa de salida clase B mostrada previamente, surge el inconveniente de que, cuando la señal de control a sus bases es menor a la $V_{BE_{ON}}$ correspondiente, ninguno de los transistores conduce, por lo que durante ese intervalo de tiempo la tensión sobre la carga es nula.\par
+Este efecto se conoce como distorsión de ``cruce por cero''. Para reducir dicho efecto, se busca darle a los transistores una tensión sobre la base para prepolarizarlos. Una manera efectiva de implementar esto es mediante el circuito conocido como multiplicador de $V_{BE}$, que se muestra a continuación.
+
+\begin{figure}[!ht]
+\begin{centering}
+\includegraphics[scale=0.5]{Imagenes/MultiplicadorVBE.png}
+\par\end{centering}
+\caption{Multiplicador de $V_{BE}$}
+\end{figure}
+
+El colector y el emisor del transistor $T_7$ se conectan a las bases de los transistores de potencia respectivamente. En el hemicircuito izquierdo corresponde a $T_1$ y $T_2$, y para el hemicircuito derecho corresponde a $T_3$ y $T_4$ (al igual que la fuente de corriente $I_F$, se utliza un multiplicador de $V_{BE}$ por cada hemicircuito con idénticos componentes).\par
+Planteando el divisor resistivo sobre $V_{BE7}$:
+
+\[
+V_{BE7} = V_{CE7} \cdot \left( \frac{R_{B1}}{R_{A1} + R_{B1}} \right)
+\]
+
+Despejando $V_{CE7}$ resulta:
+
+\[
+V_{CE7} = V_{BE7} \cdot \left( 1 + \frac{R_{A1}}{R_{B1}} \right)
+\]
+
+Para prepolarizar cada transistor del hemicircuito, se necesita una $V_{BE_{ON}} = 1.4V$ en cada uno, lo que resulta un total de 2.8V. Si se utiliza $R_{A1} = 10K\Omega$ como preset para ajuste, se despeja $R_{B1}$:
+
+\[
+R_{B1} = \frac{R_{A1}}{\frac{2.8V}{0.7V} - 1} = 3.33K\Omega \Longrightarrow R_{B1}(N) = 2.7K\Omega
+\]
+
+Se normaliza hacia abajo para asegurar la tensión mínima buscada (ya que $R_{B1}$ divide en la fórmula).\par
+Hay otro inconveniente en este tipo de etapas de salida. Suponiendo que las resistencias de emisor $R_E$ colocadas en el diseño final no estuvieran, consideremos el caso donde se entrega corriente alta a la carga. En este caso los transistores de salida elevarán su temperatura, debido a la potencia que disipan. Al elevar su temperatura, la curva $I_C(V_{BE})$ resulta ``desplazada'' hacia la izquierda, es decir que para la misma $V_{BE}$ resulta una $I_C$ mayor. Al aumentar un poco la $I_C$, la temperatura aumenta también dado que la potencia disipada en los transistores aumenta, desplazándose nuevamente la curva $I_C(V_{BE})$, repitiéndose el proceso hasta que los dispositivos se destruyen. Esto se conoce (como se mencionó anteriormente) como embalamiento térmico. Para evitar este efecto, se introducen las resistencias $R_E$ indicadas anteriormente en los emisores de los transistores, siendo de bajo valor (un criterio que se suele tomar es que resulten 10 veces menores al valor de la carga para evitar pérdidas de potencia significativas).\par
+En base a los valores disponibles, se colocaron resistencias $R_{E1} = R_{E2} = R_{E3} = R_{E4} = 0.33\Omega$. Para saber de qué potencia deben ser para no quemarse, se calcula la potencia eficaz máxima que disiparán. Siendo la $\hat{I_O}_{MAX} = 2.5A$, se tiene:
+
+\[
+\left. P_{R_E} \right|_{I_O \textrm{es máxima}} = \frac{\hat{I_O}_{MAX}^2}{2} \cdot R_E = 1.1W
+\]  
+
+Se colocaron entonces las de potencia normalizada siguiente hacia arriba disponibles, que fueron las de 3W.
 
 \subsection{Fuente de corriente $I_F$}
 
@@ -176,16 +215,103 @@ Para producir la señal invertida para el otro hemicircuito, se toma la salida $
 \caption{Amplificador de tensión e inversión de señal}
 \end{figure}
 
+Para obtener la ganancia del inversor $A_V = -1$, de la expresión conocida:
+
+\[
+A_V = -\frac{R_8}{R_7}
+\]
+
+Se toman por simplicidad $R_7(N) = R_8(N) = 10K\Omega$.
 En la figura se hace una distinción particular con $V_f$, dado que la ganancia se calculó tomando como tensión que muestrea el lazo como $\frac{\hat{V_O}_{MAX}}{2}$. Como la señal a muestrear debe ser la salida del circuito y ésta es diferencial, se debe tomar dicha salida y hacer la diferencia propiamente dicha, dividida por 2. Es decir:
 
 \[
 V_f = \frac{1}{2}\left( \frac{\hat{V_O}_{MAX}}{2} - \left( -\frac{\hat{V_O}_{MAX}}{2} \right) \right) = \frac{\hat{V_O}_{MAX}}{2}
 \]
 
-De esta manera, la señal muestreada resultante $V_f$ es la llamada en el primer circuito como $V_i^*$.
+De esta manera, la señal muestreada resultante $V_f$ es la llamada en el primer circuito como $V_i^*$. Para efectuar dicha operación, se implementa un tercer amplificador operaciónal en configuración de restador, como se muestra a continuación.
+
+\begin{figure}[!ht]
+\begin{centering}
+\includegraphics[scale=0.5]{Imagenes/Diferenciador.png}
+\par\end{centering}
+\caption{Diferenciador de señal de salida}
+\end{figure}
+
+Por superposición, la salida $V_f$ resulta:
+
+\[
+V_f = \frac{V_O}{2} \cdot \left( \frac{R_{11}}{R_{11} + R_{13}} \right) \cdot \left( 1 + \frac{R_{10}}{R_{12}} \right) + \left( -\frac{V_O}{2} \right) \cdot \left( -\frac{R_{10}}{R_{12}} \right)
+\]
+
+Si se toma $R_{10}(N) = R_{11}(N) = 1K\Omega$, y $R_{12}(N) = R_{13}(N) = (1K\Omega + 1K\Omega) = 2K\Omega$, queda:
+
+\[
+V_f = \frac{V_O}{2} \cdot \left( \frac{1}{3} \right) \cdot \left( \frac{3}{2} \right) + \frac{V_O}{2} \cdot \left( \frac{1}{2} \right) = \frac{V_O}{2}
+\]
 
 \subsubsection{Reestricción del ancho de banda}
 
-%LOS CALCULOS PARA LOS CAPACITORES DE 20KHZ Y 20HZ
+Para limitar el ancho de banda del circuito, se agregan dos capacitores de compensación en el realimentador del circuito amplificador de tensión, como se muestra en la figura.
+
+\begin{figure}[!ht]
+\begin{centering}
+\includegraphics[scale=0.5]{Imagenes/Opamp2ConCap.png}
+\par\end{centering}
+\caption{Amplificador de tensión e inversión de señal con límite de ancho de banda}
+\end{figure}
+
+Para las bajas frecuencias (en este caso menor a 20Hz), se busca que $C_2$ tenga una reactancia alta, comportándose como circuito abierto. En dicha situación, el amplificador queda con el formato de buffer, por lo que la continua pasa sin amplificarse. De esta forma, $C_2$ define la frecuencia de corte inferior.\par
+Para altas frecuencias (en este caso, mayores a 20KHz), se busca que $C_1$ tengan una reactancia baja, de forma tal que la ganancia de la configuración de no inversor sea casi unitaria, para que mayores frecuencias no sean amplificadas. De esta forma, $C_1$ define la frecuencia de corte superior.\par
+Para calcularlos, se tiene por un lado:
+
+\[
+f_{CI} = \frac{1}{2 \cdot \pi \cdot C_2 \cdot R_5}
+\]
+ 
+Dado que de los cálculos de ganancia anteriores se tiene $R_5$, se despeja el valor de $C_2$:
+
+\[
+C_2 = \frac{1}{2 \cdot \pi \cdot f_{CI} \cdot R_5} = 795nF \Longrightarrow C_2(N) = (470nF + 470nF) = 940nF
+\]
+
+Se redondea el valor teórico hacia arriba al normalizar, dado que la cota de 20Hz en audio es una cota inferior. Entonces, normalizando hacia arriba se tiene una $f_{CI}$ efectiva menor:
+
+\[
+f_{CI}^* = \frac{1}{2 \cdot \pi \cdot C_2(N) \cdot R_5(N)} = 16.9Hz
+\]
+
+De forma similar, para la otra cota:
+
+\[
+f_{CS} = \frac{1}{2 \cdot \pi \cdot C_1 \cdot R_6}
+\]
+
+De los cálculos de ganancia previos se tiene $R_6$, por lo que se despeja $C_1$:
+
+\[
+C_1 = \frac{1}{2 \cdot \pi \cdot f_{CS} \cdot R_6} = 41pF \Longrightarrow C_1(N) = 33pF
+\]
+
+Se redondea el valor teórico hacia abajo al normalizar, dado que la cota de 20KHz en audio es superior. Al normalizar hacia abajo, se tiene una $f_{CS}$ efectiva mayor:
+
+\[
+f_{CS} = \frac{1}{2 \cdot \pi \cdot C_1(N) \cdot R_6(N)} = 25.3KHz
+\]
+
+\subsection{Disipación de potencia}
+
+\section{Implementación - Análisis de parámetros característicos}
+
+\subsection{Rendimiento}
+
+\subsection{Respuesta en frecuencia}
+
+\subsubsection{Compensación}
+
+\subsection{Impedancia de entrada}
+
+\subsection{Impedancia de salida}
+
+\subsection{Distorsión armónica}
 
 \end{document}

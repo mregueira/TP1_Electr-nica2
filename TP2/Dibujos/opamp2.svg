@@ -14,9 +14,9 @@
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    id="svg8"
    version="1.1"
-   viewBox="0 0 280 200"
-   height="200mm"
-   width="280mm">
+   viewBox="0 0 245.94928 131.27296"
+   height="131.27296mm"
+   width="245.94928mm">
   <sodipodi:namedview
      showguides="true"
      units="mm"
@@ -26,17 +26,21 @@
      inkscape:window-height="1001"
      inkscape:window-width="1920"
      showgrid="false"
-     inkscape:current-layer="g10100"
+     inkscape:current-layer="g14732"
      inkscape:document-units="mm"
-     inkscape:cy="412.13309"
-     inkscape:cx="454.2631"
-     inkscape:zoom="0.64"
+     inkscape:cy="317.57992"
+     inkscape:cx="512.07938"
+     inkscape:zoom="0.90509668"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
      bordercolor="#666666"
      pagecolor="#ffffff"
-     id="base" />
+     id="base"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <defs
      id="defs2">
     <marker
@@ -139,22 +143,25 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(0,-97)"
+     transform="translate(-19.836601,-116.93463)"
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
      id="layer1" />
   <g
-     transform="rotate(-90,97.79469,96.35983)"
+     transform="rotate(-90,77.909077,96.310817)"
      inkscape:label="arrowV"
      id="g4212" />
   <g
-     transform="rotate(180,72.281994,94.34677)"
+     transform="rotate(180,62.363694,84.379457)"
      inkscape:label="arrowV"
      id="g8104" />
   <g
      id="g8332"
      inkscape:label="OpAmp"
-     transform="matrix(1,0,0,-1,24.843718,183.63371)">
+     transform="matrix(1,0,0,-1,5.0071172,163.69908)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        id="g8330"
        inkscape:label="OpAmp">
@@ -206,27 +213,36 @@
     </g>
   </g>
   <g
-     transform="translate(-44.349325,-16.860772)"
+     transform="translate(-64.185926,-36.795398)"
      inkscape:label="Resistor"
      id="g8438" />
   <path
      style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 69.864456,37.540874 v 17.826444 28.8014"
+     d="m 50.027855,17.606248 v 17.826444 28.8014"
      id="path8911"
      inkscape:connector-curvature="0"
-     sodipodi:nodetypes="ccc" />
+     sodipodi:nodetypes="ccc"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600" />
   <path
      style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 126.30387,37.55494 v 22.0243"
+     d="m 106.46727,17.620314 v 22.0243"
      id="path8913"
      inkscape:connector-curvature="0"
-     sodipodi:nodetypes="cc" />
+     sodipodi:nodetypes="cc"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600" />
   <g
      id="g9188"
      inkscape:label="GND"
-     transform="translate(-12.466668,14.221118)">
+     transform="translate(-32.303269,-5.7135078)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
-       transform="translate(113.37565,-9.9662279)"
+       transform="translate(113.37565,-10.638022)"
        id="g9174-8"
        inkscape:label="GND">
       <circle
@@ -269,9 +285,12 @@
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
   <g
-     transform="translate(-29.926836,16.707544)"
+     transform="translate(-49.763437,-3.2270818)"
      inkscape:label="GND"
-     id="g9384">
+     id="g9384"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        inkscape:label="GND"
        id="g9382">
@@ -305,7 +324,10 @@
   <g
      id="g10100"
      inkscape:label="GND"
-     transform="translate(49.158685,-39.863232)">
+     transform="translate(29.322084,-59.797858)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        id="g10092"
        inkscape:label="GND">
@@ -382,7 +404,10 @@
   <g
      id="g10582"
      inkscape:label="Resistor"
-     transform="translate(-112.65628,-5.7523822)">
+     transform="translate(-132.49288,-25.687008)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        id="g10574">
       <path
@@ -419,9 +444,12 @@
    inkscape:connector-curvature="0" />
 </g>  </g>
   <g
-     transform="translate(39.39161,-30.232756)"
+     transform="translate(19.555009,-50.167382)"
      inkscape:label="Resistor"
-     id="g10802">
+     id="g10802"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        id="g10794">
       <path
@@ -460,7 +488,10 @@
   <g
      id="g11034"
      inkscape:label="Resistor"
-     transform="translate(84.941742,-6.3330122)">
+     transform="translate(65.105141,-26.267638)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        id="g11026">
       <path
@@ -498,9 +529,12 @@
    inkscape:connector-curvature="0" />
 </g>  </g>
   <g
-     transform="translate(-66.210729,-30.106155)"
+     transform="translate(-86.04733,-50.040781)"
      inkscape:label="Resistor"
-     id="g11278">
+     id="g11278"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        id="g11270">
       <path
@@ -539,8 +573,11 @@
 </g>  </g>
   <g
      id="g12499"
-     transform="rotate(-90,137.01583,186.06568)"
-     inkscape:label="Source">
+     transform="rotate(-90,117.13022,186.01667)"
+     inkscape:label="Source"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        id="g12491"
        inkscape:label="Source"
@@ -647,9 +684,12 @@
     </g>
   </g>
   <g
-     transform="translate(-36.619386,-42.44506)"
+     transform="translate(-56.455987,-62.379686)"
      inkscape:label="Capacitor"
-     id="g12757">
+     id="g12757"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        inkscape:label="Capacitor"
        id="g12749">
@@ -709,7 +749,10 @@
   <g
      id="g13019"
      inkscape:label="Capacitor"
-     transform="rotate(-90,109.46714,174.45982)">
+     transform="rotate(-90,89.581527,174.41081)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        id="g13011"
        inkscape:label="Capacitor"
@@ -760,9 +803,12 @@
    inkscape:connector-curvature="0" />
 </g>  </g>
   <g
-     transform="translate(-72.656278,4.2476178)"
+     transform="translate(-92.492879,-15.687008)"
      inkscape:label="GND"
-     id="g9384-5">
+     id="g9384-5"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        inkscape:label="GND"
        id="g9382-1">
@@ -794,9 +840,12 @@
     </g>
   </g>
   <g
-     transform="rotate(-180,188.72087,91.833494)"
+     transform="rotate(-180,178.80257,81.866181)"
      inkscape:label="OpAmp"
-     id="g13608">
+     id="g13608"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        inkscape:label="OpAmp"
        id="g13606">
@@ -852,9 +901,12 @@
     </g>
   </g>
   <g
-     transform="translate(129.72181,-17.211502)"
+     transform="translate(109.88521,-37.146128)"
      inkscape:label="GND"
-     id="g9384-6">
+     id="g9384-6"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        inkscape:label="GND"
        id="g9382-0">
@@ -886,20 +938,9 @@
     </g>
   </g>
   <g
-     transform="translate(-8.9775311,4.1837478)"
+     transform="translate(-28.814132,-16.267642)"
      inkscape:label="GND"
      id="g14732">
-    <g
-       inkscape:label="GND"
-       id="g14723">
-      <circle
-         r="1"
-         cy="90"
-         cx="150"
-         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
-         inkscape:label="circle"
-         id="path14721" />
-    </g>
     <g
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="content"
@@ -914,7 +955,10 @@
        word-spacing="normal"
        ns0:text=" $V_i$"
        ns0:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
-       transform="matrix(0.739645,0,0,-0.739645,-18.520717,608.53059)">
+       transform="matrix(0.739645,0,0,-0.739645,-18.520717,608.53059)"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
 <path
    inkscape:connector-curvature="0"
    d="m 229.7,712.78 0.04,0.07 0.05,0.06 0.04,0.07 0.04,0.05 0.05,0.06 0.04,0.05 0.05,0.05 0.04,0.04 0.04,0.04 0.04,0.04 0.04,0.03 0.05,0.03 0.04,0.03 0.04,0.03 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.01 0.03,0.02 0.04,0.01 0.04,0.01 0.04,0.01 h 0.03 l 0.04,0.01 h 0.04 l 0.07,0.01 0.07,0.01 h 0.07 c 0.12,0.01 0.13,0.18 0.13,0.19 0,0.08 -0.05,0.12 -0.13,0.12 -0.26,0 -0.55,-0.03 -0.82,-0.03 -0.33,0 -0.66,0.03 -0.98,0.03 -0.06,0 -0.19,0 -0.19,-0.19 0,-0.11 0.09,-0.12 0.16,-0.12 0.26,-0.02 0.46,-0.12 0.46,-0.33 0,-0.14 -0.15,-0.36 -0.15,-0.37 l -3.07,-4.85 -0.67,5.25 c 0,0.17 0.22,0.3 0.68,0.3 0.14,0 0.25,0 0.25,0.2 0,0.09 -0.08,0.11 -0.14,0.11 -0.4,0 -0.82,-0.03 -1.23,-0.03 -0.18,0 -0.37,0.01 -0.55,0.01 -0.18,0 -0.37,0.02 -0.54,0.02 -0.07,0 -0.19,0 -0.19,-0.19 0,-0.12 0.09,-0.12 0.25,-0.12 0.56,0 0.57,-0.09 0.6,-0.34 l 0.79,-6.12 c 0.03,-0.2 0.07,-0.23 0.19,-0.23 0.17,0 0.2,0.05 0.28,0.18 z"
@@ -930,11 +974,110 @@
    d="m 230.08,706.45 v -0.02 l -0.01,-0.02 -0.01,-0.03 v -0.02 l -0.01,-0.02 v -0.01 l -0.01,-0.02 v -0.02 l -0.01,-0.02 v -0.02 -0.01 l -0.01,-0.01 v -0.01 -0.01 -0.01 -0.02 -0.01 -0.01 -0.01 c 0,-0.32 0.28,-0.59 0.66,-0.59 0.7,0 1.01,0.96 1.01,1.07 0,0.09 -0.09,0.09 -0.11,0.09 -0.1,0 -0.11,-0.05 -0.13,-0.12 -0.16,-0.56 -0.47,-0.84 -0.74,-0.84 -0.14,0 -0.18,0.09 -0.18,0.24 0,0.16 0.05,0.29 0.11,0.45 0.07,0.18 0.15,0.37 0.23,0.55 0.06,0.17 0.31,0.8 0.34,0.88 0.02,0.07 0.04,0.16 0.04,0.23 0,0.32 -0.28,0.59 -0.66,0.59 -0.7,0 -1.02,-0.95 -1.02,-1.07 0,-0.09 0.1,-0.09 0.12,-0.09 0.1,0 0.11,0.04 0.13,0.11 0.18,0.6 0.49,0.85 0.75,0.85 0.11,0 0.17,-0.05 0.17,-0.24 0,-0.16 -0.04,-0.27 -0.22,-0.7 z"
    style="fill:#000000;stroke-width:0"
    id="path14729" />
-</g>  </g>
+</g>    <g
+       inkscape:label="GND"
+       id="g14723-1"
+       transform="translate(-71.233447,-9.6030591)"
+       style="stroke-width:2.5999999;stroke-miterlimit:10.43299961;stroke-dasharray:none"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
+      <circle
+         r="1"
+         cy="90"
+         cx="150"
+         style="fill:#000000;stroke:#000000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10.43299961;stroke-dasharray:none"
+         inkscape:label="circle"
+         id="path14721-2" />
+    </g>
+    <g
+       inkscape:label="GND"
+       id="g14723-7"
+       transform="translate(-71.174815,-33.819052)"
+       style="stroke-width:2.5999999;stroke-miterlimit:10.43299961;stroke-dasharray:none"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
+      <circle
+         r="1"
+         cy="90"
+         cx="150"
+         style="fill:#000000;stroke:#000000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10.43299961;stroke-dasharray:none"
+         inkscape:label="circle"
+         id="path14721-3" />
+    </g>
+    <g
+       inkscape:label="GND"
+       id="g14723-9"
+       transform="translate(-14.668659,-33.733596)"
+       style="stroke-width:2.5999999;stroke-miterlimit:10.43299961;stroke-dasharray:none"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
+      <circle
+         r="1"
+         cy="90"
+         cx="150"
+         style="fill:#000000;stroke:#000000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10.43299961;stroke-dasharray:none"
+         inkscape:label="circle"
+         id="path14721-5" />
+    </g>
+    <g
+       inkscape:label="GND"
+       id="g14723-12"
+       transform="translate(-13.846769,0.08627153)"
+       style="stroke-width:2.5999999;stroke-miterlimit:10.43299961;stroke-dasharray:none"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
+      <circle
+         r="1"
+         cy="90"
+         cx="150"
+         style="fill:#000000;stroke:#000000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10.43299961;stroke-dasharray:none"
+         inkscape:label="circle"
+         id="path14721-0" />
+    </g>
+    <g
+       inkscape:label="GND"
+       id="g14723-0"
+       transform="translate(38.31956,0.05422845)"
+       style="stroke-width:2.5999999;stroke-miterlimit:10.43299961;stroke-dasharray:none"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
+      <circle
+         r="1"
+         cy="90"
+         cx="150"
+         style="fill:#000000;stroke:#000000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10.43299961;stroke-dasharray:none"
+         inkscape:label="circle"
+         id="path14721-9" />
+    </g>
+    <g
+       inkscape:label="GND"
+       id="g14723-4"
+       transform="translate(88.372148,-9.8978969)"
+       style="stroke-width:2.5999999;stroke-miterlimit:10.43299961;stroke-dasharray:none"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
+      <circle
+         r="1"
+         cy="90"
+         cx="150"
+         style="fill:#000000;stroke:#000000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10.43299961;stroke-dasharray:none"
+         inkscape:label="circle"
+         id="path14721-7" />
+    </g>
+  </g>
   <g
      id="g15014"
      inkscape:label="GND"
-     transform="translate(20.891447,13.485506)">
+     transform="translate(1.0548462,-6.4491198)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\opamp2ConCap.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        id="g15002"
        inkscape:label="GND">

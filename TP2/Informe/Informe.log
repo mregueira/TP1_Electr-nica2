@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2018.4.3)  6 JUN 2019 02:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2018.4.3)  6 JUN 2019 16:25
 entering extended mode
 **./Informe.tex
 (Informe.tex
@@ -995,71 +995,101 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1{C:/Users/Marcelo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 38.
+<Imagenes/CompletoSimple.png, id=8, 1034.6655pt x 773.7708pt>
+File: Imagenes/CompletoSimple.png Graphic file (type png)
 
-<Imagenes/EtapaSalida.png, id=8, 459.27585pt x 547.20435pt>
+<use Imagenes/CompletoSimple.png>
+Package pdftex.def Info: Imagenes/CompletoSimple.png used on input line 31.
+(pdftex.def)             Requested size: 465.59517pt x 348.19365pt.
+ [2 <./Imagenes/CompletoSimple.png>]
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 40.
+
+<Imagenes/EtapaSalida.png, id=15, 459.27585pt x 547.20435pt>
 File: Imagenes/EtapaSalida.png Graphic file (type png)
 
 <use Imagenes/EtapaSalida.png>
-Package pdftex.def Info: Imagenes/EtapaSalida.png used on input line 44.
+Package pdftex.def Info: Imagenes/EtapaSalida.png used on input line 46.
 (pdftex.def)             Requested size: 229.63736pt x 273.6015pt.
- [2 <./Imagenes/EtapaSalida.png>]
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 88.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 88.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 88.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 88.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 88.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 88.
+ [3 <./Imagenes/EtapaSalida.png>]
+<Imagenes/MultiplicadorVBE.png, id=22, 225.84375pt x 259.32886pt>
+File: Imagenes/MultiplicadorVBE.png Graphic file (type png)
 
-<Imagenes/FuenteIF.png, id=16, 205.2468pt x 263.3037pt>
+<use Imagenes/MultiplicadorVBE.png>
+Package pdftex.def Info: Imagenes/MultiplicadorVBE.png used on input line 93.
+(pdftex.def)             Requested size: 112.92159pt x 129.66411pt.
+ [4 <./Imagenes/MultiplicadorVBE.png>]
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 127.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 127.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 127.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 127.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 127.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 127.
+
+<Imagenes/FuenteIF.png, id=27, 205.2468pt x 263.3037pt>
 File: Imagenes/FuenteIF.png Graphic file (type png)
 
 <use Imagenes/FuenteIF.png>
-Package pdftex.def Info: Imagenes/FuenteIF.png used on input line 94.
+Package pdftex.def Info: Imagenes/FuenteIF.png used on input line 133.
 (pdftex.def)             Requested size: 102.62314pt x 131.65152pt.
- [3 <./Imagenes/FuenteIF.png>]
-<Imagenes/EtapaDeAV.png, id=22, 391.82385pt x 295.5843pt>
+ [5 <./Imagenes/FuenteIF.png>]
+<Imagenes/EtapaDeAV.png, id=32, 391.82385pt x 295.5843pt>
 File: Imagenes/EtapaDeAV.png Graphic file (type png)
 
 <use Imagenes/EtapaDeAV.png>
-Package pdftex.def Info: Imagenes/EtapaDeAV.png used on input line 151.
+Package pdftex.def Info: Imagenes/EtapaDeAV.png used on input line 190.
 (pdftex.def)             Requested size: 195.91144pt x 147.79178pt.
- [4 <./Imagenes/EtapaDeAV.png>]
-<Imagenes/opamp2SinCap.png, id=27, 699.45316pt x 295.94565pt>
+
+<Imagenes/opamp2SinCap.png, id=33, 699.45316pt x 295.94565pt>
 File: Imagenes/opamp2SinCap.png Graphic file (type png)
 
 <use Imagenes/opamp2SinCap.png>
-Package pdftex.def Info: Imagenes/opamp2SinCap.png used on input line 174.
+Package pdftex.def Info: Imagenes/opamp2SinCap.png used on input line 213.
 (pdftex.def)             Requested size: 349.72571pt x 147.97246pt.
- [5 <./Imagenes/opamp2SinCap.png>] (Informe.aux
+ [6 <./Imagenes/EtapaDeAV.png>]
+<Imagenes/Diferenciador.png, id=38, 385.56046pt x 306.06345pt>
+File: Imagenes/Diferenciador.png Graphic file (type png)
+
+<use Imagenes/Diferenciador.png>
+Package pdftex.def Info: Imagenes/Diferenciador.png used on input line 235.
+(pdftex.def)             Requested size: 192.77975pt x 153.03134pt.
+
+<Imagenes/Opamp2ConCap.png, id=39, 699.8145pt x 373.51546pt>
+File: Imagenes/Opamp2ConCap.png Graphic file (type png)
+
+<use Imagenes/Opamp2ConCap.png>
+Package pdftex.def Info: Imagenes/Opamp2ConCap.png used on input line 258.
+(pdftex.def)             Requested size: 349.90639pt x 186.75726pt.
+ [7 <./Imagenes/opamp2SinCap.png> <./Imagenes/Diferenciador.png>] [8 <./Imagene
+s/Opamp2ConCap.png>] (Informe.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 5145 strings out of 493333
- 67691 string characters out of 3136603
- 139521 words of memory out of 3000000
- 8510 multiletter control sequences out of 15000+200000
+ 5165 strings out of 493333
+ 68266 string characters out of 3136603
+ 140521 words of memory out of 3000000
+ 8526 multiletter control sequences out of 15000+200000
  75528 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,11n,43p,891b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,11n,43p,1097b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ml.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on Informe.pdf (5 pages, 613712 bytes).
+Output written on Informe.pdf (8 pages, 1651226 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

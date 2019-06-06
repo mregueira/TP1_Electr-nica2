@@ -10,9 +10,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="105mm"
-   height="148mm"
-   viewBox="0 0 105 148"
+   width="79.374634mm"
+   height="91.15062mm"
+   viewBox="0 0 79.374634 91.15062"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
@@ -25,17 +25,21 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.28"
-     inkscape:cx="151.46896"
-     inkscape:cy="302.74588"
+     inkscape:cx="189.97253"
+     inkscape:cy="27.899203"
      inkscape:document-units="mm"
-     inkscape:current-layer="g4212"
+     inkscape:current-layer="svg8"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     units="mm" />
+     units="mm"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <defs
      id="defs2">
     <marker
@@ -84,20 +88,6 @@
          id="path1664" />
     </marker>
     <marker
-       inkscape:stockid="BJTArrow"
-       style="overflow:visible"
-       refY="0"
-       refX="0"
-       orient="auto"
-       id="BJTArrow">
-      <path
-         id="path3307"
-         transform="translate(1)"
-         style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.60000002"
-         d="m 0,0 -3,1.25 v -2.5 z"
-         inkscape:connector-curvature="0" />
-    </marker>
-    <marker
        id="arrowVoltageStart"
        orient="auto"
        refX="0"
@@ -125,6 +115,19 @@
          id="path3994"
          inkscape:connector-curvature="0" />
     </marker>
+    <marker
+       inkscape:stockid="BJTArrow"
+       style="overflow:visible"
+       refY="0"
+       refX="0"
+       orient="auto"
+       id="BJTArrow">
+      <path
+         id="path2017"
+         style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.60000002"
+         d="m 0,0 -3,1.25 v -2.5 z"
+         inkscape:connector-curvature="0" />
+    </marker>
   </defs>
   <metadata
      id="metadata5">
@@ -139,14 +142,17 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(0,-149)"
+     transform="translate(-12.556122,-168.07373)"
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Capa 1" />
   <g
      id="g930"
      inkscape:label="diode"
-     transform="rotate(90,131.13,46.599149)">
+     transform="rotate(90,134.3888,30.784224)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\MultiplicadorVBE.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        transform="matrix(0,-0.739645,-0.739645,0,700.39484,308.42472)"
        ns0:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
@@ -171,9 +177,12 @@
    d="m 214.6419,793.51917 h 21.87684 25.73261 v -13.55604 l 0.0824,-1.42013"
    style="fill:none;stroke:#000000;stroke-width:1.352;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-opacity:1" /></g>  </g>
   <g
-     transform="translate(-31.628583,-63.045401)"
+     transform="translate(-44.184705,-82.119129)"
      inkscape:label="BJT"
-     id="g1029">
+     id="g1029"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\MultiplicadorVBE.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        inkscape:label="BJT"
        id="g1027">
@@ -184,24 +193,12 @@
          inkscape:label="none"
          id="path1015" />
       <path
-         inkscape:connector-curvature="0"
-         d="m 87.5,124 v 12"
-         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
-         inkscape:label="none"
-         id="path1017" />
-      <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
          d="m 88,127 7,-5 V 82.62625"
          style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
          inkscape:label="none"
          id="path1019" />
-      <path
-         inkscape:connector-curvature="0"
-         d="m 95,138 -7,-5"
-         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#BJTArrow)"
-         inkscape:label="none"
-         id="path1021" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
@@ -228,7 +225,10 @@
      ns0:pdfconverter="pdf2svg"
      ns0:texconverter="pdflatex"
      ns0:version="0.9.1"
-     transform="translate(-98.419292,-81.798681)">
+     transform="translate(-109.36762,-102.18788)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\MultiplicadorVBE.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        id="g3740">
       <g
@@ -276,7 +276,10 @@
   <g
      id="g2623"
      inkscape:label="GND"
-     transform="translate(-8.761978,-21.758835)">
+     transform="translate(-21.3181,-40.832563)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\MultiplicadorVBE.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        id="g2611-5"
        inkscape:label="GND"
@@ -293,7 +296,10 @@
   <g
      id="g3398"
      inkscape:label="Potentiometer"
-     transform="rotate(90,51.999708,36.063535)">
+     transform="rotate(90,55.258511,20.24861)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\MultiplicadorVBE.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        id="g3388">
       <path
@@ -342,9 +348,12 @@
    inkscape:connector-curvature="0" />
 </g>  </g>
   <g
-     transform="rotate(90,34.749708,53.313535)"
+     transform="rotate(90,38.008511,37.49861)"
      inkscape:label="Resistor"
-     id="g3594">
+     id="g3594"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\MultiplicadorVBE.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        id="g3584">
       <path
@@ -389,15 +398,19 @@
   <g
      id="g2623-5"
      inkscape:label="GND"
-     transform="translate(26.283739,-59.9749)">
+     transform="translate(13.727617,-79.048628)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\MultiplicadorVBE.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        id="g2611-5-5"
        inkscape:label="GND"
-       transform="translate(-42.98317,48.696559)">
+       transform="translate(-42.98317,48.696559)"
+       style="stroke-width:2.5999999;stroke-miterlimit:4;stroke-dasharray:none">
       <circle
          id="path2609-8-3"
          inkscape:label="circle"
-         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         style="fill:#000000;stroke:#000000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
          cx="80"
          cy="40"
          r="1" />
@@ -406,7 +419,10 @@
   <g
      id="g930-5"
      inkscape:label="diode"
-     transform="rotate(90,96.029465,81.699689)">
+     transform="rotate(90,99.288268,65.884764)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\MultiplicadorVBE.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <g
        transform="matrix(0,-0.739645,-0.739645,0,700.39484,308.42472)"
        ns0:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
@@ -433,15 +449,20 @@
   <g
      id="g2623-5-3"
      inkscape:label="GND"
-     transform="translate(26.437232,10.677358)">
+     transform="translate(13.88111,-8.3963694)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\MultiplicadorVBE.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600"
+     style="stroke-width:2.5999999;stroke-miterlimit:4;stroke-dasharray:none">
     <g
        id="g2611-5-5-1"
        inkscape:label="GND"
-       transform="translate(-42.98317,48.696559)">
+       transform="translate(-42.98317,48.696559)"
+       style="stroke-width:2.5999999;stroke-miterlimit:4;stroke-dasharray:none">
       <circle
          id="path2609-8-3-2"
          inkscape:label="circle"
-         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         style="fill:#000000;stroke:#000000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
          cx="80"
          cy="40"
          r="1" />
@@ -449,14 +470,20 @@
   </g>
   <path
      style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 13.063243,49.063826 v 17.748073 l 15.355842,-0.0473"
+     d="M 0.50712172,29.990098 V 47.738171 L 15.862963,47.690871"
      id="path3951"
      inkscape:connector-curvature="0"
-     sodipodi:nodetypes="ccc" />
+     sodipodi:nodetypes="ccc"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\MultiplicadorVBE.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600" />
   <g
      id="g4212"
      inkscape:label="arrowV"
-     transform="rotate(-90,71.794685,70.359832)">
+     transform="rotate(-90,55.97976,67.101029)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\MultiplicadorVBE.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
     <path
        id="path4200"
        inkscape:label="arc"
@@ -508,4 +535,75 @@
    d="m 244.4,707.61 v 0.01 0 h 0.01 v 0 0 0.01 0 0 h 0.01 v 0.01 0 h 0.01 v 0 0.01 0 0 0 l 0.01,0.01 v 0 0 0 0.01 0 0 0 0 l 0.01,0.01 v 0 0.01 0 0 0 0.14 h -1.2 c -0.13,0 -0.86,0.02 -0.95,0.04 -0.11,0.02 -0.12,0.07 -0.13,0.12 h -0.2 l -0.19,-1.12 h 0.21 c 0,0.08 0.06,0.4 0.14,0.46 0.03,0.02 0.5,0.03 0.58,0.03 h 1.18 c -0.21,-0.25 -0.48,-0.52 -0.67,-0.76 -0.59,-0.75 -0.67,-1.47 -0.67,-1.77 0,-0.28 0.18,-0.3 0.27,-0.3 0.26,0 0.26,0.25 0.26,0.31 v 0.1 c 0,0.88 0.19,1.43 0.49,1.76 z"
    inkscape:connector-curvature="0" />
 </g>  </g>
+  <g
+     id="g2623-5-3-7"
+     inkscape:label="GND"
+     transform="translate(-21.565577,-41.005818)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\MultiplicadorVBE.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600"
+     style="stroke-width:2.5999999;stroke-miterlimit:4;stroke-dasharray:none">
+    <g
+       id="g2611-5-5-1-0"
+       inkscape:label="GND"
+       transform="translate(-42.98317,48.696559)"
+       style="stroke-width:2.5999999;stroke-miterlimit:4;stroke-dasharray:none">
+      <circle
+         id="path2609-8-3-2-9"
+         inkscape:label="circle"
+         style="fill:#000000;stroke:#000000;stroke-width:2.5999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         cx="80"
+         cy="40"
+         r="1" />
+    </g>
+  </g>
+  <g
+     id="g2093"
+     inkscape:label="BJT"
+     transform="translate(-34.184705,-12.119129)"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\MultiplicadorVBE.png"
+     inkscape:export-xdpi="600"
+     inkscape:export-ydpi="600">
+    <g
+       id="g2091"
+       inkscape:label="BJT">
+      <path
+         id="path2079"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 50,60 H 78"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2081"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 77.5,54 V 66"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2083"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 78,57 7,-5 V 35"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2085"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#BJTArrow)"
+         d="m 78,63 7,5"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2087"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 85,68 V 85"
+         inkscape:connector-curvature="0" />
+      <circle
+         id="path2089"
+         inkscape:label="circle"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         cx="82"
+         cy="60"
+         r="10" />
+    </g>
+  </g>
 </svg>
