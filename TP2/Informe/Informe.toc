@@ -2,4 +2,7 @@
 \contentsline {section}{\numberline {1}Objetivos - Par\IeC {\'a}metros del sistema}{2}
 \contentsline {section}{\numberline {2}Dise\IeC {\~n}o del sistema}{2}
 \contentsline {subsection}{\numberline {2.1}Etapa de salida}{2}
-\contentsline {subsection}{\numberline {2.2}Fuente de corriente $I_F$}{3}
+\contentsline {subsection}{\numberline {2.2}Prepolarizaci\IeC {\'o}n}{3}
+\contentsline {subsection}{\numberline {2.3}Fuente de corriente $I_F$}{3}
+\contentsline {subsection}{\numberline {2.4}Etapa de ganancia de tensi\IeC {\'o}n}{4}
+\contentsline {subsubsection}{\numberline {2.4.1}Reestricci\IeC {\'o}n del ancho de banda}{5}

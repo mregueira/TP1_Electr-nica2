@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:ns0="http://www.iki.fi/pav/software/textext/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="137.69452mm"
+   height="103.87489mm"
+   viewBox="0 0 137.69452 103.87489"
+   version="1.1"
+   id="svg1450"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="opamp3.svg">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="204.43194"
+     inkscape:cy="333.39323"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g1035"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs1444">
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2467"
+       effect="spiro" />
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker2439"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="DotM">
+      <path
+         transform="matrix(0.4,0,0,0.4,2.96,0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         id="path2437"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2435"
+       effect="spiro" />
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="DotM"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="DotM">
+      <path
+         transform="matrix(0.4,0,0,0.4,2.96,0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         id="path2213"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2147"
+       effect="spiro" />
+  </defs>
+  <metadata
+     id="metadata1447">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1"
+     transform="translate(-55.25922,-101.5235)">
+    <g
+       transform="matrix(1,0,0,-1,60.162986,237.8245)"
+       inkscape:label="OpAmp"
+       id="g8332"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\EtapaDeAV.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
+      <g
+         inkscape:label="OpAmp"
+         id="g8330">
+        <path
+           inkscape:connector-curvature="0"
+           d="M 95,90 60,110 V 70 l 35,20"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           inkscape:label="none"
+           id="path8279" />
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           d="M 59.463482,99.464992 H 45.020738"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           inkscape:label="none"
+           id="path8281" />
+        <path
+           sodipodi:nodetypes="ccc"
+           inkscape:connector-curvature="0"
+           d="m 60,79.431559 -14.770554,-0.07307 v 0"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           inkscape:label="none"
+           id="path8283" />
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           d="m 95,90 h 21.14258"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           inkscape:label="none"
+           id="path8285" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 66,100 H 63"
+           style="fill:none;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           inkscape:label="none"
+           id="path8324" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 66,80 H 63"
+           style="fill:none;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           inkscape:label="none"
+           id="path8326" />
+        <path
+           inkscape:connector-curvature="0"
+           d="m 64.5,78.5 v 3"
+           style="fill:none;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           inkscape:label="none"
+           id="path8328" />
+      </g>
+    </g>
+    <g
+       id="g9384"
+       inkscape:label="GND"
+       transform="translate(5.392431,70.898338)"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\EtapaDeAV.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
+      <g
+         id="g9382"
+         inkscape:label="GND">
+        <path
+           id="path9374"
+           inkscape:label="none"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           d="M 99.896647,120.87849 100,130"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+        <path
+           id="path9376"
+           inkscape:label="none"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           d="M 107,130 H 93"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path9378"
+           inkscape:label="none"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           d="m 103.5,132 h -7"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path9380"
+           inkscape:label="none"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           d="M 101,134 H 99"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       transform="translate(-77.337012,48.438411)"
+       inkscape:label="Resistor"
+       id="g10582"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\EtapaDeAV.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
+      <g
+         id="g10574">
+        <path
+           inkscape:connector-curvature="0"
+           d="m 140,90 h 15.5 l 2,3 3,-6 3,6 3,-6 3,6 3,-6 2,3 H 190"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           inkscape:label="none"
+           id="path10572" />
+      </g>
+      <g
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="g10580"
+         xml:space="preserve"
+         stroke-miterlimit="10.433"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-size-adjust="none"
+         letter-spacing="normal"
+         word-spacing="normal"
+         ns0:text=" $R_{5}$"
+         ns0:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+         transform="matrix(0.739645,0,0,-0.739645,-4.515539,605.47882)">
+<path
+   inkscape:connector-curvature="0"
+   d="m 228.61,710.5 0.09,0.02 0.1,0.03 0.09,0.03 0.1,0.03 0.1,0.03 0.09,0.03 0.1,0.04 0.1,0.04 0.09,0.05 0.09,0.04 0.09,0.05 0.09,0.05 0.09,0.05 0.09,0.06 0.08,0.06 0.08,0.06 0.08,0.06 0.07,0.06 0.08,0.07 0.06,0.07 0.07,0.07 0.06,0.07 0.05,0.08 0.05,0.08 0.05,0.08 0.03,0.08 0.04,0.08 0.03,0.09 0.02,0.09 0.02,0.09 0.01,0.09 v 0.09 c 0,0.85 -0.9,1.49 -2.2,1.49 h -2.84 c -0.2,0 -0.29,0 -0.29,-0.2 0,-0.11 0.09,-0.11 0.28,-0.11 0.01,0 0.21,0 0.38,-0.02 0.17,-0.02 0.26,-0.03 0.26,-0.16 0,-0.04 -0.01,-0.07 -0.04,-0.19 l -1.33,-5.33 c -0.1,-0.39 -0.12,-0.47 -0.91,-0.47 -0.18,0 -0.27,0 -0.27,-0.2 0,-0.1 0.12,-0.1 0.14,-0.1 0.28,0 0.98,0.03 1.26,0.03 0.28,0 0.98,-0.03 1.26,-0.03 0.08,0 0.2,0 0.2,0.19 0,0.11 -0.09,0.11 -0.28,0.11 -0.37,0 -0.65,0 -0.65,0.18 0,0.06 0.02,0.11 0.03,0.17 l 0.66,2.63 h 1.19 l -0.01,0.22 h -1.12 l 0.65,2.59 c 0.06,0.24 0.09,0.34 0.28,0.37 0.09,0.01 0.41,0.01 0.61,0.01 0.71,0 1.81,0 1.81,-0.98 0,-0.34 -0.16,-1.03 -0.55,-1.41 -0.25,-0.26 -0.78,-0.58 -1.68,-0.58 l 0.01,-0.22 c 0.91,0 1.09,-0.55 1.09,-0.9 0,-0.15 -0.08,-0.46 -0.14,-0.69 -0.07,-0.27 -0.16,-0.64 -0.16,-0.84 0,-1.07 1.19,-1.07 1.32,-1.07 0.85,0 1.2,1 1.2,1.14 0,0.12 -0.11,0.12 -0.12,0.12 -0.09,0 -0.11,-0.07 -0.13,-0.14 -0.25,-0.74 -0.68,-0.9 -0.91,-0.9 -0.32,0 -0.4,0.21 -0.4,0.6 0,0.31 0.06,0.82 0.11,1.13 0.01,0.14 0.03,0.33 0.03,0.47 0,0.76 -0.66,1.07 -0.93,1.17 z"
+   style="fill:#000000;stroke-width:0"
+   id="path10576" />
+<path
+   inkscape:connector-curvature="0"
+   d="m 232.08,709.51 0.03,-0.01 h 0.04 l 0.03,-0.01 0.03,-0.01 h 0.03 l 0.03,-0.01 0.02,-0.01 h 0.03 l 0.03,-0.01 h 0.02 0.03 l 0.02,-0.01 h 0.03 0.02 l 0.02,-0.01 h 0.02 0.02 0.02 0.02 0.02 l 0.02,-0.01 h 0.01 0.02 0.02 0.01 0.02 0.01 0.01 0.01 0.02 0.01 0.01 c 0.92,0 1.47,0.63 1.47,0.73 0,0.08 -0.05,0.1 -0.09,0.1 -0.01,0 -0.02,0 -0.05,-0.02 -0.17,-0.07 -0.54,-0.2 -1.06,-0.2 -0.19,0 -0.57,0.01 -1.02,0.18 -0.07,0.04 -0.08,0.04 -0.09,0.04 -0.09,0 -0.09,-0.08 -0.09,-0.19 v -2.05 c 0,-0.12 0,-0.2 0.11,-0.2 0.06,0 0.07,0.01 0.14,0.1 0.3,0.38 0.73,0.43 0.97,0.43 0.42,0 0.61,-0.33 0.65,-0.39 0.12,-0.23 0.16,-0.49 0.16,-0.89 0,-0.21 0,-0.62 -0.21,-0.93 -0.17,-0.25 -0.47,-0.42 -0.81,-0.42 -0.46,0 -0.93,0.26 -1.1,0.71 0.26,-0.02 0.4,0.16 0.4,0.34 0,0.3 -0.26,0.36 -0.35,0.36 -0.02,0 -0.35,0 -0.35,-0.38 0,-0.62 0.57,-1.25 1.41,-1.25 0.89,0 1.68,0.66 1.68,1.54 0,0.78 -0.6,1.51 -1.47,1.51 -0.31,0 -0.67,-0.08 -0.98,-0.34 z"
+   style="fill:#000000;stroke-width:0"
+   id="path10578" />
+</g>    </g>
+    <g
+       id="g11278"
+       inkscape:label="Resistor"
+       transform="translate(-30.891461,24.08464)"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\EtapaDeAV.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
+      <g
+         id="g11270">
+        <path
+           sodipodi:nodetypes="cccccccccc"
+           id="path11268"
+           inkscape:label="none"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           d="M 136.58936,90 H 155.5 l 2,3 3,-6 3,6 3,-6 3,6 3,-6 2,3 h 31.17687"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         transform="matrix(0.739645,0,0,-0.739645,-4.537729,605.47882)"
+         ns0:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+         ns0:text=" $R_{6}$"
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         id="g11276"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+<path
+   id="path11272"
+   style="fill:#000000;stroke-width:0"
+   d="m 228.61,710.5 0.09,0.02 0.1,0.03 0.09,0.03 0.1,0.03 0.1,0.03 0.09,0.03 0.1,0.04 0.1,0.04 0.09,0.05 0.09,0.04 0.09,0.05 0.09,0.05 0.09,0.05 0.09,0.06 0.08,0.06 0.08,0.06 0.08,0.06 0.07,0.06 0.08,0.07 0.06,0.07 0.07,0.07 0.06,0.07 0.05,0.08 0.05,0.08 0.05,0.08 0.03,0.08 0.04,0.08 0.03,0.09 0.02,0.09 0.02,0.09 0.01,0.09 v 0.09 c 0,0.85 -0.9,1.49 -2.2,1.49 h -2.84 c -0.2,0 -0.29,0 -0.29,-0.2 0,-0.11 0.09,-0.11 0.28,-0.11 0.01,0 0.21,0 0.38,-0.02 0.17,-0.02 0.26,-0.03 0.26,-0.16 0,-0.04 -0.01,-0.07 -0.04,-0.19 l -1.33,-5.33 c -0.1,-0.39 -0.12,-0.47 -0.91,-0.47 -0.18,0 -0.27,0 -0.27,-0.2 0,-0.1 0.12,-0.1 0.14,-0.1 0.28,0 0.98,0.03 1.26,0.03 0.28,0 0.98,-0.03 1.26,-0.03 0.08,0 0.2,0 0.2,0.19 0,0.11 -0.09,0.11 -0.28,0.11 -0.37,0 -0.65,0 -0.65,0.18 0,0.06 0.02,0.11 0.03,0.17 l 0.66,2.63 h 1.19 l -0.01,0.22 h -1.12 l 0.65,2.59 c 0.06,0.24 0.09,0.34 0.28,0.37 0.09,0.01 0.41,0.01 0.61,0.01 0.71,0 1.81,0 1.81,-0.98 0,-0.34 -0.16,-1.03 -0.55,-1.41 -0.25,-0.26 -0.78,-0.58 -1.68,-0.58 l 0.01,-0.22 c 0.91,0 1.09,-0.55 1.09,-0.9 0,-0.15 -0.08,-0.46 -0.14,-0.69 -0.07,-0.27 -0.16,-0.64 -0.16,-0.84 0,-1.07 1.19,-1.07 1.32,-1.07 0.85,0 1.2,1 1.2,1.14 0,0.12 -0.11,0.12 -0.12,0.12 -0.09,0 -0.11,-0.07 -0.13,-0.14 -0.25,-0.74 -0.68,-0.9 -0.91,-0.9 -0.32,0 -0.4,0.21 -0.4,0.6 0,0.31 0.06,0.82 0.11,1.13 0.01,0.14 0.03,0.33 0.03,0.47 0,0.76 -0.66,1.07 -0.93,1.17 z"
+   inkscape:connector-curvature="0" />
+<path
+   id="path11274"
+   style="fill:#000000;stroke-width:0"
+   d="m 232.05,707.91 v 0.1 0.11 0.1 l 0.01,0.1 0.01,0.1 0.01,0.1 0.01,0.1 0.01,0.09 0.02,0.1 0.02,0.09 0.03,0.09 0.03,0.09 0.02,0.04 0.01,0.05 0.02,0.04 0.02,0.04 0.02,0.04 0.02,0.04 0.03,0.04 0.02,0.04 c 0.24,0.38 0.62,0.64 1.06,0.64 0.21,0 0.49,-0.06 0.63,-0.25 -0.17,-0.01 -0.32,-0.13 -0.32,-0.33 0,-0.17 0.12,-0.33 0.33,-0.33 0.21,0 0.34,0.14 0.34,0.34 0,0.41 -0.3,0.77 -0.99,0.77 -1.01,0 -2.03,-0.92 -2.03,-2.41 0,-1.81 0.85,-2.35 1.62,-2.35 0.85,0 1.59,0.65 1.59,1.56 0,0.88 -0.71,1.54 -1.52,1.54 l -0.04,-0.2 c 0.32,0 0.54,-0.12 0.71,-0.38 0.17,-0.27 0.18,-0.56 0.18,-0.96 0,-0.4 0,-0.69 -0.19,-0.96 -0.17,-0.24 -0.39,-0.38 -0.73,-0.38 v 0 c -0.35,0 -0.63,0.21 -0.77,0.51 -0.11,0.21 -0.16,0.56 -0.16,0.98 0,0.67 0.4,1.19 0.96,1.19 l 0.04,0.2 c -0.56,0 -0.87,-0.37 -1.02,-0.68 z"
+   inkscape:connector-curvature="0" />
+</g>    </g>
+    <g
+       transform="rotate(-90,162.33117,176.93874)"
+       inkscape:label="Source"
+       id="g12491"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\EtapaDeAV.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         d="M 180.8039,120 H 162"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path12475" />
+      <circle
+         r="7"
+         cy="120"
+         cx="155"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="circle"
+         id="path12477" />
+      <g
+         transform="rotate(90,155,120)"
+         id="g12483">
+        <path
+           d="m 155,120 a 2.5999999,2.5999999 0 0 1 -2.5,1.88586 A 2.5999999,2.5999999 0 0 1 150,120"
+           style="fill:none;stroke:#000000;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           sodipodi:cx="152.5"
+           sodipodi:cy="119.28586"
+           sodipodi:end="2.8633458"
+           sodipodi:open="true"
+           sodipodi:rx="2.5999999"
+           sodipodi:ry="2.5999999"
+           sodipodi:start="0.27824682"
+           sodipodi:type="arc"
+           inkscape:label="arc"
+           id="path12479" />
+        <path
+           d="m 155,120 a 2.5999999,2.5999999 0 0 1 2.5,-1.88586 A 2.5999999,2.5999999 0 0 1 160,120"
+           style="fill:none;stroke:#000000;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           sodipodi:cx="157.5"
+           sodipodi:cy="120.71414"
+           sodipodi:end="6.0049385"
+           sodipodi:open="true"
+           sodipodi:rx="2.5999999"
+           sodipodi:ry="2.5999999"
+           sodipodi:start="3.4198395"
+           sodipodi:type="arc"
+           inkscape:label="arc"
+           id="path12481" />
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         d="m 166,116 h -2"
+         style="fill:none;stroke:#000000;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path12485" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 165,115 v 2"
+         style="fill:none;stroke:#000000;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path12487" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 145,115 v 2"
+         style="fill:none;stroke:#000000;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path12489" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="g12497"
+       xml:space="preserve"
+       stroke-miterlimit="10.433"
+       font-style="normal"
+       font-variant="normal"
+       font-weight="normal"
+       font-stretch="normal"
+       font-size-adjust="none"
+       letter-spacing="normal"
+       word-spacing="normal"
+       ns0:text=" $V_g$"
+       ns0:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       transform="matrix(0.73964501,0,0,-0.73964501,-75.999032,706.62408)"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\EtapaDeAV.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
+<path
+   inkscape:connector-curvature="0"
+   d="m 229.7,712.78 0.04,0.07 0.05,0.06 0.04,0.07 0.04,0.05 0.05,0.06 0.04,0.05 0.05,0.05 0.04,0.04 0.04,0.04 0.04,0.04 0.04,0.03 0.05,0.03 0.04,0.03 0.04,0.03 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.01 0.03,0.02 0.04,0.01 0.04,0.01 0.04,0.01 h 0.03 l 0.04,0.01 h 0.04 l 0.07,0.01 0.07,0.01 h 0.07 c 0.12,0.01 0.13,0.18 0.13,0.19 0,0.08 -0.05,0.12 -0.13,0.12 -0.26,0 -0.55,-0.03 -0.82,-0.03 -0.33,0 -0.66,0.03 -0.98,0.03 -0.06,0 -0.19,0 -0.19,-0.19 0,-0.11 0.09,-0.12 0.16,-0.12 0.26,-0.02 0.46,-0.12 0.46,-0.33 0,-0.14 -0.15,-0.36 -0.15,-0.37 l -3.07,-4.85 -0.67,5.25 c 0,0.17 0.22,0.3 0.68,0.3 0.14,0 0.25,0 0.25,0.2 0,0.09 -0.08,0.11 -0.14,0.11 -0.4,0 -0.82,-0.03 -1.23,-0.03 -0.18,0 -0.37,0.01 -0.55,0.01 -0.18,0 -0.37,0.02 -0.54,0.02 -0.07,0 -0.19,0 -0.19,-0.19 0,-0.12 0.09,-0.12 0.25,-0.12 0.56,0 0.57,-0.09 0.6,-0.34 l 0.79,-6.12 c 0.03,-0.2 0.07,-0.23 0.19,-0.23 0.17,0 0.2,0.05 0.28,0.18 z"
+   style="fill:#000000;stroke-width:0"
+   id="path12493" />
+<path
+   inkscape:connector-curvature="0"
+   d="m 232.96,708.2 0.01,0.01 v 0.01 0 0.01 l 0.01,0.01 v 0.01 0.01 0 0.01 0.01 0 l 0.01,0.01 v 0 0.01 0 0.01 0 0 0.01 0 0 0.01 0 0 0 0.01 0 0 0 0 0 0 c 0,0.16 -0.12,0.23 -0.24,0.23 -0.16,0 -0.29,-0.14 -0.32,-0.27 -0.12,0.19 -0.35,0.4 -0.72,0.4 v -0.2 c 0.49,0 0.62,-0.52 0.62,-0.59 0,-0.01 0,-0.03 -0.02,-0.1 L 232,706.56 c -0.03,-0.11 -0.03,-0.12 -0.15,-0.26 -0.24,-0.29 -0.58,-0.47 -0.84,-0.47 -0.36,0 -0.53,0.3 -0.53,0.66 0,0.3 0.19,1.08 0.37,1.39 0.3,0.48 0.62,0.62 0.86,0.62 v 0.2 c -0.87,0 -1.79,-0.93 -1.79,-1.93 0,-0.72 0.49,-1.14 1.07,-1.14 0.32,0 0.62,0.16 0.87,0.38 l -0.15,-0.63 c -0.08,-0.29 -0.13,-0.48 -0.4,-0.72 -0.3,-0.25 -0.6,-0.25 -0.78,-0.25 -0.32,0 -0.41,0.02 -0.54,0.05 0.18,0.08 0.23,0.25 0.23,0.34 0,0.17 -0.14,0.26 -0.28,0.26 -0.19,0 -0.4,-0.16 -0.4,-0.42 0,-0.42 0.61,-0.43 1,-0.43 1.09,0 1.56,0.56 1.66,0.95 z"
+   style="fill:#000000;stroke-width:0"
+   id="path12495" />
+</g>    <g
+       id="g9384-5"
+       inkscape:label="GND"
+       transform="translate(-37.233659,30.944111)"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\EtapaDeAV.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
+      <g
+         id="g9382-1"
+         inkscape:label="GND">
+        <path
+           id="path9374-4"
+           inkscape:label="none"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           d="M 99.896647,107.4943 100,130"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+        <path
+           id="path9376-4"
+           inkscape:label="none"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           d="M 107,130 H 93"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path9378-4"
+           inkscape:label="none"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           d="m 103.5,132 h -7"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path9380-9"
+           inkscape:label="none"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           d="M 101,134 H 99"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <path
+       inkscape:original-d="M 105.6979,114.08464 V 138.2419"
+       inkscape:path-effect="#path-effect2147"
+       inkscape:connector-curvature="0"
+       id="path2145"
+       d="M 105.6979,114.08464 V 138.2419"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DotM)"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\EtapaDeAV.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600" />
+    <path
+       inkscape:original-d="m 174.78541,114.08464 v 33.64533"
+       inkscape:path-effect="#path-effect2435"
+       inkscape:connector-curvature="0"
+       id="path2433"
+       d="m 174.78541,114.08464 v 33.64533"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker2439)"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\EtapaDeAV.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600" />
+    <path
+       inkscape:original-d="m 174.78541,147.72997 h 7.35877"
+       inkscape:path-effect="#path-effect2467"
+       inkscape:connector-curvature="0"
+       id="path2465"
+       d="m 174.78541,147.72997 h 7.35877"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\EtapaDeAV.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600" />
+  </g>
+  <g
+     inkscape:export-ydpi="600"
+     inkscape:export-xdpi="600"
+     inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\EtapaDeAV.png"
+     id="g2539"
+     transform="rotate(-180,138.43997,93.113663)"
+     inkscape:label="GND">
+    <g
+       id="g2530"
+       inkscape:label="GND"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\EtapaDeAV.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
+      <circle
+         id="path2528"
+         inkscape:label="circle"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         cx="150"
+         cy="140"
+         r="1" />
+    </g>
+  </g>
+  <g
+     inkscape:label="GND"
+     transform="rotate(-180,110,50.000002)"
+     id="g1029" />
+  <g
+     id="g1035"
+     transform="rotate(-180,140,50.000001)"
+     inkscape:label="GND">
+    <g
+       transform="matrix(-0.739645,0,0,0.739645,316.06289,-470.94189)"
+       ns0:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns0:text=" $V_i^*$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="content"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="C:\Users\Marcelo\Documents\GitHub\TP1_Electr-nica2\TP2\Informe\Imagenes\EtapaDeAV.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
+<path
+   id="path1026"
+   style="fill:#000000;stroke-width:0"
+   d="m 229.7,712.89 0.04,0.07 0.05,0.06 0.04,0.07 0.04,0.05 0.05,0.06 0.04,0.05 0.05,0.05 0.04,0.04 0.04,0.04 0.04,0.04 0.04,0.03 0.05,0.03 0.04,0.03 0.04,0.03 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.01 0.03,0.02 0.04,0.01 0.04,0.01 0.04,0.01 h 0.03 l 0.04,0.01 h 0.04 l 0.07,0.01 0.07,0.01 h 0.07 c 0.12,0.01 0.13,0.18 0.13,0.19 0,0.08 -0.05,0.12 -0.13,0.12 -0.26,0 -0.55,-0.03 -0.82,-0.03 -0.33,0 -0.66,0.03 -0.98,0.03 -0.06,0 -0.19,0 -0.19,-0.19 0,-0.11 0.09,-0.12 0.16,-0.12 0.26,-0.02 0.46,-0.12 0.46,-0.33 0,-0.15 -0.15,-0.36 -0.15,-0.37 l -3.07,-4.85 -0.67,5.25 c 0,0.17 0.22,0.3 0.68,0.3 0.14,0 0.25,0 0.25,0.2 0,0.09 -0.08,0.11 -0.14,0.11 -0.4,0 -0.82,-0.03 -1.23,-0.03 -0.18,0 -0.37,0.01 -0.55,0.01 -0.18,0 -0.37,0.02 -0.54,0.02 -0.07,0 -0.19,0 -0.19,-0.19 0,-0.12 0.09,-0.12 0.25,-0.12 0.56,0 0.57,-0.09 0.6,-0.34 l 0.79,-6.13 c 0.03,-0.19 0.07,-0.22 0.19,-0.22 0.17,0 0.2,0.05 0.28,0.18 z"
+   inkscape:connector-curvature="0" />
+<path
+   id="path1028"
+   style="fill:#000000;stroke-width:0"
+   d="m 233.72,712.58 0.05,0.03 0.05,0.02 0.05,0.02 0.05,0.02 0.04,0.02 0.05,0.02 0.04,0.02 0.04,0.01 0.04,0.02 0.04,0.02 0.04,0.01 0.03,0.02 0.03,0.01 0.04,0.01 0.03,0.02 0.03,0.01 0.03,0.01 0.03,0.01 0.02,0.02 0.03,0.01 0.02,0.01 0.03,0.01 0.02,0.01 0.02,0.01 0.02,0.01 h 0.02 l 0.04,0.02 0.04,0.02 0.03,0.01 c 0.14,0.06 0.2,0.09 0.2,0.22 0,0.12 -0.09,0.22 -0.22,0.22 -0.05,0 -0.06,0 -0.15,-0.06 l -0.95,-0.63 0.11,1.02 c 0.01,0.13 0,0.3 -0.21,0.3 -0.08,0 -0.22,-0.05 -0.22,-0.2 0,-0.07 0.03,-0.28 0.04,-0.35 0.01,-0.11 0.06,-0.61 0.08,-0.77 l -0.95,0.63 c -0.07,0.04 -0.09,0.06 -0.15,0.06 -0.13,0 -0.22,-0.1 -0.22,-0.22 0,-0.14 0.08,-0.18 0.15,-0.2 l 1.05,-0.44 c -0.57,-0.25 -0.83,-0.35 -1,-0.43 -0.14,-0.06 -0.2,-0.08 -0.2,-0.22 0,-0.12 0.09,-0.22 0.22,-0.22 0.05,0 0.06,0 0.14,0.06 l 0.96,0.64 -0.12,-1.12 c 0,-0.16 0.14,-0.21 0.22,-0.21 0.08,0 0.22,0.05 0.22,0.21 0,0.06 -0.03,0.27 -0.04,0.34 -0.01,0.12 -0.06,0.62 -0.08,0.78 l 0.84,-0.56 c 0.19,-0.14 0.2,-0.14 0.26,-0.14 0.13,0 0.22,0.1 0.22,0.22 0,0.14 -0.08,0.18 -0.15,0.2 z"
+   inkscape:connector-curvature="0" />
+<path
+   id="path1030"
+   style="fill:#000000;stroke-width:0"
+   d="m 231.51,708.99 v 0.01 0.01 0.01 0.01 l -0.01,0.01 v 0.01 0.01 l -0.01,0.02 v 0.01 l -0.01,0.01 v 0.01 l -0.01,0.01 v 0.01 l -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 h -0.01 l -0.01,0.01 -0.01,0.01 h -0.02 l -0.01,0.01 h -0.02 l -0.01,0.01 h -0.02 -0.01 -0.02 -0.02 c -0.19,0 -0.39,-0.18 -0.39,-0.38 0,-0.12 0.09,-0.26 0.28,-0.26 0.2,0 0.39,0.19 0.39,0.38 z"
+   inkscape:connector-curvature="0" />
+<path
+   id="path1032"
+   style="fill:#000000;stroke-width:0"
+   d="m 230.08,705.46 v -0.02 l -0.01,-0.02 -0.01,-0.03 v -0.02 l -0.01,-0.02 v -0.01 l -0.01,-0.02 v -0.02 l -0.01,-0.02 v -0.01 -0.02 l -0.01,-0.02 v -0.01 -0.01 -0.01 -0.01 -0.02 -0.01 c 0,-0.32 0.28,-0.59 0.66,-0.59 0.7,0 1.01,0.96 1.01,1.07 0,0.09 -0.09,0.09 -0.11,0.09 -0.1,0 -0.11,-0.05 -0.13,-0.12 -0.16,-0.56 -0.47,-0.84 -0.74,-0.84 -0.14,0 -0.18,0.09 -0.18,0.24 0,0.16 0.05,0.29 0.11,0.45 0.07,0.18 0.15,0.37 0.23,0.55 0.06,0.17 0.31,0.8 0.34,0.89 0.02,0.07 0.04,0.15 0.04,0.22 0,0.32 -0.28,0.59 -0.66,0.59 -0.7,0 -1.02,-0.95 -1.02,-1.06 0,-0.1 0.1,-0.1 0.12,-0.1 0.1,0 0.11,0.04 0.13,0.11 0.18,0.6 0.49,0.85 0.75,0.85 0.11,0 0.17,-0.05 0.17,-0.24 0,-0.16 -0.04,-0.26 -0.22,-0.69 z"
+   inkscape:connector-curvature="0" />
+</g>  </g>
+</svg>

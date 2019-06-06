@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2018.4.3)  5 JUN 2019 23:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2018.4.3)  6 JUN 2019 02:06
 entering extended mode
 **./Informe.tex
 (Informe.tex
@@ -1006,33 +1006,47 @@ Package pdftex.def Info: Imagenes/EtapaSalida.png used on input line 44.
 (pdftex.def)             Requested size: 229.63736pt x 273.6015pt.
  [2 <./Imagenes/EtapaSalida.png>]
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 76.
+(Font)              scaled to size 11.03998pt on input line 88.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 76.
+(Font)              scaled to size 8.27998pt on input line 88.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 76.
+(Font)              scaled to size 6.43999pt on input line 88.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 76.
+(Font)              scaled to size 11.03998pt on input line 88.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 76.
+(Font)              scaled to size 8.27998pt on input line 88.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 76.
+(Font)              scaled to size 6.43999pt on input line 88.
 
-<Imagenes/FuenteIF.png, id=17, 205.2468pt x 263.3037pt>
+<Imagenes/FuenteIF.png, id=16, 205.2468pt x 263.3037pt>
 File: Imagenes/FuenteIF.png Graphic file (type png)
 
 <use Imagenes/FuenteIF.png>
-Package pdftex.def Info: Imagenes/FuenteIF.png used on input line 82.
+Package pdftex.def Info: Imagenes/FuenteIF.png used on input line 94.
 (pdftex.def)             Requested size: 102.62314pt x 131.65152pt.
- [3 <./Imagenes/FuenteIF.png>] [4] (Informe.aux
+ [3 <./Imagenes/FuenteIF.png>]
+<Imagenes/EtapaDeAV.png, id=22, 391.82385pt x 295.5843pt>
+File: Imagenes/EtapaDeAV.png Graphic file (type png)
+
+<use Imagenes/EtapaDeAV.png>
+Package pdftex.def Info: Imagenes/EtapaDeAV.png used on input line 151.
+(pdftex.def)             Requested size: 195.91144pt x 147.79178pt.
+ [4 <./Imagenes/EtapaDeAV.png>]
+<Imagenes/opamp2SinCap.png, id=27, 699.45316pt x 295.94565pt>
+File: Imagenes/opamp2SinCap.png Graphic file (type png)
+
+<use Imagenes/opamp2SinCap.png>
+Package pdftex.def Info: Imagenes/opamp2SinCap.png used on input line 174.
+(pdftex.def)             Requested size: 349.72571pt x 147.97246pt.
+ [5 <./Imagenes/opamp2SinCap.png>] (Informe.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 5135 strings out of 493333
- 67436 string characters out of 3136603
+ 5145 strings out of 493333
+ 67691 string characters out of 3136603
  139521 words of memory out of 3000000
- 8502 multiletter control sequences out of 15000+200000
+ 8510 multiletter control sequences out of 15000+200000
  75528 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,11n,43p,891b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1043,9 +1057,9 @@ s (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on Informe.pdf (4 pages, 355627 bytes).
+Output written on Informe.pdf (5 pages, 613712 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
+ 52 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
